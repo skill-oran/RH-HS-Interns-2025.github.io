@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color:#ededf5;
+    margin: 20px;
+}
+h1{
+    color:#333366;
+}
+.highlight{
+    background-color: yellow;
+    padding: 5px;
+}
+
+.mystyle{
+    color: #0008ff;
+    font-size: 18px;
+}

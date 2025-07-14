@@ -1,0 +1,20 @@
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #000000;
+    margin: 20px
+}
+h1, h2, h3 {
+    color: #08b725;
+}
+
+.highlight {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.my-style {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
