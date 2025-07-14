@@ -107,6 +107,28 @@
             font-size: 1.1rem;
             margin: 18px 0 0 0;
         }
+        /* Floating Social Button */
+        .fab {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #6c63ff;
+            color: white;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background 0.3s, transform 0.2s;
+            z-index: 1000;
+        }
+        .fab:hover {
+            background: #5548c8;
+            transform: translateY(-4px);
+        }
     </style>
 </head>
 <body>
@@ -184,6 +206,12 @@
         <div id="jsdos"></div>
     </div>
 
+    <!-- Floating Social Button -->
+    <a href="https://www.instagram.com/carvedincary/" class="fab" title="Follow on Instagram" target="_blank">&#x1F4F7;</a>
+
+    <!-- Fun Feature: Dark/Light Mode Toggle -->
+    <button class="my-button" id="toggle-theme" style="position:fixed;top:32px;right:32px;z-index:1001;">🌙 Toggle Theme</button>
+
     <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
     <script src="script.js"></script>
     <script>
@@ -206,6 +234,19 @@
         } else {
             doomLoading.style.display = 'none';
             doomError.classList.remove('hidden');
+        }
+    });
+    // Dark/Light mode toggle
+    const toggleBtn = document.getElementById('toggle-theme');
+    let dark = true;
+    toggleBtn.addEventListener('click', function() {
+        dark = !dark;
+        if (dark) {
+            document.body.style.background = 'linear-gradient(120deg, #232526 0%, #414345 100%)';
+            document.body.style.color = '#fff';
+        } else {
+            document.body.style.background = 'linear-gradient(120deg, #ffe259 0%, #43e97b 100%)';
+            document.body.style.color = '#232526';
         }
     });
     </script>
