@@ -10,11 +10,13 @@ alertBtn.onclick = function () {
 aboutMeBtn.onclick = function () {
     console.log("About Me button clicked");
     let aboutMeDiv = document.getElementsByClassName("about-me")[0];
-    aboutMeDiv.style.display = "block";
+    aboutMeDiv.style.display = "inline-block";
+    aboutMeDiv.style.border = "2px solid black";
 }
 
 myInterestsBtn.onclick = function () {
     console.log("My Interests button clicked");
     let interestsDiv = document.getElementsByClassName("interests")[0];
-    interestsDiv.style.display = "block";
+    interestsDiv.style.display = "inline-block";
+    interestsDiv.style.border = "2px solid black";
 }
