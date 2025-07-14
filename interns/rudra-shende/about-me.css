@@ -13,11 +13,6 @@ h2 {
     color: #c81b1b;
 }
 
-.highlight {
-    background-color: rgb(255, 247, 0);
-    padding: 5px;
-}
-
 .about-me {
     display: none;
 }
@@ -41,6 +36,11 @@ img:hover {
     transition: transform 0.5s ease-in-out;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .logo {
     width: 100px;
     height: 100px;
@@ -56,9 +56,4 @@ img:hover {
     color: navy;
     padding: 10px 20px;
     display: block;
-}
-
-.my-style {
-    color: #ff6600;
-    font-size: 18px;
 }
