@@ -1,16 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
+<html>
+<head>
+    <title>My First Website</title>
     <link rel="stylesheet" href="./about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+  <div class="card">
+    <h1>Welcome to My Website!</h1>
+    <p>Hi! My name is Kieran Kelly and this is my first webpage.</p>
+ </div>
+    <div class="card">
+      
+</script>
+
+
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Accomplishments – Kieran Kelly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+    details {
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      background: #fff;
+      transition: box-shadow 0.3s ease;
+    }
+    details[open] {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    summary {
+      padding: 1rem;
+      cursor: pointer;
+      position: relative;
+      font-size: 1.1rem;
+      font-weight: bold;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary .icon {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.3s ease;
+    }
+    details[open] summary .icon {
+      transform: translateY(-50%) rotate(90deg);
+    }
+    details > ul {
+      padding: 0 1.5rem 1rem;
+      margin: 0;
+    }
+    details > ul > li {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>About Me</h1>
+
+  <details>
+    <summary><span>👤 Personal Bio</span> <i class="fas fa-chevron-right icon"></i></summary>
+    <ul>
+      <li>Rising junior at Knightdale High School</li>
+      <li>Fun, charismatic, good with people</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary><span>💼 Professional Bio</span> <i class="fas fa-chevron-right icon"></i></summary>
+    <ul>
+      <li>Owned and managed <em>KTP Cutters</em> (neighborhood lawn care)</li>
+      <li>Lifeguard at Buffaloe Road</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary><span>🏆 Accomplishments</span> <i class="fas fa-chevron-right icon"></i></summary>
+    <ul>
+      <li>Varsity golf captain</li>
+      <li>Soon-to-be DECA president</li>
+      <li>10 handicap (golf)</li>
+      <li>Adobe Illustrator certified</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary><span>🎯 Skills & Interests</span> <i class="fas fa-chevron-right icon"></i></summary>
+    <ul>
+      <li>Avid golfer</li>
+      <li>Competitive swimmer</li>
+      <li>Leadership & interpersonal skills</li>
+    </ul>
+  </details>
+ </div>
+    <div class="card">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>Golf(HCAP 10)</li>
+        <li>Swimming</li>
+    </ul>
+   </div>  
+    <img src="https://mail.google.com/mail/u/0?ui=2&ik=6f7998e559&attid=0.1&permmsgid=msg-f:1837106494024066786&th=197eb69f76de26e2&view=fimg&fur=ip&permmsgid=msg-f:1837106494024066786&sz=s0-l75-ft&attbid=ANGjdJ-Q173ad0Md60_UREQFPC85jEoqXnYDLGieGcZkiLLe3USP70ilkuUTd4XxXhstyX4BYjfxsH7ta0wcmiXdgACy2KnG8imYfB2RoDJY20clZ3FCLIPCwdYo4z4&disp=emb&realattid=197eb68932d9241e88a1&zw" alt="Placeholder image">
+    
+    <p>Thanks for visiting my page!</p>
+    <p class="highlight">Im a high school student learning web development!</p>
+    <p class="my-style">Thanks for visiting my page</p>
+
+    <h2>Useful Links</h2>
+<p>Click these buttons to visit other websites:</p>
+
+<!-- This is a link that looks like a button -->
+<a href="https://k-t-pcutters.godaddysites.com/" class="my-button" target="_blank" style="text-decoration: none;">
+    My website
+</a>
+
+    <div class="card">
+        <h2>My Favorite Image</h2>
+        <p>Hover over the image to make it bigger!</p>
+        <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Hover+Over+Me!" 
+             alt="Placeholder image">
+    </div>
+
+    <h2>Try JavaScript!</h2>
+<button class="my-button" onclick="alert('Hello!')">
+    Click Me
+</button>
+
+<h2>Secret Message</h2>
+<button class="my-button" onclick="showMessage()">
+    Guess what?
+</button>
+
+<p id="secret" style="display: none; color: red;">
+    Chicken butt!
+</p>
+
+ <div class="card animate">
+        <h2>Collaboration Section</h2>
+        <p>working with my awesome classmates!</p>
+        <ul>
+            <li>learning from others</li>
+            <li>Sharing knowlage</li>
+            <li>Building toghether</li>
+        </ul>
+
+
+
+    
 </body>
-</html> 
+</html>
+</body>
+</html>
