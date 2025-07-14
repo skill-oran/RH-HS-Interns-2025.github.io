@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+h1 {
+    color: #335166;
+}
+
+h2 {
+    color: #c81b1b;
+}
+
+.highlight {
+    background-color: rgb(255, 247, 0);
+    padding: 5px;
+}
+
+.about-me {
+    display: none;
+}
+
+.interests {
+    display: none;
+}
+
+.link:hover {
+    color: #7e07e7;
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    font-weight: bold;
+    transition: transform 1.0s ease-in-out;
+}
+
+img:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn1, .btn2, .btn3 {
+    background-color: red;
+    border: 1px;
+    border-radius: 5px;
+    color: navy;
+    padding: 10px 20px;
+    display: block;
+}
+
+.my-style {
+    color: #ff6600;
+    font-size: 18px;
+}

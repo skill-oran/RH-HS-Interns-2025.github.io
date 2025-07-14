@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+h1 {
+    color: #333366;
+}
+.highlight {
+    background-color: yellow;
+    padding: 5px;
+}
+.my-style {
+    color: #FF6600;
+    font-size: 18px;
+}
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
