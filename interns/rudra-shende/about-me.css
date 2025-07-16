@@ -36,6 +36,11 @@ li:hover {
     transition: transform 0.5s ease-in-out;
 }
 
+.profile {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 img:not(:last-child) {
     margin-top: 10px;
     margin-right: 20px;
