@@ -1,26 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Website</title>
+    <link rel="stylesheet" href="about-me.css">
     
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+    <style>
+        body.dark-mode {
+            background-color: #1e396b;
+            color: #F5F5F5;
+        }
+        .dark-mode .card {
+            background-color: #187d29;
+            box-shadow: 0 2px 10px rgba(30, 9, 121, 0.4);
+        }
+        .dark-mode a {
+            color: #0fa80f;
+        }
+        .dark-mode a:hover {
+            color: #0e9d9d;
+        }
+        .dark-mode .my-button {
+            background-color: #198a73;
+            color: #fff;
+        }
+        .dark-mode .my-button:hover {
+            background-color: #168e36;
+        }
+        .dark-mode li:hover {
+            background-color: #333;
+            border-left: 3px solid #07045f;
+        }
+        #darkModeToggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            background-color: #1b1594;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        #darkModeToggle:hover {
+            background-color: #021f0f;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hi</h1>
-</body>
-</html> 
+    <button id="darkModeToggle">Toggle Blue Mode</button>
+   <div class="intro">
+    <h1>Welcome to My Interactive Website!</h1>
+    <p>Reagan Trinh</p>
+    <p>Wake Early College of Information and Biotechnologies</p>
+    <p>Raleigh, NC  27616</p>
 
-<div class="card animate">
-    <h2>Collaboration Section</h2>
-    <p>Working with my awesome classmates!</p>
-    <ul>
-        <li>Learning from others</li>
-        <li>Sharing knowledge</li>
-        <li>Building together</li>
-    </ul>
 </div>
+
+    
+
+    
+    
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Card</title>
+    <style>
+        .card {
+            background: #94cda4;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            cursor: pointer;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .dropdown-text {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding-left: 15px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        .dropdown-text.show {
+            max-height: 100px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+        <h2>-Links-</h2>
+         </button>
+
+    <p>Here's my GitHub, Journal Entries, and LinkedIn!</p>
+    <a href="https://github.com/rea-reax/RH-HS-Interns-2025.github.io#"
+       class="my-button"
+       target="_blank"
+       style="text-decoration: none; display: inline-block; margin-left: 10px;">
+        Visit GitHub
+        </a>
+
+    <p> </p>
+    <a href="https://github.com/rea-reax/RH-HS-Interns-2025.github.io/branches"
+       class="my-button"
+       target="_blank"
+       style="text-decoration: none; display: inline-block; margin-left: 10px;">
+        Visit Journal Entries
+        </a>
+
+    </button>
+    <a href="https://www.linkedin.com/in/reagan-trinh-b60071375/"
+       class="my-button"
+       target="_blank"
+       style="text-decoration: none; display: inline-block; margin-left: 10px;">
+        Visit LinkedIn
+    </a>
+    </div>
+
+    <div class="card">
+        <h2>-About Me-</h2>
+        <p>My name is Reagan Trinh and I live in North Carolina. I'm a rising junior at WECIB and have been living in North Carolina my whole life. I have two brothers, Raymond who is 19 years old, and Raydon who's also my twin brother. I have experience in coding and networking at WECIB. I'm also participating in a high school intern here at Red Hat, which helps me understand what it's like to work in a professional and corporate environment. </p>
+        <p></p>
+<img src="/Users/rtrinh/RH-HS-Interns-2025.github.io/interns/reagan-trinh/static/rearea.jpg" style="width: 180px; height: 800;" alt="Reagan">
+
+    </div>
+
+    <div class="card">
+        <h2>-My Interests-</h2>
+        <ul>
+            <li onclick="toggleDropdown(this)">Web Development
+                <div class="dropdown-text"></div>
+            </li>
+
+            <li onclick="toggleDropdown(this)">Creating Cool Websites 🌐
+                <div class="dropdown-text">During my time at the Red Hat internship, we're able to create a website using JavaScript which is new to me. Learning how to make a website like this is exciting and shows me what it's like as a programmer who works in a professional setting. </div>
+            </li>
+
+            <li onclick="toggleDropdown(this)">Playing basketball for fun 🏀
+                <div class="dropdown-text">I've been playing basketball since I was little. My brothers and I enjoy playing basketball together. Basketball helps me stay healthy and energetic.</div>
+            </li>
+
+            <li onclick="toggleDropdown(this)">Listening to music 🎵
+                <div class="dropdown-text">Depending on the occasion or mood, the genre of music that I listen to change. Sometimes I listen to RnB and then Indie Pop. It relieves me from stress and helps me throughout the day. The top artists that I listen to is Frank Ocean, Giveon, Daniel Caeser, etc.</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleDropdown(element) {
+            const dropdown = element.querySelector('.dropdown-text');
+            dropdown.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
+<div class="card">
+        <h2>-Skills and Accomplishments-</h2>
+        <ul>Helped out with church service (food drive, food bank, etc.)</p>
+</p>Collaborating and helping others when it comes to completing tasks.</p>
+</p>Received CCST and PCAP certificates</p>
+    </div>
+    </div>
+    <div class="card">
+        <h2>-Images-</h2>
+        <img src="/Users/rtrinh/RH-HS-Interns-2025.github.io/interns/reagan-trinh/static/IMG_6425.jpeg" class="framed-image" alt="Alternate Text"/>
+        <img src="/Users/rtrinh/RH-HS-Interns-2025.github.io/interns/reagan-trinh/static/IMG_6569.jpeg" class="framed-image" alt="Alternate Text"/>
+        <img src="/Users/rtrinh/RH-HS-Interns-2025.github.io/interns/reagan-trinh/static/IMG_6573.jpeg" class="framed-image" alt="Alternate Text"/>
+
+        <p>Some of these images are from my experience here at Red Hat. I had the chance to take some pictures while touring the building. We went different floors to see what the setting/workplace looks like. The picture on the left was when I went to a grad party with my girlfriend to celebrate her brother graduating high school and moving on to college.  </p>
+
+    </div>
+ 
+    <script>
+        function showMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+        const darkToggle = document.getElementById('darkModeToggle');
+        darkToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
+
+
+      <div class="card" id="reel">
+        <h2>-Day in The Life Reel Project-</h2>
+    <p>This is a video I had to make to show you what it's like to be a Red Hat HS Intern!</p>
+        <div style="margin-top: 20px; text-align: center;">
+          <video id="ditl-video" width="480" controls poster="./static/banner.png" style="border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.18);">
+            <source src="./static/0kxqzv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
