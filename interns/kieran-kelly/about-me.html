@@ -5,12 +5,15 @@
     <link rel="stylesheet" href="./about-me.css">
 </head>
 <body>
-  <div class="card">
+
+
+
+  <div class="card" style="background: linear-gradient(120deg, #38f9d7 0%, #43e97b 60%, #1e90ff 100%); color: #fff; box-shadow: 0 4px 24px rgba(30,144,255,0.13);">
     <h1>Welcome to My Website!</h1>
-    <p>Hi! My name is Kieran Kelly and this is my first webpage.</p>
- </div>
-    <div class="card">
-      
+    <p class="intro-text">Hi! My name is Kieran Kelly and this is my first webpage.</p>
+  </div>
+
+
 </script>
 
 
@@ -21,20 +24,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6fa;
       color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .card {
+      background: #f8fafc;
+      border-radius: 14px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      margin-bottom: 2rem;
+      padding: 1.2rem 1.5rem;
+      border: none;
+      transition: box-shadow 0.3s;
+      color: #222;
+      /* Make text dark for readability */
+    }
+    .card h1, .card h2, .card p, .card ul, .card li, .card a {
+      color: #222 !important;
+      text-shadow: 0 1px 6px rgba(95,95,255,0.07);
+    }
+    .card:hover {
+      box-shadow: 0 6px 24px rgba(52,152,219,0.12);
     }
     details {
-      border: 1px solid #aaa;
-      border-radius: 4px;
+      border: none;
+      border-radius: 10px;
       margin-bottom: 1rem;
-      background: #fff;
+      background: #f5f8ff;
       transition: box-shadow 0.3s ease;
+      box-shadow: 0 1px 4px rgba(52,152,219,0.07);
     }
     details[open] {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(52,152,219,0.13);
     }
     summary {
       padding: 1rem;
@@ -43,6 +74,7 @@
       font-size: 1.1rem;
       font-weight: bold;
       list-style: none;
+      border-radius: 10px;
     }
     summary::-webkit-details-marker { display: none; }
     summary .icon {
@@ -62,107 +94,176 @@
     details > ul > li {
       margin: 0.5rem 0;
     }
+    .my-button {
+      background: #5f5fff;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 0.7em 1.4em;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin: 0.5em 0.5em 0.5em 0;
+      box-shadow: 0 1px 4px rgba(95,95,255,0.08);
+      transition: background 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .my-button:hover {
+      background: #43e97b;
+      box-shadow: 0 2px 8px rgba(67,233,123,0.12);
+    }
+    img {
+      border-radius: 12px;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 12px rgba(52,152,219,0.09);
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+    }
+    h1, h2 {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    .animate {
+      animation: fadeInUp 0.8s;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
-</head>
+
 <body>
+  <nav style="position:sticky;top:0;z-index:1000;background:#e3eafc;padding:0.7em 2em;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(95,95,255,0.08);">
+    <span style="font-weight:700;color:#fff;font-size:1.2em;letter-spacing:0.03em;">Kieran Kelly</span>
+    <div>
+      <a href="#about" class="my-button" style="margin:0 0.5em;">About</a>
+      <a href="#interests" class="my-button" style="margin:0 0.5em;">Interests</a>
+      <a href="#projects" class="my-button" style="margin:0 0.5em;">Projects</a>
+      <a href="#collab" class="my-button" style="margin:0 0.5em;">Collaboration</a>
+      <a href="useful-links.html" class="my-button" style="margin:0 0.5em;">Links Page</a>
+      <a href="contact.html" class="my-button" style="margin:0 0.5em;background:linear-gradient(90deg,#43e97b,#a770ef);color:#fff;">Contact</a>
+    </div>
+  </nav>
 
-  <h1>About Me</h1>
+  <main>
+    <h1 id="about">About Me</h1>
+    <details>
+      <summary><span>👤 Personal Bio</span> <i class="fas fa-chevron-right icon"></i></summary>
+      <ul>
+        <li>Rising junior at Knightdale High School</li>
+        <li>Fun, charismatic, good with people</li>
+      </ul>
+    </details>
+    <details>
+      <summary><span>💼 Professional Bio</span> <i class="fas fa-chevron-right icon"></i></summary>
+      <ul>
+        <li>Owned and managed <em>KTP Cutters</em> (neighborhood lawn care)</li>
+        <li>Lifeguard at Buffaloe Road</li>
+      </ul>
+    </details>
+    <details>
+      <summary><span>🏆 Accomplishments</span> <i class="fas fa-chevron-right icon"></i></summary>
+      <ul>
+        <li>Varsity golf captain</li>
+        <li>Soon-to-be DECA president</li>
+        <li>10 handicap (golf)</li>
+        <li>Adobe Illustrator certified</li>
+      </ul>
+    </details>
+    <details>
+      <summary><span>🎯 Skills & Interests</span> <i class="fas fa-chevron-right icon"></i></summary>
+      <ul>
+        <li>Avid golfer</li>
+        <li>Competitive swimmer</li>
+        <li>Leadership & interpersonal skills</li>
+      </ul>
+    </details>
 
-  <details>
-    <summary><span>👤 Personal Bio</span> <i class="fas fa-chevron-right icon"></i></summary>
-    <ul>
-      <li>Rising junior at Knightdale High School</li>
-      <li>Fun, charismatic, good with people</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary><span>💼 Professional Bio</span> <i class="fas fa-chevron-right icon"></i></summary>
-    <ul>
-      <li>Owned and managed <em>KTP Cutters</em> (neighborhood lawn care)</li>
-      <li>Lifeguard at Buffaloe Road</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary><span>🏆 Accomplishments</span> <i class="fas fa-chevron-right icon"></i></summary>
-    <ul>
-      <li>Varsity golf captain</li>
-      <li>Soon-to-be DECA president</li>
-      <li>10 handicap (golf)</li>
-      <li>Adobe Illustrator certified</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary><span>🎯 Skills & Interests</span> <i class="fas fa-chevron-right icon"></i></summary>
-    <ul>
-      <li>Avid golfer</li>
-      <li>Competitive swimmer</li>
-      <li>Leadership & interpersonal skills</li>
-    </ul>
-  </details>
- </div>
-    <div class="card">
+    <div class="card" id="interests" style="position:relative;overflow:hidden;background: linear-gradient(120deg, #38f9d7 0%, #43e97b 60%, #1e90ff 100%); color: #fff;">
       <h2>My Interests</h2>
       <ul>
         <li>Web Development</li>
-        <li>Golf(HCAP 10)</li>
+        <li>Golf (HCAP 10)</li>
         <li>Swimming</li>
-    </ul>
-   </div>  
-    <img src="https://mail.google.com/mail/u/0?ui=2&ik=6f7998e559&attid=0.1&permmsgid=msg-f:1837106494024066786&th=197eb69f76de26e2&view=fimg&fur=ip&permmsgid=msg-f:1837106494024066786&sz=s0-l75-ft&attbid=ANGjdJ-Q173ad0Md60_UREQFPC85jEoqXnYDLGieGcZkiLLe3USP70ilkuUTd4XxXhstyX4BYjfxsH7ta0wcmiXdgACy2KnG8imYfB2RoDJY20clZ3FCLIPCwdYo4z4&disp=emb&realattid=197eb68932d9241e88a1&zw" alt="Placeholder image">
-    
-    <p>Thanks for visiting my page!</p>
-    <p class="highlight">Im a high school student learning web development!</p>
-    <p class="my-style">Thanks for visiting my page</p>
-
-    <h2>Useful Links</h2>
-<p>Click these buttons to visit other websites:</p>
-
-<!-- This is a link that looks like a button -->
-<a href="https://k-t-pcutters.godaddysites.com/" class="my-button" target="_blank" style="text-decoration: none;">
-    My website
-</a>
-
-    <div class="card">
-        <h2>My Favorite Image</h2>
-        <p>Hover over the image to make it bigger!</p>
-        <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Hover+Over+Me!" 
-             alt="Placeholder image">
+        <li>Video Games</li>
+        <li>Fishing</li>
+      </ul>
+      <!-- Golf Ball Falling Into Hole Animation -->
+      <div id="golf-animation" style="position:absolute;bottom:10px;right:20px;width:110px;height:80px;pointer-events:none;">
+        <svg viewBox="0 0 110 80" width="110" height="80">
+          <!-- Flag -->
+          <rect x="95" y="30" width="3" height="30" fill="#5f5fff" />
+          <polygon points="98,30 108,35 98,40" fill="#43e97b" />
+          <!-- Hole -->
+          <ellipse id="hole" cx="100" cy="65" rx="10" ry="4" fill="#222" opacity="0.7" />
+          <!-- Ball -->
+          <circle id="golf-ball" cx="100" cy="20" r="8" fill="#fff" stroke="#43e97b" stroke-width="2">
+            <animate attributeName="cy" from="20" to="65" dur="1.2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="1.2s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+      </div>
     </div>
 
-    <h2>Try JavaScript!</h2>
-<button class="my-button" onclick="alert('Hello!')">
-    Click Me
-</button>
-
-<h2>Secret Message</h2>
-<button class="my-button" onclick="showMessage()">
-    Guess what?
-</button>
-
-<p id="secret" style="display: none; color: red;">
-    Chicken butt!
-</p>
-
- <div class="card animate">
-        <h2>Collaboration Section</h2>
-        <p>working with my awesome classmates!</p>
-        <ul>
-            <li>learning from others</li>
-            <li>Sharing knowlage</li>
-            <li>Building toghether</li>
-        </ul> 
-        
-     
-
-
-
-
-
+    <img src="https://mail.google.com/mail/u/0?ui=2&ik=6f7998e559&attid=0.1&permmsgid=msg-f:1837106494024066786&th=197eb69f76de26e2&view=fimg&fur=ip&permmsgid=msg-f:1837106494024066786&sz=s0-l75-ft&attbid=ANGjdJ-Q173ad0Md60_UREQFPC85jEoqXnYDLGieGcZkiLLe3USP70ilkuUTd4XxXhstyX4BYjfxsH7ta0wcmiXdgACy2KnG8imYfB2RoDJY20clZ3FCLIPCwdYo4z4&disp=emb&realattid=197eb68932d9241e88a1&zw" alt="Placeholder image" style="width:200px;height:auto;object-fit:contain;">
     
-</body>
-</html>
+    <div class="card" id="links" style="background: linear-gradient(120deg, #38f9d7 0%, #43e97b 60%, #1e90ff 100%); color: #fff;">
+      <h2>Useful Links</h2>
+      <p>Click the button below to see my useful links:</p>
+      <a href="useful-links.html" class="my-button">Go to Useful Links Page</a>
+    </div>
+
+    <div class="card" style="background: linear-gradient(120deg, #38f9d7 0%, #43e97b 60%, #1e90ff 100%); color: #fff;">
+      <h2>My Favorite Images of the Internship</h2>
+      <p>Check out my favorite images from the internship!</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; align-items: flex-start;">
+        <img src="https://mail.google.com/mail/u/0?ui=2&ik=6f7998e559&attid=0.3&permmsgid=msg-f:1837816851714664126&th=19813cb080ade6be&view=att&disp=safe&realattid=19813c97883fa6fd1ee2&zw" alt="Internship Favorite 3" style="max-width: 320px; height: auto; border-radius: 16px;">
+        <img src="https://mail.google.com/mail/u/0?ui=2&ik=6f7998e559&attid=0.1&permmsgid=msg-f:1837816851714664126&th=19813cb080ade6be&view=att&disp=safe&realattid=19813c9781314c963f21&zw" alt="Internship Favorite 1" style="max-width: 320px; height: auto; border-radius: 16px;">
+        <img src="https://mail.google.com/mail/u/0?ui=2&ik=6f7998e559&attid=0.2&permmsgid=msg-f:1837816851714664126&th=19813cb080ade6be&view=att&disp=safe&realattid=19813c978cc9af4f5ef3&zw" alt="Internship Favorite 2" style="max-width: 320px; height: auto; border-radius: 16px;">
+      </div>
+    </div>
+
+    <div class="card" style="background: linear-gradient(120deg, #38f9d7 0%, #43e97b 60%, #1e90ff 100%); color: #fff;">
+      <h2>Try JavaScript!</h2>
+      <button class="my-button" onclick="alert('Hello!')">Click Me</button>
+      <h2>Secret Message</h2>
+      <button class="my-button" onclick="showMessage()">Guess what?</button>
+      <p id="secret" style="display: none; color: red;">Chicken butt!</p>
+    </div>
+
+    <div class="card" id="projects" style="background: linear-gradient(120deg, #38f9d7 0%, #43e97b 60%, #1e90ff 100%); color: #fff;">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="journals.html" class="my-button">My Journals</a></li>
+        <li><a href="social-media-project.html" class="my-button">Social Media Project</a></li>
+      </ul>
+    </div>
+
+    <div class="card animate" id="collab" style="background: linear-gradient(120deg, #38f9d7 0%, #43e97b 60%, #1e90ff 100%); color: #fff;">
+      <h2>Collaboration Section</h2>
+      <p>Working with my awesome classmates!</p>
+      <ul>
+        <li>Learning from others</li>
+        <li>Sharing knowledge</li>
+        <li>Building together</li>
+      </ul>
+    </div>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'});" class="my-button" style="position:fixed;bottom:32px;right:32px;z-index:999;background:linear-gradient(90deg,#5f5fff,#43e97b);box-shadow:0 2px 12px rgba(95,95,255,0.18);">Back to Top</button>
+  </main>
+  <script>
+    function showMessage() {
+      document.getElementById('secret').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
