@@ -6,31 +6,100 @@
    <title>My First Website</title>
 </head>
 
-<div class="card" style="text-align: center;">
-  <h1>My Time at Red Hat</h1>
- </div>
-  <div class="card" style="text-align: center;">
-<h2>About Me</h2>
+<body>
+   <header class="header-bar">
+    <div class="header-logo">RedHat</div>
+    <nav class="nav-links">
+      <a href="javascript:void(0);" class="tab-button active" onclick="openTab(event, 'home')">Home</a>
+      <a href="https://www.linkedin.com/in/dhisha-kumar-6158b2338/" target="_blank" class="tab-button">LinkedIn</a>
+      <a href="https://rh-hs-interns-2025.github.io/interns/dhisha-kumar/journals/journals.html" target="_blank" class="tab-button">Journals</a>
+      <a href="javascript:void(0);" class="tab-button" onclick="openTab(event, 'social-media')">Social Media Reel</a>
+    </nav>
+  </header>
+  <div id="home" class="tab-content active">
+    <div class="card" style="text-align: center;">
+      <h1>Dhisha Kumar: RedHat Intern</h1>
+    </div>
+    <div class="card">
+      <img src="/Users/dhikumar/Downloads/IMG_0354.JPG" class="profile-img" alt="me" style="width: 200px;">
+    </div>
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Dhisha Kumar, Westborough High School</p>
+      <p>
+        As a student, I have earned an Academic Achievement Award in my computer science class, placed in the top five at the Science Olympiad Invitational at Harvard University for the Robot Tour event, and led a Hackathon at Microsoft alongside nine other high school students.
 
-    <p style="margin-bottom: 10px;">Dhisha Kumar, Westborough High School</p>
-    <p style="margin-bottom: 10px;"> As a student I have earned an academic achievement award in my computer science class; placed top 5 at a Science Olympiad invitational at Harvard University, for Robot Tour; and I have led a Hackathon at Microsoft along with 9 other High School students. Through these experiences I have learned to be a leader with helpful collaborative traits. My goal is to use these traits to make a helpful impact on society using computer science.   </p>
+These experiences have helped me develop strong leadership and collaboration skills, while deepening my passion for problem-solving through technology. My goal is to apply these qualities to create meaningful, positive change in society through computer science.
+      </p>
+    </div>
+    <div class="card">
+      <h2>My Interests</h2>
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <ul style="flex: 1;">
+          <li>Travel</li>
+          <li>Read</li>
+          <li>Lacrosse</li>
+        </ul>
+        <div style="display: flex; gap: 20px;">
+          <img src="https://img.freepik.com/premium-photo/high-angle-view-toys-against-blue-background_1048944-24584442.jpg?semt=ais_hybrid&w=740" alt="travel" style="width: 230px; border-radius: 10px;">
+          <img src="https://media.istockphoto.com/id/166025443/photo/opened-book-on-top-of-stack-of-blue-books-knowledge.jpg?s=612x612&w=0&k=20&c=LJ959ErCaD5WDlJ6_BhmtD_yKOez_gOeZKuar2l4axU=" alt="Read" style="width: 200px; border-radius: 10px;">
+          <img src="/Users/dhikumar/Downloads/lax.jpeg" alt="Lacrosse" style="width: 200px; border-radius: 10px;">
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h3> Fun Facts</h3>
+  <!-- Social Media Tab -->
+  <div id="social-media" class="tab-content">
+    <div class="card">
+      <h2>Social Media Reel</h2>
+      <p>This is my social media reel section!</p>
+   <iframe width="315" height="560"
+src="https://youtube.com/embed/ADNdSxPZhVw?feature=shared"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
 
-    <p style="margin-bottom: 10px;"> I enjoy dancing</p>
-    <p style="margin-bottom: 10px;"> I like to read</p>
-    <p style="margin-bottom: 10px;"> I love to bake</p>
 
-</div>
-<div class="card">
-<img src="data:image/jpeg;base64,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" class="profile-img" alt="reading">
-<p class="mystyle">Thanks for visiting my page!</p>
-</div>
-<p>hi</p>
-<!-- Link that looks like a button -->
- <h1>Click the button below to vist my Linkdin</h1>
-<a href="https://www.linkedin.com/in/dhisha-kumar-6158b2338/" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left: 10px;">
-   Linkedin
-</a>
+
+
+
+
+
+
+      <!-- Add content like embedded videos or images here -->
+    </div>
+  </div>
+
+  <!-- JavaScript for Tab Switching -->
+  <script>
+    function openTab(evt, tabName) {
+      // Hide all tab content
+      const tabContents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+        tabContents[i].classList.remove("active");
+      }
+
+      // Remove active class from all buttons
+      const tabButtons = document.getElementsByClassName("tab-button");
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+      }
+
+      // Show the selected tab
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(tabName).classList.add("active");
+
+      // Add active class to the clicked button
+      evt.currentTarget.classList.add("active");
+    }
+
+    // Show Home tab on initial load
+    window.onload = () => {
+      openTab({ currentTarget: document.querySelector('.tab-button.active') }, 'home');
+    };
+  </script>
 </body>
-</html> 
+</html>
