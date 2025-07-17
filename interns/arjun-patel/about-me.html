@@ -1,16 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>My First Website</title>
+    <link rel = "stylesheet" href = "./about-me.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body>
-  <h1>Hi</h1>
+    <h1 class="animate__animated animate__fadeInDown">Welcome to <u>My Website!</u></h1>
+    <p>Hi! My name is Arjun and this is my first webpage.</p>
+    
+    <h2 class = " animate__animated animate__zoomInLeft">About Me</h2>
+    <p>I'm a high school student learning <a class = "highlight">web development</a>!</p>
+    <p class = "my-style">Thanks for visiting this page!</p>
+   
+   <div class = "card">
+    <h2>My Interests</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Cricket</li>
+        <li>Tutoring</li>
+    </ul>
+  </div>
+  <div class = "card"> 
+    <a href = "https://www.redhat.com/en" target = "_blank"><img src="data:image/png;base64,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" alt="RedHat Logo"></a>
+  </div>  
+
+  <h2>Try Javascript!</h2>
+  <button class= "my-button" onclick="alert('hello')">
+    Click me 
+  </button>
+  <h2>Secret Message</h2>
+  <button class="my-button" onclick="showMessage()">
+      Show Secret
+  </button>
+
+  <p id="secret" style="display: none; color: red;">
+      You found it!
+  </p>
+
+<!-- Add this at the very bottom, before </body> -->
+<script>
+function showMessage() {
+    document.getElementById('secret').style.display = 'block';
+}
+</script>
+
+<div class = "card animate">
+  <h2>Collaboration Section</h2>
+  <p>Working with my awesome classmates</p>
+  <ul>
+    <li>Learning from others</li>
+    <li>Sharing Knowledge</li>
+    <li>Building Together</li>
+  </ul>
+</div>
 </body>
-</html> 
+</html>

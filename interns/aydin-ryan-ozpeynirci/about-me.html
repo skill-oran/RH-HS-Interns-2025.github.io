@@ -1,26 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- The title appears in the browser tab -->
-    <title>My First Website</title>
-    
-   <link rel=" stylesheet" href ="about-me.css">
+<html>
+<head>
+    <title>My Interactive Website</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p class = "mystyle"> Hi! My name is Aydin and this is my first webpage <p>
-
-    <h2>About me</h2>
+    <h1>Welcome to My Final Project Website</h1>
+    <h3>Hi! My name is Aydin. This is my final project for the Red Hat 2025 High School summer internship!</h3>
+   
+    <div class="card">
+        <h2>About Me</h2>
+        
+        <p>I go to Wayland High School, in Wayland, Massachusetts. I enjoy coding with AI, spending time with friends, and playing sports. I also like computer science, and in my free time I like to golf. 
+            Last summer, I trained a Chat GPT model with image recognition. That got me really interested in AI, and so I decided to take an OpenShift AI Learning Path.</p>
     
-    <p class="highlight"> Im a high school student learning web development!</p>
+    </div>
+    
+    <div class="card">
+        <h2>My Interests</h2>
+    
+        <ul>
+            <li>Working with Ai</li>
+            <li>Web development</li>
+            <li>Playing soccer</li>
+            <li>Golfing</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h2>Here are some pictures from my amazing internship!</h2>
+     
+        <img src="file:///Users/aozpeyni/Downloads/Coding-Pic.JPG" 
+             alt="Placeholder image"
+             width="200px"
+             height="auto">
 
-    <h2> My Interests</h2>
-    <ul class = "mystyle">
-        <li>Web development</li>
-        <li>Playing Soccer</li>
-        <li>Golfing</li> 
+        <img src="file:///Users/aozpeyni/Downloads/PingPongPic.jpg" 
+             alt="Placeholder image"
+             width="200px"
+             height="auto">
 
-    </ul>
-    <h2> Thanks for visitng my page!</h2>
-</body>
-</html> 
+
+    </div>
+
+      <!-- Add this to your HTML -->
+<h2>Useful Links</h2>
+<p>Check out my Github and LinkedIn!</p>
+
+
+<!-- This is a link that looks like a button -->
+<a href="https://github.com/AydinOzpeynirci" class="my-button" target="_blank" style="text-decoration: none;">
+   GitHub
+</a>
+
+
+<a href="https://LinkedIn.com" class="my-button" target="_blank" style="text-decoration: none; margin-left: 10px;">
+   LinkedIn
+</a>
+
+
+<h2>My Social Media Video</h2>
+<a href="https://github.com/AydinOzpeynirci" class="my-button" target="_blank" style="text-decoration: none;">
+   Video Link
+</a>
+
+
+<script>
+function showMessage() {
+    document.getElementById('secret').style.display = 'block';
+}
+
+</script>
+
+
+<h2>My Journal Entries!</h2>
+<a href="https://rh-hs-interns-2025.github.io/interns/aydin-ryan-ozpeynirci/journals/journals.html" class="my-button" target="_blank" style="text-decoration: none;">
+   Click here to see all of my Journal entries!
+</a>
+
+<!-- Add this to your HTML -->
+<h2>Everything Together</h2>
+
+<!-- Hoverable list -->
+<ul>
+    <li>Hover over me!</li>
+    <li>Me too!</li>
+</ul>
+
+<!-- Simple JavaScript button -->
+<button class="my-button" onclick="alert('Hello!')">
+    Say Hello
+</button>
+
+<!-- Link that looks like a button -->
+<a href="https://github.com" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left: 10px;">
+    Visit GitHub
+</a>
+
+
+

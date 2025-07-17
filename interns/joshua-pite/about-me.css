@@ -1,11 +1,15 @@
 body {
     font-family: Arial, sans-serif; 
-    background-color: rgb(255, 208, 208);
+    background-color: rgb(74, 74, 74);
     margin: 20px;
 }
 
 h1 {
-    color:rgb(184, 0, 0)
+    color:#ffa7a7
+}
+
+p {
+    color:rgba(253, 166, 166, 0.607)
 }
 
 .highlight {
@@ -16,4 +20,75 @@ h1 {
 .my-style {
     color:rgb(255, 81, 118);
     font-size: 18px;
+}
+
+/* Make links change color when you hover */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8f8f;
+    text-decoration: underline;
+}
+
+/* Make images slightly bigger on hover */
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Add smooth transitions to everything */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Create a card style that lifts up on hover */
+.card {
+    background-color: rgb(255, 123, 123);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 10);
+    color: #ffa7a7;
+    p {
+    color:#515151
+}
+    h2 {
+    color:#000000f6
+}
+    
+}
+.card li {
+    color:#6a6a6af6
+}
+
+.card ul {
+    color:#ea0000
+}
+.card:hover {
+    box-shadow: 0 5px 15px rgba(255, 121, 107, 0.96);
+    transform: translateY(-13px);
+}
+
+/* Style a button that changes on hover */
+.my-button {
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.my-button:hover {
+    background-color: #ff8a53;
+    transform: scale(1.05);
+}
+
+/* Make list items highlight on hover */
+li:hover {
+    background-color: #fd6565;
+    padding-left: 10px;
 }

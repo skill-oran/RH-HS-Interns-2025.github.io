@@ -1,16 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>Arohan Pathak</title>
+    <link rel="stylesheet" href="about-me.css">
+
+
+
+
+
+
 </head>
 <body>
-  <h1>Hi</h1>
+
+    <img src="data:image/png;base64,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" 
+             alt="Placeholder image">
+
+    <h1>Arohan Pathak</h1>
+    <p>Littleton High School, Littleton, MA</p>
+    
+
+
+     
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I'm a rising high school Senior from Littleton, Massachussetts, with an interest in engineering and business. I like learning new things, meeting new people, and building new connections. I've lived in Mass my entire life, and have always been attracted to the field of engineering, primarily because of my consistent interest in cars. As a result I started robotics when I was in 6th grade in FIRST Lego League (FLL), and joined an FIRST Robotics Team (FRC) team in 8th grade. Since then I have been part of the team and have learned a series of valuable skills ranging from Mechanical, Electrical, Software, Business, Fundraising, and a bunch of other very important skills.    </p>
+        <p>Hover over this card to see it lift up!</p>
+    </div>
+    
+    <div class="card">
+        <h2>My Interests</h2>
+        <p>Hover over the items below:</p>
+        <ul>
+            <li>Web Development</li>
+            <li>Creating Cool Websites</li>
+            <li>Learning new things</li>
+            <li>Cars</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h2>My Favorite Image</h2>
+        <p>Hover over the image to make it bigger!</p>
+        <img src="https://media.istockphoto.com/id/1503382373/photo/boston-in-massachusetts-usa.jpg?s=612x612&w=0&k=20&c=8dfSw9utXj9DvEw1wyG-tmSV3j2AgSOZyDYnaepRnF4=" 
+             alt="Placeholder image">
+    </div>
+
+<div class="card animate">
+    <h2>Collaboration Section</h2>
+    <p>Working with my awesome classmates!</p>
+    <ul>
+        <li>Learning from others</li>
+        <li>Sharing knowledge</li>
+        <li>Building together</li>
+    </ul>
+</div>
+
+
+
 </body>
-</html> 
+</html><!-- Add this to your HTML -->
+<h2>Useful Links</h2>
+<p>Contact info:</p>
+
+<!-- This is a link that looks like a button -->
+<a href="https://www.linkedin.com/in/arohan-pathak-641b94266" class="my-button" target="_blank" style="text-decoration: none;">
+   LinkedIn
+</a>
+
+
+
+<h2>Secret Message</h2>
+<button class="my-button" onclick="showMessage()">
+    Show Secret
+</button>
+
+<p id="secret" style="display: none; color: rgb(184, 2, 2);">
+    You found it!
+</p>
+
+<!-- Add this at the very bottom, before </body> -->
+<script>
+function showMessage() {
+    document.getElementById('secret').style.display = 'block';
+}
+</script>
+
+<h2>Try JavaScript!</h2>
+<button class="my-button" onclick="alert('Hello!')">
+    Click Me
+</button>
+
+<!-- Add this to your HTML -->
+<h2>Everything Together</h2>
+
+<!-- Hoverable list -->
+<ul>
+    <li>Hover over me!</li>
+    <li>Me too!</li>
+</ul>
+
+<!-- Simple JavaScript button -->
+<button class="my-button" onclick="alert('Hello!')">
+    Say Hello
+</button>
+
+<!-- Link that looks like a button -->
+<a href="https://docs.google.com/document/d/1NH0zvGZb6gJpB3lXOqdQSGg_LT3P1sgH3GQqcJaxhCE/edit?usp=sharing" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left: 10px;">
+    Journal Entries
+</a>
+
+<a href="https://github.com/aropat/RH-HS-Interns-2025.github.io" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left: 10px;">
+    Visit GitHub
+</a
+
+
+

@@ -1,0 +1,82 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #303030;
+	margin: 50px;
+	color: #f0f0f0;
+}
+
+* {
+	transition: all 0.3s ease;
+}
+
+h1 {
+	color: #ff7fa3;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+a {
+	background-color: #505050;
+	color: #ff7fa3;
+	padding: 2px 5px 2px 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #707070;
+}
+
+.card-block {
+	display: flex;
+	flex-direction: row;
+}
+
+.social-buttons {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	gap: 10px;
+	z-index: 999;
+}
+
+.social-buttons a {
+	padding: 5px;
+	box-shadow: 0 2px 8px #00000050;
+}
+
+.card {
+	width: 70%;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: 0 2px 8px #00000050;
+	margin-top: 20px;
+	margin-left: 10px;
+	background-color: #404040;
+}
+.first-card {
+	width: 30%;
+}
+.card:hover {
+	box-shadow: 0 8px 15px #00000080;
+	transform: translateY(-5px);
+}
+
+.highlight {
+	background-color: #60606050;
+	color: #ff7fa3;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	/* text-align: left; */
+}
+
+.my-style {
+	color: #ff6600;
+	font-size: 18px;
+}
