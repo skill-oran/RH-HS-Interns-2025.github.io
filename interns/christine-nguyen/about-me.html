@@ -1,16 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
+<html>
+<head>
+    <title>My First Website</title>
     <link rel="stylesheet" href="./about-me.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Mono&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Slab:wght@100..900&display=swap');
+</style>
 </head>
 <body>
-  <h1>Hi</h1>
+
+    <div class="main-card-container">
+        <div class="cardlocation">
+            <h2 style="width: 100%; padding-left: 20px; color: #636EAA;"> 𖡡 Boston, MA </h2>
+        </div>
+
+        <div class="cardname">
+            <h1> Christine Nguyen </h1>
+        </div>
+
+        <div class="card-content-wrapper">
+            <div class="card-row">
+                <div class="card">
+                    <h2>About Me</h2>
+                    <p class="highlight"> Boston Latin Academy </p>
+                  <p> High School Intern @ Red Hat </p>
+                  <p> Skills: Teamwork, attention to detail, adaptability </p>
+                  <p> Interests: Music, Programming
+                  <p> Goals: Gaining more experience </p>
+                    
+                </div>
+
+                <div class="card">
+                    <h2> Links </h2>
+                  
+                        <a href="https://www.linkedin.com/in/christine-nguyen-9934b2374/" class="my-button" target="_blank" style="text-decoration: none;">
+                        LinkedIn </a>
+                 
+
+ <p> </p>
+
+                        <button class="my-button" onclick="showText('journal')">Journal Entries</button>
+<p id="journal" style="display: none; color: red;">
+    <a href="https://rh-hs-interns-2025.github.io/interns/christine-nguyen/journals/journals.html" target="_blank" style="color: #6D6183; text-decoration: underline;">
+        Four Journal Entries
+    </a>
+</p>
+
+                  <p> </p>
+
+                       <button class="my-button" onclick="toggleVideo()">Social Media Reel</button>
+
+<div id="reel-container" style="display: none; margin-top: 10px;">
+    <video id="reel-video" width="380" height = "600"controls>
+        <source src="file:///Users/chrnguye/Downloads/videoredhat.mp4" type="video/mp4">
+        
+    </video>
+
+    
+
+</div>
+
+
+</div>
+ 
+
+
+
+
+
+                
+
+                
+
+                <div class="cardimgs">
+                    <div class="image-layout">
+                        <img src="file:///Users/chrnguye/Downloads/IMG_0940.jpeg" alt="Image 1">
+                        <img src="file:///Users/chrnguye/Downloads/IMG_7472.jpeg" alt="Image 2">
+                        <img src="file:///Users/chrnguye/Downloads/IMG_0952.jpeg" alt="Image 3"> </div>
+                </div>
+            </div>
+      </div>
+            <div class="cardbottom" </div>
+
+<div style="text-align: right; margin-top: -2px; padding-right: 5px;">
+  <span class="dot" style="background-color: rgb(99, 110, 170);"></span>
+  <span class="dot" style="background-color: #6D6183;"></span>
+  <span class="dot" style="background-color: #FAF8E4;"></span>
+</div>
+
+
+
+
+        </div>
+    
+
+<script>
+    function showText(id) {
+        const element = document.getElementById(id);
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+<script>
+    function toggleVideo() {
+        const container = document.getElementById('reel-container');
+        const video = document.getElementById('reel-video');
+
+        if (container.style.display === 'none' || container.style.display === '') {
+            container.style.display = 'block';
+        } else {
+            container.style.display = 'none';
+            video.pause();
+        }
+    }
+</script>
+
 </body>
-</html> 
+</html>
+
