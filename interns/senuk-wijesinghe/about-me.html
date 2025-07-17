@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="./about-me.css">
 </head>
 <body>
+ <!-- Mouse Trail Container -->
+<div id="trail-container"></div>
+ <div class="crt-overlay"></div>
+
   <div class="social-buttons">
 	<a href="https://github.com/Mespyr" target="_blank">Github</a>
 	<a href="https://linkedin.com/in/senuk-wijesinghe-616a92353" target="_blank">LinkedIn</a>
@@ -48,11 +52,20 @@
 	</div>
   </div>
 
-  <div class="card">
-	<h2>Favorite Photos</h2>
-	<img src="./static/img_1.JPEG" height="250">
-	<img src="./static/img_2.JPEG" height="250">
-	<img src="./static/img_3.JPEG" height="250">
+  <div class="card-block">
+	<div class="card">
+	  <h2>Favorite Photos</h2>
+	  <img src="./static/img_1.JPEG" height="250">
+	  <img src="./static/img_2.jpeg" height="250">
+	  <img src="./static/img_3.jpeg" height="250">
+	</div>
+	<div class="card first-card">
+	  <h2>Social Media Video</h2>
+	  <video controls>
+		<source src="./static/DayInTheLife.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	  </video>
+	</div>
   </div>
 
   <div class="card animate">
@@ -65,6 +78,7 @@
       </ul>
   </div>
 
-  <p class="my-style">Thanks for visiting my page!</p>
+ <p class="my-style">Thanks for visiting my page!</p>
+ <script src="about-me.js"></script>
 </body>
-</html> 
+</html>
