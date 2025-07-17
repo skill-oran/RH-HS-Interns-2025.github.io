@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <head>
     <!-- Meta tags for proper character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
+    <title>My First Website</title>
+
     <!-- Link to our external CSS file -->
     <link rel="stylesheet" href="./about-me.css">
-</head>
-<body>
-  <h1>Hi</h1>
-</body>
-</html> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- JavaScript -->
+    <script src="./about-me.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Hi! My name is Rudra Shende.</h1>
+    <p>This is my web page for the Red Hat 2025 High School Internship.</p>
+    <h2>First, try out JavaScript by clicking the 'Click Me!' button!</h2>
+    <h2>Then, click the 'About Me' and 'My Interests' buttons to see two new sections appear!</h2>
+
+    <button class="btn1">Click Me!</button>
+    <button class="btn2">About Me</button>
+
+    <div class="about-me card">
+      <h2>About Me</h2>
+      <p>I am a high school student learning web development!</p>
+      <p>Hover over this section to see it lift up!</p>
+    </div>
+
+    <button class="btn3">My Interests</button>
+    <div class="interests card">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>Programming</li>
+        <li>Open Source</li>
+        <li>Linux</li>
+        <li>Artificial Intelligence</li>
+      </ul>
+      <p>Hover over the items to see them change!</p>
+    </div>
+    
+    <p>This is my GitHub account: <a class="link" target="_blank" href="https://github.com/rudra-s-1027">My GitHub
+        Account</a></p>
+    <img src="./static/red-hat.svg" alt="Red Hat Logo" class="logo" />
+    <p>Hover over the image to see it rotate 360 degrees!</p>
+
+    <p class="animate__animated animate__bounce" style="font-weight: bold">This element is animated!</p>
+
+    <p>Thanks for visiting my page!</p>
+  </body>
+
+</html>

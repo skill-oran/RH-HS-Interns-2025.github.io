@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
+    <title>About Me - Jessica Zanchi</title>
+    <link rel="icon" type="image/x-icon" href="images/redhatlogo.png">
     <link rel="stylesheet" href="./about-me.css">
+    <script src="about-me.js"></script>
 </head>
 <body>
-  <h1>Hi</h1>
+    <div id="splashscreen">
+        <div id="titlestuff">
+            <h1>JESSICA ZANCHI</h1>
+            <div class="cirdecor"></div>
+            <div class="cirdecor"></div>
+            <img id="titlepic" src="images/redhatwtbg.webp" height="25" width="25" alt="Red Hat Logo">
+            <h2>Red Hat High School Internship</h2>
+            <h2>July 7 - July 18, 2025</h2>
+        </div>
+    </div>
+
+    <div id="bodycontent">
+        <hr class="linethrough">
+        
+        <div class="reveal whiteblock" id="aboutme">
+            <img style="width:40%; aspect-ratio: 1 / 1; height:auto; object-fit:cover;" src="images/meandcado.jpg" alt="Prom day!">
+            <div style="border-radius: 10px;width:50%;background-color: rgba(222, 222, 222, 0.63);">
+                <h2 style="border-radius: 10px 10px 0px 0px;margin-top:0;">ABOUT ME</h2>
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;background-color: rgba(144, 143, 143, 0.311);padding:15px;">
+                    <h3 style="margin:0">Jessica Zanchi - Keefe Tech 2026</h3>
+                    <div style="display:flex;align-items:center;gap:10px;margin:4px 0 0 0;">
+                        <a style="text-decoration: none; filter:invert(100)" target="_blank" href="https://www.linkedin.com/in/jessica-zanchi-b94a81335/">
+                            <img src="images/linkedinlogo.png" height="30" alt="LinkedIn Link">
+                        </a>
+                        <a style="text-decoration: none; filter:invert(100)" target="_blank" href="https://www.instagram.com/jess.10z?igsh=aG01dDRxcjRuNjdw&utm_source=qr">
+                            <img src="images/instalogo.png" height="30" alt="Instagram Link">
+                        </a>
+                    </div>
+                </div>
+                <div style="display:flex;gap:5px;position:relative;flex-direction: column;padding:25px 55px;transform:scale(1.1);">
+                    <p>Hi! My name is Jess, and I'm a rising senior at Keefe Technical School. I'm enrolled in the Programming & Web Development vocational course, and I'm a part of the soccer and track teams at my school. I'm excited to be a part of the Red Hat community!</p>
+                    <div>
+                        <h4>Want to know a little more?</h4>
+                        <ul>
+                            <li>I have over 6 years of coding experience</li>
+                            <li>I am familiar with languages such as Java, C# and SQL</li>
+                            <li>I am a part of BPA and SkillsUSA, where I have placed on the state level on multiple occasions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal greenblock" id="aboutme">
+            <img style="width:20%; height:auto; object-fit:cover;" src="images/windowcado.JPG" alt="Avocado getting some sun">
+            <div style="border-radius: 10px;width:50%;background-color: rgba(0, 0, 0, 0.17);">
+                <h2 style="border-radius: 10px 10px 0px 0px;margin-top:0;">REELS PROJECT</h2>
+                <h3 style="background-color: rgba(0, 0, 0, 0.4);padding:25px 35px;">Day in The Life: Red Hat Intern Edition</h3>
+                <p style="transform:scale(1.1);">As a way fun to showcase our experience at the Red Hat office, the interns were tasked with creating a short Day in The Life video. Each of our 90 second videos needed to illustrate the typical day of a high school intern.<br><br>My video in particular takes a first person POV and walks the viewer through a personal account of my day. Each clip is short and sweet and accompanied by a brief voiceover that explains the video.<br><br>Please enjoy!</p>
+            </div>
+
+            <div id="mediaplayer">
+                <div class="video-container" id="reel">
+                    <video id="reelVideo" src="images/dayinthelife.mp4" loop muted playsinline></video>
+                    <div class="overlay-play" id="playIcon">▶</div>
+                    <div class="mute-button" id="muteButton">🔇</div>
+                    <div class="fullscreen-button" id="fullscreenButton">⛶</div>
+                    <div class="time-left" id="timeLeft">--:--</div>
+                    <div class="progress-bar-container" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="reveal whiteblock" id="aboutme">
+            <div style="border-radius: 10px;width:50%;background-color: rgba(222, 222, 222, 0.63);">
+                <h2 style="border-radius: 10px 10px 0px 0px;margin-top:0;">JOURNAL ENTRIES</h2>
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;background-color: rgba(144, 143, 143, 0.311);padding:15px;">
+                    <h3 style="margin:0">Four unique reflections of Red Hat's culture</h3>
+                </div>
+            </div>
+            <img style="width:40%; aspect-ratio: 1 / 1; height:auto; object-fit:cover;" src="images/puffycado.jpg" alt="Avocado being close!">
+        </div>
+    </div>
 </body>
-</html> 
+</html>

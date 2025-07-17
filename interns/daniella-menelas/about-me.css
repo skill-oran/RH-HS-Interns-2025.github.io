@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+
+}
+
+hi {
+  color:#333366
+}
+
+.highlight {
+background-color:yellow;
+padding:  5px;
+}
+
+.my-style {
+    color:#ff6600;
+    font-size: 18px;
+
+}
+    

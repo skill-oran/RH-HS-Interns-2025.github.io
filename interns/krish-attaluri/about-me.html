@@ -1,16 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Krish Attaluri's Interactive Website</title>
+    <link rel="stylesheet" href="about-me.css"/>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #232526 0%, #414345 100%);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 28px 24px 24px 24px;
+            margin: 32px auto 32px auto;
+            max-width: 600px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255,255,255,0.18);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease both;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .my-button {
+            background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 8px 4px;
+            box-shadow: 0 2px 8px rgba(76, 110, 245, 0.15);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .my-button:hover {
+            background: linear-gradient(90deg, #5548c8 0%, #36b1e6 100%);
+            transform: scale(1.08);
+        }
+        .hidden { display: none; }
+        iframe {
+            width: 100%;
+            max-width: 640px;
+            height: 360px;
+            border: none;
+            margin: 10px auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .rainbow-text { animation: rainbow 2s linear infinite; }
+        @keyframes rainbow {
+            0% { color: #ff5252; }
+            25% { color: #ffe259; }
+            50% { color: #43e97b; }
+            75% { color: #38f9d7; }
+            100% { color: #ff6a00; }
+        }
+        .pulse { animation: pulse 1.5s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+        /* DOOM Section */
+        .doom-section {
+            background: rgba(30, 30, 40, 0.85);
+            border: 2px solid #6c63ff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(108,99,255,0.15);
+            margin: 36px auto 36px auto;
+            padding: 24px 12px 18px 12px;
+            max-width: 700px;
+        }
+        #jsdos {
+            width: 640px;
+            height: 400px;
+            margin: 0 auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background: #181828;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+            position: relative;
+        }
+        #doom-loading {
+            color: #ffe259;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 18px 0 0 0;
+            letter-spacing: 1px;
+        }
+        #doom-error {
+            color: #ff5252;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 18px 0 0 0;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hi</h1>
+    <h1 class="rainbow-text">Welcome to My Interactive Website!</h1>
+    <p class="pulse">Hi! My name is Krish Attaluri. Hover over elements to see them change!</p>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I'm a high school student learning web development!</p>
+        <p>Hover over this card to see it lift up!</p>
+    </div>
+
+    <div class="card">
+        <h2>My Interests</h2>
+        <p>Hover over the items below:</p>
+        <ul style="list-style: disc inside; text-align: left; max-width: 400px; margin: 0 auto;">
+            <li>Web Development</li>
+            <li>Creating Cool Websites</li>
+            <li>Video Gaming</li>
+            <li>Working out</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Try JavaScript!</h2>
+        <button class="my-button pulse" onclick="alert('Hello!')">Click Me</button>
+    </div>
+
+    <div class="card">
+        <h2>Carved In Cary Socials</h2>
+        <p>Click these buttons to visit my socials:</p>
+        <a href="https://www.instagram.com/carvedincary/" class="my-button" target="_blank">Instagram</a>
+    </div>
+
+    <div class="card">
+        <h2>Secret Message</h2>
+        <button class="my-button" onclick="showMessage()">Show Secret</button>
+        <p id="secret" class="hidden" style="color: #ffe259; font-weight: bold; animation: pulse 1s infinite;">You found it!</p>
+    </div>
+
+    <div class="card animate">
+        <h2>Collaboration Section</h2>
+        <p>Working with my awesome classmates!</p>
+        <ul style="list-style: disc inside; text-align: left; max-width: 400px; margin: 0 auto;">
+            <li>Learning from others</li>
+            <li>Sharing knowledge</li>
+            <li>Building together</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>My Favorite Game</h2>
+        <p>Hover over the image to make it bigger!</p>
+        <p>I like Doom Eternal because it was one of the first games I ever played and I still have fun playing it. My favorite weapon is the Crucible Blade and I also like the lore of the game :)</p>
+        <img src="https://assetsio.gnwcdn.com/doom_eternal-1.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp"
+             style="width: 100%; max-width: 400px; transition: transform 0.3s; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.25);"
+             onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="Doom Eternal">
+    </div>
+
+    <div class="card">
+        <h2>Secret Video</h2>
+        <button class="my-button" onclick="document.getElementById('secret-video').classList.toggle('hidden')">Toggle Secret Video</button>
+        <div id="secret-video" class="hidden">
+            <iframe src="https://www.youtube.com/embed/_nZ3LZyx3mM" title="Secret Video"></iframe>
+        </div>
+    </div>
+
+    <!-- 🎮 Classic DOOM Game Section -->
+    <div class="doom-section">
+        <h2 class="pulse">Play Classic DOOM (1993)</h2>
+        <p style="margin-bottom: 10px;">Use arrow keys to move, Ctrl to shoot, and Enter to open doors. Works best on desktop!</p>
+        <button class="my-button" onclick="enterFullscreen()">Go Fullscreen</button>
+        <div id="doom-loading">Loading DOOM...</div>
+        <div id="doom-error" class="hidden">Failed to load DOOM. Please check your connection and make sure the .jsdos file is present.</div>
+        <div id="jsdos"></div>
+    </div>
+
+    <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // Show secret message
+    function showMessage() {
+        document.getElementById('secret').classList.remove('hidden');
+    }
+    // Enhance DOOM loading/failure UI
+    window.addEventListener('DOMContentLoaded', function() {
+        var doomLoading = document.getElementById('doom-loading');
+        var doomError = document.getElementById('doom-error');
+        var jsdosDiv = document.getElementById('jsdos');
+        if (typeof Dos !== 'undefined' && jsdosDiv) {
+            Dos(jsdosDiv).run("/static/DOOM1.jsdos").then(function() {
+                doomLoading.style.display = 'none';
+            }).catch(function() {
+                doomLoading.style.display = 'none';
+                doomError.classList.remove('hidden');
+            });
+        } else {
+            doomLoading.style.display = 'none';
+            doomError.classList.remove('hidden');
+        }
+    });
+    </script>
 </body>
-</html> 
+</html>

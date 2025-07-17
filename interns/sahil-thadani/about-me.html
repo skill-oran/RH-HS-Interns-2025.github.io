@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<head>
+  <meta charset="UTF-8">
+  <title>My First Website</title>
+  <link rel="stylesheet" href="./about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+  <div class="container">
+    
+    <!-- Navigation -->
+    <div class="navbar">
+      <div class="logo"><img src="file:///Users/sthadani/Downloads/redhat-sources.jpg" width="25%" height="auto" alt="Red Hat logo"></div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#links">Links</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <h1>Welcome to my website!</h1>
+    <img src="file:///Users/sthadani/Downloads/IMG_5444.JPG" alt="laceholder image">
+    <p class="my-style-white">Hi, my name is Sahil and this is my webpage.</p>
+
+    <div class="card" id="about">
+      <h2>About Me</h2>
+      <p class="my-style">I'm a student at Westborough High School learning web development.
+        I enjoy coding and learning new technologies. I love to play sports like tennis and basektaball, and games like 2k and Madden in my free time. 
+        I'm intrested in CS, Engineering, and Finance.
+      </p>
+    </div>
+
+    <div class="card" id="interests">
+      <h2>My Interests</h2>
+      <ul>
+        <li class="my-style">AI and its use in different fields</li>
+        <li class="my-style">Finance and Accounting</li>
+        <li class="my-style">Soccer, Tennis, and Basketball</li>
+      </ul>
+    </div>
+
+    <div class="card" id="links">
+      <h2>Useful Links</h2>
+      <p class="my-style-white">Click the button to visit my pages:</p>
+      <a href="https://www.github.com/sahiltheram" class="my-button" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/sahil-thadani-45828b321/" class="my-button" target="_blank">LinkedIn</a>
+      <a href="file:///Users/sthadani/Downloads/RH-HS-Interns-2025.github.io/interns/sahil-thadani/journals/journals.html" class="my-button" target="_blank">Journals</a>
+
+    </div>
+
+    <div class ="card">
+      <h2>Day in the life of a Red Hat intern</h2>
+      <p class="my-style-white">I love playing and watching sports. Here are some of my favorites:</p>
+      <ul>
+        
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Basketball</h2>
+      <button id="toggle-button" class="my-button" onclick="toggleMessage()">
+        Reveal Favorite Basketball Player
+      </button>
+
+      <p id="secret" style="display: none; color: #08b725;">
+        My favorite basketball player is <strong>Payton Pritchard</strong>! 
+        He's really good at basketball, and I love watching his ball control and scoring abilities.
+        <img src="data:image/jpeg;base64,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" alt="placeholder image">
+      </p> 
+    </div>
+
+    <div class="card" id="contact">
+      <h2>Contact Me</h2>
+      <p class="my-style-white">Feel free to reach out to me via email at sthadani@redhat.com:</p>
+      <a href="mailto: sthadani@redhat.com" class="my-button">Email</a>
+  </div>
+  <h1>Thanks for visiting the page!</h1>
+
+  <script>
+  function toggleMessage() {
+    const secret = document.getElementById("secret");
+    const button = document.getElementById("toggle-button");
+
+    if (secret.style.display === "none" || secret.style.display === "") {
+      secret.style.display = "block";
+      button.textContent = "Hide Favorite Basketball Player";
+    } else {
+      secret.style.display = "none";
+      button.textContent = "Reveal Favorite Basketball Player";
+    }
+  }
+</script>
 </body>
-</html> 
+</html>

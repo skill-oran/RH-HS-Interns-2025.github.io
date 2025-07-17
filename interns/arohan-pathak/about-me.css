@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 20px;
+}
+
+p {
+    color: #ffffff; 
+}
+
+
+
+h1 {
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff; 
+}
+
+.highlight {
+    background-color: rgb(190, 90, 77);
+    padding: 5px;
+}
+
+.my-style{
+    color: #ff6600;
+    font-size: 18px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Make images slightly bigger on hover */
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Add smooth transitions to everything */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Create a card style that lifts up on hover */
+.card {
+    background-color: rgb(231, 86, 86);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
+/* Style a button that changes on hover */
+.my-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.my-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Make list items highlight on hover */
+li:hover {
+    background-color: #ecf0f1;
+    padding-left: 10px;
+}
