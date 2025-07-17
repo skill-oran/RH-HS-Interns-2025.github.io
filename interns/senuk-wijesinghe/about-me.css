@@ -140,3 +140,7 @@ a:hover {
     transform: scale(2);
   }
 }
+
+video {
+	width: 100%;
+}
