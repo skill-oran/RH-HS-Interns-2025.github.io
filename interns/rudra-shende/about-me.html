@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- The title appears in the browser tab -->
-  <title>My First Website</title>
+  <title>My Website for the 2025 Red Hat HS Internship</title>
 
   <!-- Link to our external CSS file -->
   <link rel="stylesheet" href="./about-me.css">
@@ -19,10 +19,11 @@
 <body>
   <h1>Hi! My name is <strong>Rudra Shende</strong>.</h1>
   <p>This is my web page for the 2025 Red Hat High School Internship.</p>
-  <h2>First, see the power of JavaScript by clicking the 'Click Me!' button!</h2>
-  <h2>Then, click the 'About Me' and 'My Interests' buttons to see two new sections appear!</h2>
-
-  <button class="btn1">Click Me!</button>
+  <h2>Click the 'About Me' and 'My Interests' buttons to see two new sections appear!</h2>
+  <div class="border">
+    <h2>Secret Message</h2>
+    <button class="btn1">Reveal secret message</button>
+  </div>
   <br>
   <button class="btn2">About Me</button>
   <br>
@@ -35,6 +36,21 @@
     <p>Hover over this section to see it lift up!</p>
   </div>
   <br>
+
+  <h2>Internship Highlight</h2>
+  <div class="border animate__animated animate__shakeX">
+    <p>I created an Instagram Reel interviewing a fellow intern! Check it out below!</p>
+    <div class="tenor-gif-embed" data-postid="14249948" data-share-method="host" data-aspect-ratio="0.730897"
+      data-width="30%" data-height="50%"><a
+        href="https://tenor.com/view/smartparcel-down-arrows-arrow-loading-gif-14249948">Smartparcel
+        Down Arrows Sticker</a>from <a href="https://tenor.com/search/smartparcel-stickers">Smartparcel Stickers</a>
+    </div>
+    <video controls aria-label="Video of an intern interview" width="320" height="200">
+      <source src="./static/Internship-Reel.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  </div>
+
   <button class="btn3">My Interests</button>
   <div class="interests card border animate__animated animate__fadeInLeftBig">
     <h2>My Interests</h2>
@@ -58,7 +74,7 @@
   </div>
 
   <h2>What did I do as an intern at Red Hat?</h2>
-  <div class="border">
+  <div class="accomplishments">
     <ul>
       <li><strong>Social Media</strong>
         <ul>
@@ -100,8 +116,8 @@
       width="200px" />
     <img src="./static/DSC_0023.JPG" alt="Picture of me coding" height="200px" width="200px" />
   </div>
-  <div width="320" height="200" class="border">
-    <video controls aria-label="Video of all interns waving">
+  <div class="border">
+    <video controls aria-label="Video of all interns waving" width="320" height="200">
       <source src="./static/all-interns.MOV" type="video/quicktime">
       <source src="./static/all-interns.mp4" type="video/mp4">
       Your browser does not support the video tag.

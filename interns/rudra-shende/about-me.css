@@ -2,6 +2,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -12,12 +13,26 @@ body {
     background-color: #f0f0f0;
     margin: 20px;
     background-color: #e4e4e4;
-    transition: fadeIn 3s ease-in-out; 
+    transition: fadeIn 3s ease-in-out;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* horizontal centering */
+    align-items: center;
+    /* vertical centering */
+    flex-direction: column;
+    /* optional: stacks children vertically */
 }
 
 .border {
     border-radius: 20px;
     background-color: #ffffff;
+    text-align: center;
+}
+
+.accomplishments {
+    background-color: #ffffff;
+    border-radius: 20px;
 }
 
 h1 {
