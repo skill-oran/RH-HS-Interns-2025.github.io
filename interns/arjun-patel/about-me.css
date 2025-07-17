@@ -39,6 +39,7 @@ img:hover {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     cursor: pointer;
+    width: 60%;
 
 }
 
@@ -55,4 +56,9 @@ img:hover {
     position: relative;
     /* left: 25%; */
     transform: translateX(5%)
+}
+
+.video {
+    float: right;
+    border-radius: 20px;
 }
