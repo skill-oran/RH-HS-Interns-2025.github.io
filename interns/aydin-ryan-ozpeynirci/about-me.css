@@ -6,6 +6,9 @@ body{
 h1{
     color:#a6a6ed;
 }
+.h1color{
+    color: #ecf0f1;
+}
 .highlight{
     background-color: yellow;
     padding: 5px;
@@ -16,7 +19,7 @@ h1{
     font-size: 18px;
 }
 a {
-    color: #d42727;
+    color: #f3f3f3;
     text-decoration: none;
 }
 
@@ -51,7 +54,7 @@ img:hover {
 
 /* Style a button that changes on hover */
 .my-button {
-    background-color: rgb(91, 109, 212);
+    background-color: rgb(30, 33, 205);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -69,4 +72,13 @@ img:hover {
 li:hover {
     background-color: #ecf0f1;
     padding-left: 10px;
+}
+
+.emails{
+    margin-bottom: 100px;
+}
+.fedoraPic{
+    margin-left: 350px;
+
+
 }
