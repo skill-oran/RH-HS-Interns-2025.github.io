@@ -24,14 +24,71 @@ const videoContainer = document.getElementById('reel');
     muteButton.textContent = video.muted ? '🔇' : '🔊';
   });
 
-  fullscreenButton.addEventListener('click', (e) => {
+fullscreenButton.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (!document.fullscreenElement) {
-      videoContainer.requestFullscreen().catch(err => console.error(err));
-    } else {
-      document.exitFullscreen();
+
+    // Check if overlay already exists
+    let overlay = document.getElementById('customFullscreenOverlay');
+    if (!overlay) {
+        // Create overlay
+        overlay = document.createElement('div');
+        overlay.id = 'customFullscreenOverlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100vw';
+        overlay.style.height = '100vh';
+        overlay.style.background = 'rgba(0,0,0,0.7)';
+        overlay.style.zIndex = '9999';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+
+        // Clone video node
+        const fullscreenVideo = video.cloneNode(true);
+        fullscreenVideo.removeAttribute('id');
+        fullscreenVideo.style.maxWidth = '95vw';
+        fullscreenVideo.style.maxHeight = '95vh';
+        fullscreenVideo.style.width = 'auto';
+        fullscreenVideo.style.height = 'auto';
+        fullscreenVideo.style.borderRadius = '10px';
+        fullscreenVideo.controls = true;
+        fullscreenVideo.currentTime = video.currentTime;
+        fullscreenVideo.muted = video.muted;
+        fullscreenVideo.play();
+
+        // Sync time when closed
+        fullscreenVideo.addEventListener('pause', () => {
+            video.currentTime = fullscreenVideo.currentTime;
+        });
+        fullscreenVideo.addEventListener('ended', () => {
+            video.currentTime = fullscreenVideo.currentTime;
+        });
+
+        // Close button
+        const closeBtn = document.createElement('button');
+        closeBtn.textContent = '✕';
+        closeBtn.style.position = 'absolute';
+        closeBtn.style.top = '20px';
+        closeBtn.style.right = '30px';
+        closeBtn.style.fontSize = '2rem';
+        closeBtn.style.background = 'none';
+        closeBtn.style.color = '#fff';
+        closeBtn.style.border = 'none';
+        closeBtn.style.cursor = 'pointer';
+        closeBtn.style.zIndex = '10001';
+
+        closeBtn.addEventListener('click', () => {
+            video.currentTime = fullscreenVideo.currentTime;
+            video.muted = fullscreenVideo.muted;
+            overlay.remove();
+        });
+
+        overlay.appendChild(fullscreenVideo);
+        overlay.appendChild(closeBtn);
+        document.body.appendChild(overlay);
     }
-  });
+});
 
   function updateTimeLeft() {
     const remaining = video.duration - video.currentTime;
@@ -102,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.4 }
+        { threshold: 0.3 }
     );
 
     reveals.forEach((el) => {
@@ -126,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.4 }
+        { threshold: 0.3 }
     );
 
 	revealLefts.forEach((el) => {
