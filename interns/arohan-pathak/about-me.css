@@ -1,21 +1,38 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    background-color: #020000;
     margin: 20px;
 }
 
 p {
+    text-align: center;
     color: #ffffff; 
-}
+    font-size: 18px;
 
+}
 
 
 h1 {
+   font-weight: bold;
     color: #ffffff;
+    text-align: center;
 }
 
+
 h2 {
+    font-weight: bold;
     color: #ffffff; 
+    font-size: 45;
+}
+
+h3 {
+    font-weight: bold;
+    color: #000000;
+}
+
+h4 {
+
+    color: #000000;
 }
 
 .highlight {
@@ -50,7 +67,7 @@ img:hover {
 
 /* Create a card style that lifts up on hover */
 .card {
-    background-color: rgb(231, 86, 86);
+    background-color: rgb(202, 20, 20);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -64,13 +81,15 @@ img:hover {
 
 /* Style a button that changes on hover */
 .my-button {
-    background-color: #3498db;
-    color: white;
+    background-color: #d11313;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    display: inline-block; 
+    margin: 5px; 
 }
 
 .my-button:hover {
@@ -82,4 +101,18 @@ img:hover {
 li:hover {
     background-color: #ecf0f1;
     padding-left: 10px;
+}
+
+.personalnarr{
+  text-align: left;
+  color: black;
+  font-style: italic;
+}
+.black-text {
+  text-align: left;
+  color: black;
+}
+
+.left-align {
+  text-align: left;
 }
