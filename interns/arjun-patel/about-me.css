@@ -39,11 +39,20 @@ img:hover {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     cursor: pointer;
+
 }
 
 .card:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transform: translateY(-5px);
+    /* text-align: center; */
+    /* position: relative;
+    left: 50%;
+    transform: translateX(-25%) */
 }
 
-
+.slideX:hover {
+    position: relative;
+    /* left: 25%; */
+    transform: translateX(5%)
+}
