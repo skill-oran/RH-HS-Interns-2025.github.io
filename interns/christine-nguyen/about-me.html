@@ -1,100 +1,128 @@
 <html>
 <head>
-  <title> My First Website </title>
-  <link rel = "stylesheet" href="./about-me.css">
-  </head>
-
-
+    <title>My First Website</title>
+    <link rel="stylesheet" href="./about-me.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Mono&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Slab:wght@100..900&display=swap');
+</style>
+</head>
 <body>
 
-  <div class = "cardlocation">
-    <h2 style ="width: 100%; padding-left: 20px; color: #636EAA;"> 𖡡 Boston, MA </h2>
-  </div>
+    <div class="main-card-container">
+        <div class="cardlocation">
+            <h2 style="width: 100%; padding-left: 20px; color: #636EAA;"> 𖡡 Boston, MA </h2>
+        </div>
+
+        <div class="cardname">
+            <h1> Christine Nguyen </h1>
+        </div>
+
+        <div class="card-content-wrapper">
+            <div class="card-row">
+                <div class="card">
+                    <h2>About Me</h2>
+                    <p class="highlight"> Boston Latin Academy </p>
+                  <p> High School Intern @ Red Hat </p>
+                  <p> Skills: Teamwork, attention to detail, adaptability </p>
+                  <p> Interests: Music, Programming
+                  <p> Goals: Gaining more experience </p>
+                    
+                </div>
+
+                <div class="card">
+                    <h2> Links </h2>
+                  
+                        <a href="https://www.linkedin.com/in/christine-nguyen-9934b2374/" class="my-button" target="_blank" style="text-decoration: none;">
+                        LinkedIn </a>
+                 
+
+ <p> </p>
+
+                        <button class="my-button" onclick="showText('journal')">Journal Entries</button>
+<p id="journal" style="display: none; color: red;">
+    <a href="https://rh-hs-interns-2025.github.io/interns/christine-nguyen/journals/journals.html" target="_blank" style="color: #6D6183; text-decoration: underline;">
+        Four Journal Entries
+    </a>
+</p>
+
+                  <p> </p>
+
+                       <button class="my-button" onclick="toggleVideo()">Social Media Reel</button>
+
+<div id="reel-container" style="display: none; margin-top: 10px;">
+
+<iframe width="315" height="560"
+src="https://youtube.com/embed/GmcWdm4KMOU?feature=share>"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
 
 
-  <div class="cardname">
-    <h1> Christine Nguyen </h1>
-  </div>
 
-  <div class = "card-row">
-    <div class= "card">
-    <h2>About Me</h2>
-    <p class="highlight"> I'm a high school student learning web development</p>
-    <div class="card animate">
-    <h2>Collaboration Section</h2>
-    <p>Working with my awesome classmates!</p>
-    <ul>
-        <li>Learning from others</li>
-        <li>Sharing knowledge</li>
-        <li>Building together</li>
-    </ul>
-</div>
-<a href="https://www.w3schools.com" class="my-button" target="_blank" style="text-decoration: none;">
-    Learn More
-</a>
-
-    </div>
-
-    <div class="card">
-    <h2> My interests</h2>
-    <ul>
-        <li>Web development</li>
-        <li>Music</li>
-        <li>Add another interest</li>
-    </ul>
-
-
-    </div>
-
-<div class= "cardimgs">
-
-<div class="image-layout">
-
-  <div class="right-imgs">
-    <img src="https://via.placeholder.com/200x190" alt="Top Right Image">
-    <img src="https://via.placeholder.com/200x190" alt="Bottom Right Image">
-  </div>
-</div>
-  </div>
     
-  </div>   
 
-   
-<div class="cardbutton">
+</div>
 
-  <button class="my-button" onclick="showtext()">
-    Red Hat </button>
 
-<p id="secret" style="display: none; color: red;">
-    High School Intern </p>
+</div>
+ 
 
-  </div>  
 
-  
 
-<!-- Add this at the very bottom, before </body> -->
+
+
+                
+
+                
+
+                <div class="cardimgs">
+                    <div class="image-layout">
+
+                        <img src="https://github.com/cnguyen24-max/RH-HS-Interns-2025.github.io/blob/main/interns/christine-nguyen/static/IMG_0940.jpeg?raw=true" alt="Image 1">
+                        <img src="https://github.com/cnguyen24-max/RH-HS-Interns-2025.github.io/blob/main/interns/christine-nguyen/static/IMG_7472.jpeg?raw=true" alt="Image 2">
+                        <img src="https://github.com/cnguyen24-max/RH-HS-Interns-2025.github.io/blob/main/interns/christine-nguyen/static/IMG_0952.jpeg?raw=true" alt="Image 3"> </div>
+                </div>
+            </div>
+      </div>
+            <div class="cardbottom" </div>
+
+<div style="text-align: right; margin-top: -2px; padding-right: 5px;">
+  <span class="dot" style="background-color: rgb(99, 110, 170);"></span>
+  <span class="dot" style="background-color: #6D6183;"></span>
+  <span class="dot" style="background-color: #FAF8E4;"></span>
+</div>
+
+
+
+
+        </div>
+    
+
 <script>
-function showMessage() {
-    document.getElementById('secret').style.display = 'block';
-}
-
-let trigger = false; 
-function showtext(){  
-    let secrettext=document.getElementById("secret");
-    if (!trigger) {
-            document.getElementById('secret').style.display = 'block';
-
-    }else {
-            document.getElementById('secret').style.display = 'none';
-
+    function showText(id) {
+        const element = document.getElementById(id);
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
     }
-    trigger = !trigger;
-   }
 </script>
 
+<script>
+    function toggleVideo() {
+        const container = document.getElementById('reel-container');
+        const video = document.getElementById('reel-video');
 
+        if (container.style.display === 'none' || container.style.display === '') {
+            container.style.display = 'block';
+        } else {
+            container.style.display = 'none';
+            video.pause();
+        }
+    }
+</script>
 
 </body>
-
 </html>
-

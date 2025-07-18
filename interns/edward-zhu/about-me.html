@@ -1,130 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>My Interactive Website</title>
-    <link rel="stylesheet" href="about-me.css">
-</head>
-<body>
-    <h1>Welcome to My Interactive Website!</h1>
-    <p>Hi! My name is Edward Zhu. Hover over elements to see them change!</p>
-    
-    <div class="card">
-        <h2>About Me</h2>
-        <p>I'm a high school student learning web development!</p>
-        <p>Hover over this card to see it lift up!</p>
-    </div>
-    
-    <div class="card">
-        <h2 class = "setpadding">My Interests</h2>
-        <p>Hover over the items below:</p>
-        <ul>
-            <li>Web Development</li>
-            <li>Creating Cool Websites</li>
-            <li>I like strawberry ice cream</li>
-            <li>I like pizza</li>
-        </ul>
-    </div>
-    
-    <div class="card">
-        <h2>My Favorite Image</h2>
-        <p>Hover over the image to make it bigger!</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Strawberry_ice_cream_cone_%285076899310%29.jpg" alt="Ice Cream">
-    </div>
+<html> 
+    <head>
+        <title> Welcome </title>
+        <link rel="stylesheet" href="ProjectStyle.css">
+    </head>
 
-    <!-- Add this to your HTML -->
-    <h2>Useful Links</h2>
-    <p>Click these buttons to visit other websites:</p>
+    <body> 
 
-    <!-- This is a link that looks like a button -->
-    <a href="https://www.w3schools.com" class="my-button" target="_blank" style="text-decoration: none;">
-    Learn More
-    </a>
+        <img src="Documents/AurumCrop.png" class="Logo"> 
 
-    <h2>Try JavaScript!</h2>
-    <button class="my-button" onclick="alert('Hello!')">
-    Click Me
-    </button>
+        <div class = "Buttons-Home"> 
 
+            <a href="Edward_Project.html" class="Home-Bar Reg"> Home </a>
 
-    <h2>Secret Message</h2>
-    <button class="my-button" onclick="showMessage()">
-     Show Secret
-    </button>
+            <a href="aboutme.html" class="Home-Bar Reg"> About Me </a> 
 
-    <p id="secret" style="display: none; color: red;">
-     You found it!
-    </p>
+            <a href="journalentries.html" class="Home-Bar Reg"> Journal Entries </a> 
+            
+            <a href="socialmediaproject.html" class="Home-Bar Reg"> Social Media Project </a> 
+            
+            <a href="contact.html" class="Home-Bar Special"> Contact </a>
+        </div>
 
-    <!-- Add this at the very bottom, before </body> -->
-    <script>
-    function showMessage() {
-     document.getElementById('secret').style.display = 'block';
-    }
-</script>
+        <div class="rectangle-top"></div>
 
-<!-- Add this to your HTML -->
-<h2>Everything Together</h2>
+        
+           
+     <!--   <img src="Downloads/me1.jpg" class="me">-->
 
-<!-- Hoverable list -->
-<ul>
-    <li>Hover over me!</li>
-    <li>Me too!</li>
-</ul>
+        <button class="bio"> Bio </button>
+         
+        <input type="checkbox" id="toggle-button" class="toggle-checkbox" />
+        <label for="toggle-button" class="toggle-button">Bio</label>
 
-<!-- Simple JavaScript button -->
-<button class="my-button" onclick="alert('Hello!')">
-    Say Hello
-</button>
+        <div class="toggle-content">
+         <p>Self-driven high school senior with strong analytical, problem-solving, and leadership skills. 
+            Looking to pursue a career in finance and data analytics. Experienced in research, corporate finance, data analysis, and customer service.
+             Strong passion for learning and challenge. </p>
+        </div>
 
-<!-- Link that looks like a button -->
-<a href="https://github.com" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left: 10px;">
-    Visit GitHub
-</a>
+        <input type="checkbox" id="toggle-button2" class="toggle-checkbox2" />
+        <label for="toggle-button2" class="toggle-button2">Qualifications</label>
 
-<div class="card animate">
-    <h2>Collaboration Section</h2>
-    <p>Working with my awesome classmates!</p>
-    <ul>
-        <li>Learning from others</li>
-        <li>Sharing knowledge</li>
-        <li>Building together</li>
-    </ul>
-</div>
-</body>
+        <div class="toggle-content2">
+         <p>School: Worcester Academy, Headmaster's List, Varsity Athlete, Student Leader <br>
+            GPA: 4.00 WGPA: 4.60 <br>
+            APs: AP Calculus BC (5) AP Chemistry (5) AP Statistics (5) <br>
+            Work Experience: Red Hat Intern, Chipotle Worker</p>
+        </div>
+
+        <img src="Downloads/rowing1.jpg" class="rowing">
+      
+       <img src="https://assets.boostmyschool.com/uploads/orgs/logos/f5ee4cf6-d3e3-11ec-944f-df1bbecb6c68/3390724a47b969457529fce3e081f585.jpg" class="school">
+    </body>
+
 </html>
-
-<!--<DOCTYPE html>
-<html lang="en"> 
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
-    <title>About Me</title>
-    
-  
-    <link rel="stylesheet" href="./about-me.css">
-<head> 
-        <title>My First Website</title>
-        <link rel="stylesheet" href="./about-me.css">
-</head>
-<body>
-    <h1>Welcome to My Website!</h1>
-    <p class="highlight">Hi! My name is Edward and this is my first webpage</p>
-
-    <h2>About Me: I am a high school student.</h2>
-    <p class="my-style">I'm a high school student learning web development!</p>
-
-    <h2>My Interests</h2>
-    <ul>
-        <li>Web Development</li>
-        <li>I like strawberry Ice Cream</li>
-        <li>I like pasta</li>
-
-    </ul>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Strawberry_ice_cream_cone_%285076899310%29.jpg" alt="Ice Cream">
-    <p>Thanks for visiting my page!</p>
-</body>
-</html>
--->
