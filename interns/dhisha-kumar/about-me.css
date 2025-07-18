@@ -1,0 +1,127 @@
+body{
+    font-family: 'Verdana', sans-serif;
+    
+    margin: 20px;
+    background-image: url("https://img.freepik.com/free-vector/watercolor-blue-background_23-2149323834.jpg?semt=ais_hybrid&w=740");
+
+}
+
+h1{
+    color: #003b73;
+}
+.highlight {
+    background-color: #bfd7ed;
+    padding: 5px;
+}
+
+.my-style{
+    color: #bfd7ed;
+    font-size: 18px;
+}
+a {
+    color:#60a3d9;
+    text-decoration: none;
+}
+p:hover{
+color: #60a3d9;
+    text-decoration: none;
+}
+a:hover {
+   color: #60a3d9;
+    text-decoration: none;
+}
+
+/* Make images slightly bigger on hover */
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Add smooth transitions to everything */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Create a card style that lifts up on hover */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px #bfd7ed;
+    transform: translateY(-5px);
+}
+
+/* Style a button that changes on hover */
+.my-button {
+    background-color: #bfd7ed;
+    color: #bfd7ed;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.my-button:hover {
+    background-color:#0074b7;
+    transform: scale(1.05);
+}
+
+/* Make list items highlight on hover */
+li:hover {
+    background-color:#0074b7;
+    padding-left: 10px;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    margin: 20px auto;
+    display: block;
+}
+.fun-facts li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fact-icon {
+  width: 60px;        /* Adjust size as needed */
+  height: auto;
+  margin-right: 60px; /* Adds space between image and text */
+   vertical-align: middle;
+}
+.header-bar {
+    background-color: #003b73;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+   

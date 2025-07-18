@@ -1,31 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/redhatlogo.png">
 
-    <!-- The title appears in the browser tab -->
     <title>About Me - Jessica Zanchi</title>
-    
-    <!-- Link to our external CSS file -->
+    <link rel="icon" type="image/x-icon" href="images/cadocloseup.png">
+
     <link rel="stylesheet" href="./about-me.css">
+    <script src="about-me.js"></script>
 </head>
 <body>
-  <h1>Welcome to My Website!</h1>
-  <p>Hi! My name is Jessica and this is my first website.</p>
 
-  <h2>About me</h2>
-  <p class="highlight">I am a high school student learning web development.</p>
+    <div id="splashscreen">
+        <div id="titlestuff">
+            <h1>JESSICA ZANCHI</h1>
+            <h2>Red Hat High School Internship</h2>
+            <h2>July 7 - July 18, 2025</h2>
+        </div>
+    </div>
 
-  <h2>My Interests</h2>
-  <ul>
-    <li>Web Development</li>
-    <li>Programming</li>
-    <li>Design</li>
-  </ul>
+    <div id="bodycontent">
+        <hr class="linethrough">
+        
+        <div class="reveal whiteblock" id="aboutme">
+            <img style="width:40%; aspect-ratio: 1 / 1; height:auto; object-fit:cover;" src="images/meandcado.jpg" alt="Prom day!">
+            <div style="border-radius: 10px;width:50%;background-color: rgba(222, 222, 222, 0.63);">
+                <h2 style="border-radius: 10px 10px 0px 0px;margin-top:0;">ABOUT ME</h2>
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;background-color: rgba(144, 143, 143, 0.311);padding:5px 15px;">
+                    <h3 style="margin:0">Jessica Zanchi - Keefe Tech 2026</h3>
+                    <div style="display:flex;align-items:center;gap:10px;margin:4px 0 0 0;">
+                        <a style="text-decoration: none; filter:invert(100)" target="_blank" href="https://www.linkedin.com/in/jessica-zanchi-b94a81335/">
+                            <img src="images/linkedinlogo.png" height="30" alt="LinkedIn Link">
+                        </a>
+                        <a style="text-decoration: none; filter:invert(100)" target="_blank" href="https://www.instagram.com/jess.10z?igsh=aG01dDRxcjRuNjdw&utm_source=qr">
+                            <img src="images/instalogo.png" height="30" alt="Instagram Link">
+                        </a>
+                    </div>
+                </div>
+                <div style="display:flex;gap:5px;position:relative;flex-direction: column;transform:scale(1.1);">
+                    <p>Hi! My name is Jess, and I'm a rising senior at Keefe Technical School. I'm enrolled in the Programming & Web Development vocational course, and I'm a part of the soccer and track teams at my school. I'm excited to be a part of the Red Hat community!</p>
+                    <div style="padding:0px 60px">
+                        <h4>Want to know a little more?</h4>
+                        <ul>
+                            <li>I have over 6 years of coding experience</li>
+                            <li>I am familiar with languages such as Java, C# and SQL</li>
+                            <li>I am a part of BPA and SkillsUSA, where I have placed on the state level on multiple occasions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <img src="images/kale.jpeg" alt="Jessica Zanchi" width="200">
-  <p class="my-style">Thanks for visiting!</p>
+        <div class=" greenblock" id="aboutme">
+            <img class="revealleft" style="width:20%; height:auto; object-fit:cover;" src="images/windowcado.JPG" alt="Avocado getting some sun">
+            <div class="revealleft" style="border-radius: 10px;width:50%;background-color: rgba(0, 0, 0, 0.17);">
+                <h2 style="border-radius: 10px 10px 0px 0px;margin-top:0;">REELS PROJECT</h2>
+                <h3 style="background-color: rgba(0, 0, 0, 0.4);padding:25px 35px;">Day in The Life: Red Hat Intern Edition</h3>
+                <p style="transform:scale(1.1);">As a way fun to showcase our experience at the Red Hat office, the interns were tasked with creating a short Day in The Life video. Each of our 90 second videos needed to illustrate the typical day of a high school intern.<br><br>My video in particular takes a first person POV and walks the viewer through a personal account of my day. Each clip is short and sweet and accompanied by a brief voiceover that explains the video.<br><br>Please enjoy!</p>
+            </div>
+
+            <div class="revealleft" id="mediaplayer">
+                <div class="video-container" id="reel">
+                    <video id="reelVideo" src="images/dayinthelife.mp4" loop muted playsinline></video>
+                    <div class="overlay-play" id="playIcon">▶</div>
+                    <div class="mute-button" id="muteButton">🔇</div>
+                    <div class="fullscreen-button" id="fullscreenButton">⛶</div>
+                    <div class="time-left" id="timeLeft">--:--</div>
+                    <div class="progress-bar-container" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="reveal whiteblock">
+            <div style="border-radius: 10px;width:50%;background-color: rgba(222, 222, 222, 0.63);">
+                <h2 style="border-radius: 10px 10px 0px 0px;margin-top:0;">JOURNAL ENTRIES</h2>
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;background-color: rgba(144, 143, 143, 0.311);padding:5px 15px">
+                    <h3 style="margin:0">Four unique reflections of Red Hat's culture</h3>
+                </div>
+                <div style="transform:scale(1.1);">
+                <p>Over the course of the internship, each of us wrote four journal entries that responded to a prompt about the lessons we were learning from Red Hat. Each needed to be appoximately one paragraph, but there were no specific guidelines other than that.<br><br>Read my journal entries <a target="_blank" style="color:rgb(38, 155, 22);" href="journals/journals.html">here!</a></p>
+                <p>
+                    Day 3: Differences between school and professional workplaces<br>
+                    Day 4: An interesting topic from the week<br>
+                    Day 6: Who has made an impact on me during this internship<br>
+                    Day 8: What I have learned about myself and my desired career
+                </p>
+                </div>
+            </div>
+            <img style="width:40%; aspect-ratio: 1 / 1; height:auto; object-fit:cover;" src="images/puffycado.jpg" alt="Avocado being close!">
+        </div>
+    </div>
+    <footer>
+        <p>🦜</p>
+        <div>
+           <h2>THANKS FOR VIEWING!</h2>
+          <p>And thank you to Red Hat for giving us an amazing experience :)</p>
+        </div>
+        <p id="parrotTrigger" style="cursor:pointer;">🦜</p>
+        <!-- Secret Gallery Overlay -->
+        <div id="secretGallery" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center; flex-direction:column;">
+            <button id="closeGallery" style="position:absolute; top:30px; right:40px; font-size:1rem; background:#1d6d22; color:white; border:none; border-radius:10px; width:30px; height:30px; cursor:pointer;">X</button>
+            <div class="gallery-container" style="display:grid; grid-template-columns: repeat(5, 1fr); gap:20px; justify-items:center; align-items:center; max-width:90vw; max-height:70vh; overflow:auto; margin-top:60px;">
+            <img src="images/gal1.jpg" alt="Gallery 1" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal2.JPG" alt="Gallery 2" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal3.JPG" alt="Gallery 3" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal4.jpg" alt="Gallery 4" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal5.jpg" alt="Gallery 5" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal6.jpg" alt="Gallery 6" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal9.JPG" alt="Gallery 9" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal10.JPG" alt="Gallery 10" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal11.JPG" alt="Gallery 11" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            <img src="images/gal12.jpg" alt="Gallery 12" style="width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px #222;">
+            </div>
+        </div>
+        <script>
+            const parrot = document.getElementById('parrotTrigger');
+            const gallery = document.getElementById('secretGallery');
+            const closeBtn = document.getElementById('closeGallery');
+            parrot.onclick = () => { gallery.style.display = 'flex'; };
+            closeBtn.onclick = () => { gallery.style.display = 'none'; };
+        </script></div>
+    </footer>
+
 </body>
-</html> 
+</html>
