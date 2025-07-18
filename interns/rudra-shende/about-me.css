@@ -1,20 +1,46 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 20px;
+    background-color: #e4e4e4;
+    transition: fadeIn 3s ease-in-out;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* horizontal centering */
+    align-items: center;
+    /* vertical centering */
+    flex-direction: column;
+    /* optional: stacks children vertically */
+}
+
+.border {
+    border-radius: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.accomplishments {
+    background-color: #ffffff;
+    border-radius: 20px;
 }
 
 h1 {
-    color: #335166;
+    color: rgb(123, 128, 133);
 }
 
 h2 {
     color: #c81b1b;
-}
-
-.highlight {
-    background-color: rgb(255, 247, 0);
-    padding: 5px;
 }
 
 .about-me {
@@ -30,19 +56,37 @@ h2 {
     text-decoration: underline;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
 li:hover {
     font-weight: bold;
     transition: transform 1.0s ease-in-out;
 }
 
-img:hover {
+.logo:hover {
     transform: rotate(360deg);
     transition: transform 0.5s ease-in-out;
+}
+
+.profile {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+img:not(:last-child) {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.card {
+    border: 2px solid black;
+}
+
+.pics {
+    display: inline-block;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -51,16 +95,17 @@ img:hover {
     transition: transform 0.5s ease-in-out;
 }
 
-.btn1, .btn2, .btn3 {
+.video {
+    object-fit: cover;
+}
+
+.btn1,
+.btn2,
+.btn3 {
     background-color: red;
     border: 1px;
     border-radius: 5px;
     color: navy;
     padding: 10px 20px;
     display: block;
-}
-
-.my-style {
-    color: #ff6600;
-    font-size: 18px;
 }
