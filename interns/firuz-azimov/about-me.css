@@ -1,0 +1,291 @@
+:root {
+  --bg-color: #ffd6da;
+  --text-color: #2c2c2c;
+  --accent-color: #d63384;
+  --accent-hover: #ad2f6d;
+  --card-bg: #fff0f3;
+  --card-shadow: 0 8px 32px rgba(44, 44, 44, 0.12);
+  --card-hover-shadow: 0 24px 56px rgba(214, 51, 132, 0.18), 0 2px 0px var(--accent-hover);
+  --button-bg: #ff6b81;
+  --button-hover: #e2556d;
+  --list-hover-bg: #ffe6e9;
+  --list-border: #d63384;
+  --glass-blur: blur(8px);
+  --gradient-border: linear-gradient(135deg, #d63384 0%, #74b9ff 100%);
+  --image-shadow: 0 2px 12px rgba(214, 51, 132, 0.12);
+  --neon-glow: 0 0 16px 4px #74b9ff, 0 0 32px 8px #d63384;
+  --frosted-bg: rgba(255,255,255,0.18);
+  --sheen: linear-gradient(120deg, rgba(255,255,255,0.2) 0%, rgba(214,51,132,0.12) 100%);
+  --glass-gradient: linear-gradient(120deg, #fff0f3 0%, #e0ffe6 100%);
+  --rainbow: linear-gradient(90deg, #d63384, #74b9ff, #ffd6da, #ad2f6d);
+  --shadow-3d: 0 8px 32px rgba(44,44,44,0.18), 0 2px 0px var(--accent-hover), 0 0 32px 8px #74b9ff;
+  --border-glow: 0 0 24px 0 var(--accent-color), 0 0 48px 8px var(--accent-hover);
+  --blur-bg: blur(16px);
+  --card-anim: cardFadeIn 0.7s cubic-bezier(.77,0,.18,1) forwards, floatCard 2.5s ease-in-out infinite alternate;
+
+body.dark-mode {
+  --bg-color: #1e1e2f;
+  --text-color: #f5f5f5;
+  --card-bg: #2b2b3c;
+  --card-shadow: 0 8px 32px rgba(44,44,44,0.32);
+  --card-hover-shadow: 0 24px 56px rgba(74,185,255,0.18), 0 2px 0px var(--accent-hover);
+  --accent-color: #74b9ff;
+  --accent-hover: #0984e3;
+  --button-bg: #444;
+  --button-hover: #555;
+  --list-hover-bg: #333;
+  --list-border: #74b9ff;
+  --glass-blur: blur(10px);
+  --gradient-border: linear-gradient(135deg, #74b9ff 0%, #d63384 100%);
+  --image-shadow: 0 8px 32px rgba(74,185,255,0.22);
+
+/* Base layout */
+* {
+  transition: all 0.3s cubic-bezier(.77,0,.18,1);
+  box-sizing: border-box;
+
+body {
+  background: var(--glass-gradient), url('https://www.transparenttextures.com/patterns/noise.png');
+  color: var(--text-color);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.7;
+  min-height: 100vh;
+  animation: bgMove 18s ease-in-out infinite alternate;
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  position:relative;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-2px;
+  height:2px;
+  width:100%;
+  background: var(--gradient-border);
+  transform: scaleX(0);
+  transform-origin:left;
+  transition:transform .3s;
+}
+a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Cards */
+.card {
+  background: var(--frosted-bg);
+  backdrop-filter: var(--blur-bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow-3d);
+  border: 2.5px solid transparent;
+  background-clip: padding-box;
+  padding: 22px 26px;
+  margin: 28px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s, transform 0.25s cubic-bezier(.77,0,.18,1), border-image 0.5s;
+  position: relative;
+  animation: var(--card-anim);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: var(--rainbow);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+.card:hover {
+  transform: translateY(-18px) scale(1.045) rotate(-1deg);
+  box-shadow: var(--border-glow);
+  border-image: var(--rainbow) 1;
+  border-width: 3px;
+  animation: borderGlow 1.2s linear infinite alternate, floatCard 2.5s ease-in-out infinite alternate;
+}
+@keyframes borderGlow {
+  0% { box-shadow: 0 0 24px 0 var(--accent-color), 0 0 32px 8px #74b9ff; }
+  100% { box-shadow: 0 0 48px 8px var(--accent-hover), 0 0 64px 16px #d63384; }
+}
+@keyframes floatCard {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-10px) scale(1.04) rotate(-2deg); }
+}
+}
+
+/* Buttons */
+.my-button {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 5px 0 0;
+  box-shadow: 0 2px 8px rgba(214, 51, 132, 0.12), 0 0.5px 6px rgba(214,51,132,0.08);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition: box-shadow 0.3s, transform 0.2s, border-image 0.5s;
+  animation: floatBtn 3.5s ease-in-out infinite alternate;
+}
+.my-button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: var(--neon-glow);
+  border-image: var(--rainbow) 1;
+  border-width: 2.5px;
+  animation: pulseBtn 0.7s, floatBtn 3.5s ease-in-out infinite alternate;
+}
+@keyframes pulseBtn {
+  0% { transform: scale(1.08); box-shadow: 0 6px 18px #d63384; }
+  50% { transform: scale(1.18); box-shadow: 0 12px 32px #74b9ff; }
+  100% { transform: scale(1.12); box-shadow: 0 6px 18px #ad2f6d; }
+}
+@keyframes floatBtn {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.04) translateY(-8px) rotate(-2deg); }
+}
+.my-button:active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.3);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.5s linear;
+  z-index: 1;
+}
+@keyframes ripple {
+  to {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+li {
+  list-style: none;
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+li:hover {
+  background: var(--sheen);
+  padding-left: 18px;
+  border-left: 4px solid var(--list-border);
+  box-shadow: 0 2px 12px #d6338422;
+  filter: brightness(1.08);
+}
+
+/* Images */
+img:hover {
+  box-shadow: var(--image-shadow), 0 2px 12px rgba(214,51,132,0.18), 0 0 24px 8px #74b9ff;
+  filter: drop-shadow(0 0 8px #d63384) brightness(1.08);
+}
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+  /* Card entrance animation delay for staggered effect */
+/* Headings gradient effect */
+h1, h2 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--rainbow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 8px #fff, 0 0 12px #d63384;
+}
+
+/* Main content container */
+.main-content {
+  animation: fadeInMain 1.2s cubic-bezier(.77,0,.18,1);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 32px #d6338422, 0 0 32px #74b9ff22;
+  border-radius: 24px;
+  background: var(--frosted-bg);
+  backdrop-filter: var(--blur-bg);
+}
+@keyframes fadeInMain {
+  from { opacity: 0; transform: scale(0.98) translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+/* Background texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('https://www.transparenttextures.com/patterns/noise.png'), linear-gradient(120deg, #ffd6da 0%, #ffc2cc 100%);
+  opacity: 0.3;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  animation: bgMove 18s ease-in-out infinite alternate;
+}
+
+body.dark-mode::before {
+  background: url('https://www.transparenttextures.com/patterns/noise.png'), linear-gradient(120deg, #1e1e2f 0%, #2b2b3c 100%);
+  opacity: 0.25;
+  animation: bgMove 18s ease-in-out infinite alternate;
+}
+
+a { position:relative; }
+a::after {
+  content:""; position:absolute; left:0; bottom:-2px; height:2px; width:100%;
+  background: linear-gradient(90deg,var(--accent),var(--accent-dark));
+  transform: scaleX(0); transform-origin:left; transition:transform .3s;
+}
+a:hover::after { transform: scaleX(1); }
+
+/* Card entrance animation */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeIn 0.7s cubic-bezier(.77,0,.18,1) forwards;
+}
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
