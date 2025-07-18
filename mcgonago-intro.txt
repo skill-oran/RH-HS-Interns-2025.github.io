@@ -1,0 +1,5 @@
+Name:                 Owen McGonagle
+School:               University of Massachusetts
+Favorite Subject:     Math
+Fun Fact:             pretty good at ping pong
+What I Hope to Learn: js coding
