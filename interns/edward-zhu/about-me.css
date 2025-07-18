@@ -1,0 +1,558 @@
+.Buttons-Home
+{
+    margin-left: 260px; 
+    margin-top: 30px; 
+    position: absolute; 
+    z-index: 1; 
+}
+
+.Home-Bar{ 
+    color: white; 
+    text-decoration: none; 
+    font-family: Sans-serif; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    font-size: 30px; 
+    margin-left: 30px; 
+    border-radius: 5px; 
+    border: none; 
+    border-bottom: 2px solid transparent; 
+    background: none; 
+    position: relative; 
+    z-index: 1; 
+    transition: box-shadow 0.15s, underline 0.03s; 
+
+}
+
+.appearing-text{
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 150px; 
+    color: white; 
+    font-family: Sans-serif;
+    position: absolute; 
+    margin-top: 300px; 
+    margin-left: 340px; 
+    text-shadow: 10px 10px 10px rgba(36, 142, 54, 255), 15px 15px 15px rgba(0, 0, 0, 0.15);
+    opacity: 0; 
+    /* forwards tells browser to keep the final state of the animantion, ease-in defines the timing of animation
+        fadeIn is the name of the animation*/
+    animation: fadeIn 3s ease-in forwards; 
+}
+/* keyframes is a CSS rule used to define animations - tells you how to change the values of CSS properties over time*/
+@keyframes fadeIn {
+    to { 
+        opacity: 1; 
+    }
+}
+
+.Special{
+    /*background: rgba(46, 204, 64, 255);*/
+    background-color: white; 
+    color: rgba(36, 142, 54, 255);
+    border: 2px solid rgba(36, 142, 54, 255); 
+    margin-left: 120px;  
+    margin-top: -15px; 
+    position: absolute; 
+    transition: color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.Special:hover{
+    color: white; 
+    background: rgba(36, 142, 54, 255);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15); 
+}
+
+.Home-Bar:hover{
+    cursor: pointer; 
+    /*text-decoration: underline;*/
+    z-index: 1; 
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+.Reg:hover{
+    text-decoration: underline;  
+}
+
+.Home-Bar:active{
+    opacity: 0.7; 
+}
+
+.rectangle-top{
+    width: 1600px;       
+    height: 100px;     
+    background-color: #444;  
+    /*white; */
+    /*border-radius: 10px;  */
+    
+    /*position*/
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 0; 
+}
+
+.Logo
+{
+    margin-left: 5px; 
+    margin-top: 4px; 
+    border-radius: 10px; 
+    width: 180px; 
+    position: absolute; 
+    z-index: 1; 
+}
+body { 
+    
+     background-image: url('https://img.freepik.com/premium-photo/black-cement-texture-background_28629-1634.jpg?semt=ais_hybrid&w=740'); 
+     background-size: cover; 
+}
+
+/* Contact Page Specific */
+
+.Title{
+    color: white; 
+    position: absolute; 
+    margin-left: 650px; 
+    margin-top: 120px; 
+    font-family: sans-serif; 
+    font-size: 120px; 
+    font-weight: bold; 
+    text-shadow: 10px 10px 10px rgba(36, 142, 54, 255), 15px 15px 15px rgba(0, 0, 0, 0.15);
+}
+
+.Contact-Pic{
+    position: absolute; 
+    margin-left: 80px; 
+    margin-top: 120px; 
+    width: 500px;
+    border-radius: 30px;  
+}
+
+.white-rect{
+    position: absolute; 
+    z-index: 3; 
+    margin-left: 530px; 
+    margin-top: 575px; 
+    background-color: white; 
+    width: 20px; 
+    height: 40px; 
+}
+/* .linkedin-button{ -->
+    background: white; 
+    color: black; 
+    left: 320px; 
+    margin-top: 280px;
+    width: 800px; 
+    height: 120px; 
+    font-family: sans-serif; 
+    font-size: 120px; 
+    border-radius: 5px;
+    border: none; 
+    position: absolute;  
+
+} */
+
+.linkedin-button {
+    background: white;
+    color: rgba(36, 142, 54, 255);
+    left: 520px;
+    margin-top: 240px;
+    width: 400px;
+    height: 120px;
+    font-weight: bold; 
+    font-family: sans-serif;
+    font-size: 60px;
+    border-radius: 5px;
+     border: none; 
+    position: absolute;
+    display: flex-start;
+    gap: 100px; 
+    align-items: center;
+   justify-content: space-between;
+    padding-left: 90px;
+    gap: 20px;
+    cursor: pointer;
+    transition: color 0.15s, text-decoration 0.15s box-shadow 0.15s;
+}
+
+.linkedin-icon {
+    height: 80px;
+    left: 20px; 
+    top: 20px; 
+    position: absolute; 
+    width: auto;
+}
+
+.linkedin-button:hover{
+     box-shadow:10px 10px 10px rgba(36, 142, 54, 255);
+}
+.linkedin-text {
+    color: rgba(36, 142, 54, 255);  
+    text-decoration: none;
+    transition: text-decoration 0.15s;
+}
+
+.linkedin-button:hover .linkedin-text {
+    text-decoration: underline;
+}
+
+.email-button {
+    background: white;
+    color: rgba(36, 142, 54, 255);
+    left: 520px;
+    margin-top: 350px;
+    width: 260px;
+    border: none; 
+    height: 120px;
+    font-family: sans-serif;
+    font-size: 60px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 140px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: box-shadow 0.15s, text-decoration 0.15s;
+}
+
+.email-icon {
+    height: 70px;
+     left: 20px; 
+    top: 20px;
+    position: absolute; 
+    width: auto;
+}
+
+.email-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-line {
+    font-size: 40px;
+    align-items: center;
+    text-align: center; 
+    color: rgba(36, 142, 54, 255);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.bottom-line {
+    font-size: 24px;
+    color: rgba(36, 142, 54, 255);
+    line-height: 1.2;
+}
+
+.bottom-line:hover{
+     text-decoration: underline;
+}
+
+.email-button:hover {
+    box-shadow: 10px 10px 10px rgba(36, 142, 54, 255);
+}
+
+
+.phone-button {
+    background: white;
+    color: rgba(36, 142, 54, 255);
+    left: 520px;
+    margin-top: 500px;
+    width: 400px;
+    height: 120px;
+    font-family: sans-serif;
+    font-size: 60px;
+    border-radius: 5px;
+   border: none; 
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 140px;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+}
+
+.phone-icon {
+    height: 70px;
+    
+     left: 20px; 
+    top: 20px;
+    position: absolute; 
+    width: auto;
+}
+
+.phone-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone-button:hover {
+    box-shadow: 10px 10px 10px rgba(36, 142, 54, 255);
+}
+
+
+.LinkedIn-photo{
+    position: absolute; 
+    width: 100px; 
+    margin-top: 320px; 
+    left: 600px; 
+    z-index: 2;
+}
+
+/* about me page */
+
+
+.rowing{
+    position: absolute; 
+    margin-top: 130px; 
+    margin-left: 50px;
+    width: 300px; 
+    border-radius: 90px; 
+    box-shadow: 10px 10px 10px rgba(36, 142, 54, 255);
+   /* transition: box-shadow 0.15s; */
+}
+
+.school{
+    position: absolute; 
+    margin-top: 460px; 
+    margin-left: 50px;
+    width: 280px; 
+    box-shadow: 10px 10px 10px rgba(36, 142, 54, 255);
+    border-radius: 90px; 
+}
+
+
+   
+.toggle-checkbox {
+  display: none;
+}
+
+
+.toggle-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgba(36, 142, 54, 0.8);
+  color: white;
+  font-family: Sans-serif;
+  font-size: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 380px; 
+  margin-top: 120px;  
+  position: absolute; 
+  z-index: 10;
+  transition: background-color 0.15s ;
+}
+
+.toggle-button:hover {
+  background-color: rgba(36, 142, 54, 255);
+}
+
+.toggle-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(36, 142, 54, 255); 
+  color: white;
+  font-family: Sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  width: 920px;     
+ 
+  border-radius: 10px;
+  margin-left: 420px; 
+  position: absolute; 
+  top: 220px;      
+  left: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+  z-index: 9;
+}
+
+/* Show the rectangle & text when checkbox is checked */
+.toggle-checkbox:checked + .toggle-button + .toggle-content {
+  max-height: 180px; 
+  opacity: 1;
+  padding: 15px;
+}
+
+
+.toggle-checkbox2 {
+  display: none;
+}
+
+
+.toggle-button2 {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgba(36, 142, 54, 0.8);
+  color: white;
+  font-family: Sans-serif;
+  font-size: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 380px; 
+  margin-top: 450px;  
+  position: absolute; 
+  z-index: 10;
+  transition: background-color 0.15s;
+}
+
+.toggle-button2:hover {
+  background-color: rgba(36, 142, 54, 255);
+}
+
+
+.toggle-content2 {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(36, 142, 54, 255); 
+  color: white;
+  font-family: Sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  width: 920px;    
+  padding: 0 20px; 
+  border-radius: 10px;
+  margin-left: 420px;
+  position: absolute; 
+  top: 550px;          
+  left: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+  z-index: 9;
+}
+
+
+.toggle-checkbox2:checked + .toggle-button2 + .toggle-content2 {
+  max-height: 200px;
+  opacity: 1;
+  padding: 20px;
+}
+
+
+.video {
+    position: absolute; 
+    margin-top: 130px; 
+    margin-left: 550px; 
+  border-radius: 10px;
+  box-shadow: 0 12px 132px rgba(36, 142, 54, 255);
+  max-width: 100%;
+}
+
+.dayvid {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 0 12px 132px rgba(36, 142, 54, 1);
+}
+
+/* Journal Entries*/
+
+.journalbutton1,
+.journalbutton2,
+.journalbutton3,
+.journalbutton4 {
+    background-color: white;
+    color: rgba(36, 142, 54, 255);
+    border: 2px solid rgba(36, 142, 54, 255);
+    border-radius: 8px;
+    padding: 10px 5px;
+    font-family: sans-serif;
+    font-size: 30px;
+   
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.journalbutton1:hover,
+.journalbutton2:hover,
+.journalbutton3:hover,
+.journalbutton4:hover {
+    background-color: rgba(36, 142, 54, 255);
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.journalbutton1{
+    width: 200px; 
+    position: absolute; 
+    margin-left: 100px; 
+    margin-top: 150px; 
+    z-index: 3; 
+    
+    font-size: 50px; 
+    font-family: sans-serif;
+}
+
+.journalbutton2{
+    width: 200px; 
+    position: absolute; 
+    margin-left: 410px; 
+    margin-top: 150px; 
+    z-index: 3; 
+   
+    font-size: 50px; 
+    font-family: sans-serif;
+}
+
+.journalbutton3{
+    width: 200px; 
+    position: absolute; 
+    margin-left: 750px; 
+    margin-top: 150px; 
+    z-index: 3; 
+
+    font-size: 50px; 
+    font-family: sans-serif;
+}
+
+.journalbutton4{
+    width: 200px; 
+    position: absolute; 
+    margin-left: 1080px; 
+    margin-top: 150px; 
+    z-index: 3; 
+
+    font-size: 50px; 
+    font-family: sans-serif;
+}
+
+.toggle-image {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: block;
+  position: absolute; 
+  margin-left: 20px; 
+  margin-top: 300px; 
+  width: 1400px; 
+}
+
+#toggle3:checked + .toggle-image{
+     opacity: 1;
+}
+#toggle4:checked + .toggle-image{
+    opacity: 1;
+}
+#toggle6:checked + .toggle-image{
+     opacity: 1;
+}
+#toggle8:checked + .toggle-image {
+  opacity: 1;
+}
