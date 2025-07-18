@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Meta tags for proper character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- The title appears in the browser tab -->
+    <title>My First Website</title>
+
+    <!-- Link to our external CSS file -->
+    <link rel="stylesheet" href="./about-me.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- JavaScript -->
+    <script src="./about-me.js" defer></script>
+  </head> 
+
+  <body>
+    <h1>Hi! My name is Owen McGonagle</h1>
+    <p>This is my first webpage for the Red hat 2025 High School Internship workshop</p>
+
+    <h2>First, try out JavaScript by clicking the 'Click Me!' button!</h2>
+    <h2>Then, click the 'About Me' and 'My Interests' buttons to see two new sections appear!</h2>
+
+    <button class="btn1">Click Me!</button>
+    <button class="btn2">About Me</button>
+
+    <div class="about-me card">
+      <h2>About Me</h2>
+      <p class="highlight">I'm a Red Hat Openstack on Openshift (RHOSO) developer learning web development!</p>
+      <p>Hover over this section to see it lift up!</p>
+    </div>
+
+    <button class="btn3">My Interests</button>
+    <div class="interests card">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Finding cool AI tools to help with my Openstack on Openshift developent</li>
+        <li>not sure what AI tools can help me with my ping pong game?</li>
+      </ul>
+      <p>Hover over the items to see them change!</p>
+    </div>
+
+    <div class="card animate">
+    <h2>Collaboration Section</h2>
+    <p>Working with my awesome classmates!</p>
+    <ul>
+        <li>Learning from others</li>
+        <li>Sharing knowledge</li>
+        <li>Building together</li>
+    </ul>
+    </div>
+
+    <p>This is my GitHub account: <a class="link" target="_blank" href="https://github.com/mcgonago">My GitHub
+        Account</a></p>
+
+    <!-- Add this to your HTML -->
+    <h2>Everything Together</h2>
+
+    <!-- Hoverable list -->
+    <ul>
+        <li>Hover over me!</li>
+        <li>Me too!</li>
+    </ul>
+
+    <!-- Simple JavaScript button -->
+    <button class="my-button" onclick="alert('Hello!')">
+        Say Hello
+    </button>
+
+    <!-- Link that looks like a button -->
+    <a href="https://github.com" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left: 10px;">
+        Visit GitHub
+    </a>
+
+
+    <p>Thanks for visiting my page!</p>
+  </body>
+</html>
