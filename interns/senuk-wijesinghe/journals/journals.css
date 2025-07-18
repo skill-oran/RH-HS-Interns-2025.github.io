@@ -1,0 +1,6 @@
+object {
+    outline: none;
+    border: 2px solid var(--accent-mute);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	z-index: 10;
+}
