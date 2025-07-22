@@ -1,0 +1,5 @@
+Name: {Arvind Bassi}
+School: {Cardinal Gibbons HighSchool}
+Favorite {Subject: Math}
+Fun Fact: {I love to travel}
+What I Hope to Learn: {Learn about what the professions I am interested do everday} 
