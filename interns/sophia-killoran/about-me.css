@@ -1,0 +1,17 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-size:medium; 
+    background-color: skyblue 
+}
+
+h1 { 
+    font-style:oblique; 
+    font-size: 3em;
+    color: darkred; 
+    background-color: blueviolet;
+}
+
+
+
+/* the row of fonts shows the order or priority - if the browser does not */
+/* support the first one, it will automatically go to the second option.*/
