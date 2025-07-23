@@ -1,0 +1,13 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: pink;
+}
+
+h1 {
+    font-size: 3em;
+    color: grey;
+}
+
+.about-me {
+    color: grey;
+}
