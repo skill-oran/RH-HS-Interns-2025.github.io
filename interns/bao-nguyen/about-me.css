@@ -1,3 +1,12 @@
 body {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+background-color: mediumblue;
 } 
+h2 {
+    color: green;
+}
+
+.mary-is-tuff {
+    color: bisque;
+    font-size: 100px;
+}
