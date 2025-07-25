@@ -1,5 +1,13 @@
+head {
+
+    font-family: 'Courier New', monospace;
+    color: #6df369;
+    margin: 0;
+    padding: 20px;
+}
+
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Courier New', monospace;    
     color: #6df369;
     
     margin: 20px;
@@ -85,7 +93,9 @@ li:hover {
     padding-left: 10px;
 }
 
-.section-background {
-    position: fixed !important;
-    left:unset !important;
+.layout1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

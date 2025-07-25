@@ -3,18 +3,17 @@
 <head>
     <title>My Interactive Website</title>
     <link rel="stylesheet" href="about-me.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <body>
-    <h1>Welcome to My Interactive Website!</h1>
-    <p>Hi! My name is Adit. Hover over elements to see them change!</p>
-    
-    <div class="card">
+    <div class="layout1">
+        <h1>Welcome to My Interactive Website!</h1>
+        <p>Hi! My name is Nolan.</p>
+    </div>
+
         <h2>About Me</h2>
         <p>I'm a high school student learning web development!</p>
-        <p>Hover over this card to see it lift up!</p>
-    </div>
     
-    <div class="card">
+ 
         <h2>My Interests</h2>
         <p>Hover over the items below:</p>
         <ul>
@@ -23,7 +22,7 @@
             <li>Playing Chess</li>
             <li>Watching TV</li>
         </ul>
-    </div>
+
     
     <div class="card">
         <h2>My Favorite Image</h2>
@@ -40,13 +39,13 @@
         Click Me
     </button>
 
-    <h2> Secret Message </h2>
-    <button class="my-button" onclick="document.getElementById('secret').style.display='block'">
-        Reveal Secret
-    </button>
-    <p id="secret" style="display:none;">You found the secret message!</p>
-</body>
-</html>
+    <p id="secret" style="display:none;">You found the secret message!
+      
+    </p>
+    <!-- Place this in your <body> -->
+
+
+
 
 <h2> Everything Together </h2>
 
@@ -61,21 +60,13 @@
     Learn More
 </a>
 
-<button class="my-button" onclick="showMessage()">
-    Show Secret
-</button>
+
+</body>
 
 
+</html>
 
-<p id="secret" style="display: none; color: red;">
-    You found it!
-</p>
 
-<script>
-function showMessage() {
-    document.getElementById('secret').style.display = 'block';
-}
-</script>
 
 
 
