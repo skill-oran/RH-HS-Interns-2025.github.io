@@ -6,21 +6,20 @@
     <!---rel - referencing a local file, href is instructing to find it-->
 </head>
 <body>
-    <h1>Hello? This is Sophia speaking...</h1>
-    <p>Hi! My name is Sophia and this is not my first webpage...</p>
-    <p>But it is the first one I have programmed, instead of making in google sites.</p>
+    <h1 title="Hovering, huh?">Hello? This is Sophia speaking...</h1>
+    <p>Hi! My name is Sophia, and this is my first real website!</p>
 
     <div class="card"> 
         <!--- creating the card layout w/ the about me -> the name of the class is .card -->
 
-        <h2 style="font-style:oblique">About Me</h2>
+        <h2 style="font-style:oblique"; class="diffHeading">About Me</h2>
         <p>I'm a rising junior at Newton South High school. I'm learning web development!</p>
         <p>In school, I have taken several CS courses, and am taking Honors CS3 this upcoming year.</p>
         <p>I am also on my school's science team, and have competed at MIT, Brown, and the statewide competition.</p>
     </div>
 
     <div class="card">
-        <h2>My Interests</h2>
+        <h2 class="diffHeading">My Interests</h2>
         <ul>
             <li>Web Development</li>
             <li>Computer science</li>
@@ -30,13 +29,13 @@
     </div>
 
     <div class="card"> 
-        <h2>An Image I Like</h2>
-        <p> Hover over the image to make it bigger !!1!</p>
+        <h2 class="diffHeading">An Image.</h2>
+        <p> Hover over the image to make it do something interesting !</p>
         <img src="https://media.tenor.com/92MplgQwb80AAAAM/cat-meme-wave-emoji.gif" alt="Placeholder image">
     </div>
     <!-- 'card' is kind of like a class, only a class of format that can be applied to multiple sections-->
-
-    <h2>Useful Links ?!?!?!?!</h2> 
+    <div class="card2">
+    <h2 class="diffHeading">Useful Links ?!?!?!?!</h2> 
     <p>click these buttons to be transported elsewhere in the wasteland:</p> 
 
     <!-- This is a link that looks like a button, the button I designed in CSS --> 
@@ -80,8 +79,8 @@
     <a href="https://github.com" class="my-button" target="_blank"
     style="text-decorations:none; display:inline-block; margin-left:10px;">
         Visit GitHub 
-    </a>
-
+    </a> 
+    </div>
     <p>Thanks for visiting my page!</p>
 
     <script> 
