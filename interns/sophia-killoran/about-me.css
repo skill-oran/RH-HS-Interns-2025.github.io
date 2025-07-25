@@ -1,17 +1,94 @@
 body {
     font-family:'Courier New', Courier, monospace;
     font-size:medium; 
-    background-color: skyblue 
+    background-color: mediumpurple 
 }
+
+/* the row of fonts shows the order or priority - if the browser does not */
+/* support the first one, it will automatically go to the second option.*/
 
 h1 { 
     font-style:oblique; 
     font-size: 3em;
-    color: darkred; 
-    background-color: blueviolet;
+    color: navy; 
+    background-color: paleturquoise;
 }
 
+h1:hover { 
+    text-decoration: underline;
+    color: blueviolet
+}
+/*note: can't transform text */ 
 
+h2 { 
+    font-style:oblique; 
+    font-size: 2em; 
+    color: navy;
+}
 
-/* the row of fonts shows the order or priority - if the browser does not */
-/* support the first one, it will automatically go to the second option.*/
+/* a is usually a small piece of body text that serves as a link */ 
+
+a { 
+    color: purple; 
+    text-decoration: none; 
+}
+
+/*hover = stating what happens when the cursor hovers over element 'a'. If that -> this*/ 
+a:hover { 
+    color: blue;
+    text-decoration: underline 
+}
+
+/*img -> referring it to my stupid cat */ 
+/*transform - changes the size. Scaling it by a factor of 1.1, so not much */  
+img:hover { 
+    transform: scale(2) rotate(360deg) 
+}
+
+/* '*' here is referring to every transition in the code, nothing specific.  */
+/*'0.3s ease' just means pausing 0.3 seconds before activating the effect */ 
+* { 
+    transition: all 0.3s ease;
+} 
+
+/*Can create a card style that lifts up on hover */ 
+
+.card { 
+    background-color: white; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.3)
+} 
+
+.card:hover { 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.3);
+    transform: translate(-5px) 
+}
+
+/*can create a button that changes on being hovered*/ 
+
+.my-button { 
+    background-color: blue; 
+    color: red; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+.my-button:hover{ 
+    background-color: yellow;
+    transform: scale(1.5);
+}
+
+/*can also create a list, where list items light up on being hovered over*/ 
+li:hover{
+    background-color: navy;
+    padding-left: 10px; 
+    color: magenta
+}
+/*while the list is inside the card, it can still be edited individually. */
+/* padding left = padding solely on the left side i think*/ 
+
