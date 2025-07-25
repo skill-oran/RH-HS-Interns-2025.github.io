@@ -114,6 +114,13 @@ li:hover {
     justify-content: center;
     margin-bottom: 100vh; /* Add some space at the bottom */
 }
+.layout2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30vh; /* Add some space at the bottom */
+}
 
     @font-face {
         font-family: 'FixedSys'; /* Choose a name for your font */
