@@ -1,51 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
- <link rel="stylesheet" href="about-me.css"/>
- <script type="text/javascript" src="./index.js"></script>
+<html>
+<head>
+    <title>2X</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
+    <h1>Jorge Romero</h1>
+    <h4>"Wake up in the morning, told myself keep going, told myself keep flowing, one life keep going" - 1oneam</h4>
 
+    
+    <div class="card">
+        <h2>About Me</h2>
+    <p>I'm a rising senior at Boston Latin Academy. I do both indoor and outdoor track, along with football.
+    </p>
+    </div>
 
-<h1>Jorge Romero</h1> 
+    <div class="card">
+    <h2>My Interests</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Music</li>
+        <li>Gaming</li>
+        <li>Sports</li>
+    </ul>
+    </div>
 
-<div class="socials">
+    <div class="card">
+    <img src="/Users/jorgeromero/Downloads/1000005506.jpg" alt="Placeholder image" class="profile-image" width="350" height="475">
+    <img src="/Users/jorgeromero/Downloads/1000015110.jpg" alt="Placeholder image" class="profile-image" width="350">
+    <img src="/Users/jorgeromero/Downloads/1000010487.jpg" alt="Placeholder image" class="profile-image" width="350">
 
- <a href= https://www.linkedin.com/in/jorge-romero-4a7088319> 
- </div>
+    </div>
+<h2>Useful links:</h2>
+<p>Click these buttons to visit my socials</p>
+<a href="https://www.linkedin.com/in/jorge-romero-4a7088319/" class="my-button" target="blank" style="text-decoration: none;">
+linkedin
+</a>
+    <p>Thanks for visiting my page!</p>
 
-<h2>
- 
-  Welcome to my page. I'm Jorge Romero, a rising senior at Boston Latin Academy. 
-  My main goal of this internship is to learn about the many different goals here at red hat, and see what I do and don't like.
-                    Scroll down to learn more about me
-</h2>
+<h2>Try javascript</h2>
+<button class="my-button" onclick="alert('Hello!')">
+    Click me
+</button>
 
-<h3>About Me:</h3>
-
-<h4>School:</h4>
-
-<p>
- As of right now, I currently attend Boston Latin Academy. For sports I do both indoor and outdoor track & field, along with football. I have met many people at BLA and while the school is not perfect,
- I enjoy the experience and wish to become more invovled in the community.
+<h2>Secret Message</h2>
+<button class="my-button" onclick="showMessage()">
+    Show secret
+</button>
+<p id="secret" style="display: none; color: red,">
+    found it
 </p>
-
-<h5>Interests:</h5>
-
-
-
-
-<p>I have many interests that I'm invested in. The largest interest of mine right now is music, as to me it
- serves as a way for me to focus on work and also complement how I feel in a certain moment. Other casual interests of mine are basketball, football, gaming, and drawing.
-</p>
-
-<h6>Internship & Future:</h6>
-
-
-<p>
-    do later
-</p>
+<script>
+    function showMessage() {
+        document.getElementById('secret').style.display = 'block';
+    }
+</script>
 
 
 </body>
-</html> 
+</html>
