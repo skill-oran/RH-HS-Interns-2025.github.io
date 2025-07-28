@@ -19,7 +19,7 @@ body {
     background-size: cover; /* Make the image cover the entire element */
     background-attachment: fixed; /* Make the background image fixed */
     font-family: 'Monofonto', monospace; /* Use the custom font */
-    color: #f36969;
+    color: #6df369;
 }
 
 
@@ -59,19 +59,6 @@ img:hover {
     transform: scale(1.1);
 }
 
-.imageleft {
-    max-width: 300px;   /* Image won't exceed the width of its container */
-    height: auto;      /* Height adjusts to keep aspect ratio */
-    display: block;    /* Removes extra space below image */
-    margin: -25vh 0 2vh 15vh; /* Adjusts the margins to create space around the image */
-}
-.imageright {
-    max-width: 300px;   /* Image won't exceed the width of its container */
-    height: auto;      /* Height adjusts to keep aspect ratio */
-    display: block;    /* Removes extra space below image */
-    /*margin: 0 auto;    /* Centers the image horizontally */
-    margin: -25vh 15vh 2vh 0; /* Adjusts the margins to create space around the image */
-}
 
 .image-row {
     display: flex;
@@ -81,11 +68,24 @@ img:hover {
 .image-row img {
     max-width: 300px;
     height: auto;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    margin-top: -25vh;
 }
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+
+
+.image-box {
+    background: rgba(0,0,0,0.5);    /* semi-transparent background */
+    border: 2px solid #6df369;      /* green border */
+    border-radius: 16px;            /* rounded corners */
+    padding: 24px;                  /* space inside the box */
+    margin: 32px auto;              /* space outside the box, centered */
+    display: flex;
+    flex-direction: row;            /* line up images horizontally */
+    justify-content: center;        /* center images horizontally */
+    align-items: center;
+    gap: 24px;                      /* space between images */
+    max-width: 700px;               /* optional: limit box width */
 }
 
 /* Add smooth transitions to everything */
