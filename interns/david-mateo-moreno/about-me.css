@@ -48,6 +48,10 @@ img {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+#boat {
+    color: #ffffff;
+}
+
 /*style a button that changes color on hover*/
 .my-button {
   background-color: #af0890;
@@ -71,6 +75,5 @@ li:hover {
   width: 200px;
   height: auto;
 }
-
 
 
