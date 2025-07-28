@@ -9,11 +9,7 @@ head {
 
 
 body {
-    /*font-family: 'Courier New', monospace;    
-    
-    margin: 20px;
-    padding-top: 0px;
-    padding-left: 20px;*/
+
     /*background-image: url(https://i.imgur.com/xYD9n.png);
         background-image: url(https://wallpapercave.com/wp/wp14434233.png);*/
         background-image: url(https://wallpapercave.com/wp/wp14434235.png);
@@ -23,12 +19,9 @@ body {
     background-size: cover; /* Make the image cover the entire element */
     background-attachment: fixed; /* Make the background image fixed */
     font-family: 'Monofonto', monospace; /* Use the custom font */
-    color: #6df369;
+    color: #f36969;
 }
 
-p {
-
-}
 
 h1 {
     justify-content: center;
@@ -64,6 +57,35 @@ a:hover {
 /* Make images slightly bigger on hover */
 img:hover {
     transform: scale(1.1);
+}
+
+.imageleft {
+    max-width: 300px;   /* Image won't exceed the width of its container */
+    height: auto;      /* Height adjusts to keep aspect ratio */
+    display: block;    /* Removes extra space below image */
+    margin: -25vh 0 2vh 15vh; /* Adjusts the margins to create space around the image */
+}
+.imageright {
+    max-width: 300px;   /* Image won't exceed the width of its container */
+    height: auto;      /* Height adjusts to keep aspect ratio */
+    display: block;    /* Removes extra space below image */
+    /*margin: 0 auto;    /* Centers the image horizontally */
+    margin: -25vh 15vh 2vh 0; /* Adjusts the margins to create space around the image */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.image-row img {
+    max-width: 300px;
+    height: auto;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Add smooth transitions to everything */
@@ -103,8 +125,9 @@ img:hover {
 
 /* Make list items highlight on hover */
 li:hover {
-    background-color: #000000;
+    /*background-color: #000000;*/
     padding-left: 10px;
+        transform: scale(1.1);
 }
 
 .layout1 {
@@ -120,6 +143,35 @@ li:hover {
     align-items: center;
     justify-content: center;
     margin-bottom: 30vh; /* Add some space at the bottom */
+}
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh; /* Add some space at the bottom */
+    margin-left: 10vh;
+    margin-right: 10vh;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh; /* Add some space at the bottom */
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.interests {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh; /* Add some space at the bottom */
+
 }
 
     @font-face {
