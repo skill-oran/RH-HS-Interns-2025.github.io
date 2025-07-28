@@ -10,6 +10,11 @@ body {
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
+    button#mode-toggle {
+        background-color: #333;
+        color: #f1f1f1;
+    }
+
 }
 
 h1 {
@@ -58,7 +63,3 @@ button#mode-toggle {
     font-weight: bold;
 }
 
-body.dark-mode button#mode-toggle {
-    background-color: #333;
-    color: #f1f1f1;
-}
