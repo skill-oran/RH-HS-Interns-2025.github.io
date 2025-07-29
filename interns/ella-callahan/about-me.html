@@ -1,16 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>Ella's First Website</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+    <h1>Welcome to My Website!</h1>
+    <p>Hi! My name is Ella and this is my first webpage!</p>
+    
+
+    
+
+    
+    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTeShpZO8btp_K-ESPrhs9-_jiPwlR218ak4A2-Hz72BhF4ezyrpmhOB8lmbdrdlA2_UQs0CVreaHeVO8VIfZSxceHFoxW__3Lb9rdgbg" alt="Placeholder image">
+    
+    
+    <div class="card">
+        <h2>About Me</h2>
+        <p>My name is Ella Callahan and I am a current high school intern at Red Hat. Outside of school, I love to play soccer and basketball while also keeping myself busy with two part-time jobs at ice cream shops. I enjoy volunteering at the local food pantry and farm co-op and I dedicate my time to various clubs including DECA and Debate club as well. I am enthusiastic when it comes to AI and furthering my knowledge in this department and finding new ways to interact with it. One of my greatest strengths is my ability to collaborate and listen to others and incorporate that information into my own work and in the workplace. </p>
+
+    </div>
+
+    <div class="card">
+        <h2>My Interests</h2>
+        <p>Hover over the items below:</p>
+        <ul>
+            <li>Web Development</li>
+            <li>Data Science</li>
+            <li>Learning New Coding Languages</li>
+            <li>Architecture Legos</li>
+        </ul>
+    </div>
+
+    <h2>Access My LinkedIn Here:</h2>
+
+    <a href="https://www.linkedin.com/in/ella-callahan-a1847533a/"
+    target="_blank" style="text-decoration: none;">
+        LinkedIn
+</a>
+
+<h2>Try JavaScript!</h2>
+<button class="my-button" onclick="alert('Hello!')">
+    Click Me
+</button>
+
+<h2>Secret Message</h2>
+<button class="my-button" onclick="showMessage()">
+    Show Secret
+</button>
+
+<p id="secret" style="display: none; color: red;">
+    You found it!
+</p>
+
+<script>
+function showMessage() {
+    document.getElementById('secret').style.display= 'block';
+}
+</script>
+
+<h2>Everything Together</h2>
+
+<ul>
+    <li>Hover over me!</li>
+    <li>Me too!</li>
+</ul>
+
+<button class="my-button" onclick="alert('Hello!')">
+    Say Hello
+</button>
+
+<a href="https://github.com" class="my-button" target="_blank"
+style="text-decoration:none; display: inline-block; margin-left:
+10px;">
+Visit GitHub
+</a>
+
+<p>Thanks for visiting my page!</p>
+
 </body>
-</html> 
+</html>

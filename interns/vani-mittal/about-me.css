@@ -1,0 +1,127 @@
+body {
+    font-family: Serif, san-serif;
+    background-color: #f7d6d0;
+    margin: 20px;
+}
+
+h1 {
+    color: #821d30;
+}
+
+.highlight {
+    background-color: #77b7eb;
+    padding: 5px;
+}
+
+.my-style {
+    color: #821d30;
+    font-size: 18px;
+}
+
+a {
+    color: #ffc5d0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffc5d0;
+    text-decoration: underline;
+}
+
+/* Make images slightly bigger on hover */
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Add smooth transitions to everything */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Create a card style that lifts up on hover */
+.card {
+    background-color: #ffc5d0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+
+}
+
+.cardspecial {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
+/* Style a button that changes on hover */
+.my-button {
+    background-color: #fb6090
+
+;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.my-button1 {
+    background-color: #fb6090
+;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.my-button:hover {
+    background-color: #fb6090;
+    transform: scale(1.05);
+}
+
+/* Make list items highlight on hover */
+li:hover {
+    background-color: #ecf0f1;
+    padding-left: 10px;
+}
+
+.tab-container {
+      display: flex;
+      background-color: #f1f1f1;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .tab-button {
+      background-color: #ddd;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .tab-button.active {
+      background-color: #bbb;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      margin-top: 10px;
+      border-top: 1px solid #ccc;
+    }
+
+    .tab-content.active {
+      display: block;
+    }

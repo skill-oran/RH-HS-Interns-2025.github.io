@@ -1,0 +1,112 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+    background-color: #e4e4e4;
+
+    transition: fadeIn 3s ease-in-out;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* horizontal centering */
+    align-items: center;
+    /* vertical centering */
+    flex-direction: column;
+    /* optional: stacks children vertically */
+}
+
+.border {
+    border-radius: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.accomplishments {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+h1 {
+    color: rgb(123, 128, 133);
+}
+
+h2 {
+    color: #c81b1b;
+}
+
+.about-me {
+    display: none;
+}
+
+.interests {
+    display: none;
+}
+
+.link:hover {
+    color: #7e07e7;
+    text-decoration: underline;
+}
+
+li:hover {
+    font-weight: bold;
+    transition: transform 1.0s ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.profile {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+img:not(:last-child) {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.card {
+    border: 2px solid black;
+}
+
+.pics {
+    display: inline-block;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.video {
+    object-fit: cover;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+    background-color: red;
+    border: 1px;
+    border-radius: 5px;
+    color: navy;
+    padding: 10px 20px;
+    display: block;
+}
