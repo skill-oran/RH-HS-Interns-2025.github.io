@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1 title="Hovering, huh?"; class="big-heading">Hello? This is Sophia speaking...</h1>
+    
+    </div>
     <p id="typedText" class="blurb">
     <span id="text"></span><span id="cursor">|</span>
     </p> 
@@ -16,7 +18,7 @@
         const textElement = document.getElementById("text");
         const cursor = document.getElementById("cursor");
         let i = 0;
-        const speed = 50; // typing speed
+        const speed = 45; // typing speed
         const delayBetweenLoops = 2000;
 
     // Blink cursor by toggling opacity
@@ -41,12 +43,16 @@ window.onload = typeWriter;
 </script>
 
     <div class="card"> 
-        <!--- creating the card layout w/ the about me -> the name of the class is .card -->
-
         <h2 style="font-style:oblique"; class="diffHeading">About Me</h2>
-        <p>I'm a rising junior at Newton South High school. I'm learning web development!</p>
-        <p>In school, I have taken several CS courses, and am taking Honors CS3 this upcoming year.</p>
-        <p>I am also on my school's science team, and have competed at MIT, Brown, and the statewide competition.</p>
+        <!--- creating the card layout w/ the about me -> the name of the class is .card -->
+        <div class="flex-container-rows">
+        <div class="flex-container-cols">
+        <p>Hi, I'm Sophia! I'm a rising junior at Newton South High School.</p>
+        <p>I live in Newton MA, and I have a dog named Zoe.</p> 
+        </div>
+        
+        
+        </div>
     </div>
 
     <div class="card">
@@ -58,12 +64,7 @@ window.onload = typeWriter;
             <li>Sci-Fi books</li>
         </ul>
     </div>
-
-    <div class="card"> 
-        <h2 class="diffHeading">An Image.</h2>
-        <p> Hover over the image to make it do something interesting !</p>
-        <img src="https://media.tenor.com/92MplgQwb80AAAAM/cat-meme-wave-emoji.gif" alt="goofy aah cat">
-    </div>
+        
     <!-- 'card' is kind of like a class, only a class of format that can be applied to multiple sections-->
     <div class="card">
     <h2 class="diffHeading">Useful Links ?!?!?!?!</h2> 
@@ -113,20 +114,13 @@ window.onload = typeWriter;
     </a> 
     </div>
     <p>Thanks for visiting my page!</p>
+    <img src="https://media.tenor.com/92MplgQwb80AAAAM/cat-meme-wave-emoji.gif" alt="goofy aah cat">
 
     <script> 
     function showMessage() { 
         document.getElementById('secret').style.display = 'block';
     }
-    </script> 
-    <div class="card animate"> 
-    <h2>Collab section</h2> 
-    <p>Working with my awesome class mates :)))) </p>
-        <ul>
-        <li> Learning from others </li>
-        <li>Sharing knowledge</li>
-        <li>Uhhhh etcetera etcetera</li>
-        </ul> 
-    </div>
+    </script>
+
 </body>
 </html>
