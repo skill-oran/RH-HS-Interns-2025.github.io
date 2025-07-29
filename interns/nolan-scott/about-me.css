@@ -70,7 +70,7 @@ img:hover {
     height: auto;
     margin-left: 15vh;
     margin-right: 15vh;
-    margin-top: -25vh;
+    margin-top: -45vh;
 }
 
 
@@ -86,6 +86,7 @@ img:hover {
     align-items: center;
     gap: 24px;                      /* space between images */
     max-width: 700px;               /* optional: limit box width */
+    position: relative;
 }
 
 /* Add smooth transitions to everything */
@@ -117,6 +118,22 @@ img:hover {
     cursor: pointer;
     font-size: 16px;
 }
+.profile-button {
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid #6df369;      /* green border */
+    color: #6df369;;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    margin: 24px auto; /* Center horizontally */
+    margin-top: 20vh;
+
+}
 
 .my-button:hover {
     background-color: #2980b9;
@@ -142,7 +159,7 @@ li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30vh; /* Add some space at the bottom */
+    margin-bottom: 60vh; /* Add some space at the bottom */
 }
 .bio {
     display: flex;
@@ -152,7 +169,7 @@ li:hover {
     margin-bottom: 10vh; /* Add some space at the bottom */
     margin-left: 10vh;
     margin-right: 10vh;
-    text-align: center;
+    text-align: justify;
 }
 
 .links {
@@ -168,9 +185,10 @@ li:hover {
 .interests {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-bottom: 5vh; /* Add some space at the bottom */
+    margin-left: 10vh;
+    margin-right: 10vh;
 
 }
 
