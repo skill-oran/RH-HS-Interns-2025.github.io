@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>Samantha's Website</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <h1>Welcome to my website!</h1>
+    <div class="card">
+        <h2 class="about-me">About Me</h2>
+        <p>Hi! My name is Samantha. I am a rising senior attending Andover High School. I'm currently a high school intern at Red Hat and find passion in helping others.</p>
+        <ul>
+            <li>I love art and design</li>
+            <li>I am organized</li>
+            <li>I am full of empathy</li>
+            <li>I have good communication skils</li>
+            <li>I am eager to learn new things</li>
+        </ul>
+        </div>
+    <div class="card">
+        <h2>My interests</h2>
+        <ul>
+            <li>Design</li>
+            <li>Art</li>
+            <li>Psychology</li>
+            <li>Writing</li>
+            <li>Biology</li>
+        </ul>    
+    </div>
+
+    <h2>useful links</h2>
+    <p>click these buttons to visit other websites:</p>
+    <a href="link" style="text-decoration:none;">
+        Learn more here!!
+    </a>
+
+    <h2>Try javascript!</h2>
+    <button class="my-button" onclick="alert('Hello!')">
+        Click me
+    </button>
+
+    <h2>Secret message</h2>
+    <button class="my-button" onclick="showMessage()">
+        Show Secret
+    </button>
+
+    <p id="secret" style="display:none; color:pink;">
+        You found it!
+    </p>
+    
+    <script>
+        function showMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+    </script>
+    
+    <button class="my-button" onclick="alert('hello!')">
+        Say hello
+    </button>
+
+    <a href="link" target="_blank" style="text-decoration:none;display:inline-block; margin-left:10px; margin-top:10px;">
+        Visit github
+    </a>
+
+    <img src="1000015467.jpg" alt="Placeholder image">
 </body>
 </html> 
