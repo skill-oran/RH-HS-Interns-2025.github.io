@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+    <title>Andrew Fang - Red Hat Internship Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="about-me.css">
+    <script defer src="about-me.js"></script>
 </head>
 <body>
-  <h1>Hi</h1>
+    <div class="container">
+        <header class="fade-in">
+            <div class="header-content">
+                <h1>Andrew Fang</h1>
+                <p class="subtitle">Prelude to myself</p>
+                <div class="mode-toggle">
+                    <button id="mode-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="about-me-card slide-up">
+                <p>Rising senior at Westford Academy passionate about computing, hardware, and creative problem-solving.</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="card slide-up">
+                <h2><i class="fas fa-user"></i> About Me</h2>
+                <p>I'm a high school student with a deep interest in web development, computer architecture, and innovative design. My internship experiences have allowed me to explore these passions in professional settings.</p>
+            </section>
+
+            <section class="card slide-up">
+                <h2><i class="fas fa-star"></i> My Interests</h2>
+                <ul class="interests-list">
+                    <li><i class="fas fa-microchip"></i> RISC Architecture</li>
+                    <li><i class="fas fa-desktop"></i> Computer Hardware</li>
+                    <li><i class="fas fa-tshirt"></i> Fashion</li>
+                    <li><i class="fas fa-code"></i> Good Food</li>
+                </ul>
+            </section>
+
+            <section class="card slide-up">
+                <h2><i class="fas fa-briefcase"></i> Internship Work</h2>
+                <div class="project-gallery">
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/400x250" alt="Project placeholder" class="project-image">
+                        <div class="project-overlay">
+                            <h3>wip title</h3>
+                            <p>wip descript/p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card slide-up">
+                <h2><i class="fas fa-paperclip"></i> Connect with me</h2>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-button">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="journal.html" class="social-button">
+                        <i class="fas fa-book-open"></i> Internship Journal
+                    </a>
+                    <a href="mailto:your.email@example.com" class="social-button">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="fade-in">
+            <p>Thanks for visiting my portfolio! &copy; <span id="current-year"></span> Andrew Fang</p>
+        </footer>
+    </div>
 </body>
-</html> 
+</html>
