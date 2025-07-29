@@ -1,16 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>2X</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+    <h1>Jorge Romero</h1>
+    <h4>"Wake up in the morning, told myself keep going, told myself keep flowing, one life keep going" - 1oneam</h4>
+
+    
+    <div class="card">
+        <h2>About Me</h2>
+    <p>I'm a rising senior at Boston Latin Academy. I do both indoor and outdoor track, along with football.
+    </p>
+    </div>
+
+    <div class="card">
+    <h2>My Interests</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Music</li>
+        <li>Gaming</li>
+        <li>Sports</li>
+    </ul>
+    </div>
+
+    <div class="card">
+    <img src="/Users/jorgeromero/Downloads/1000005506.jpg" alt="Placeholder image" class="profile-image" width="350" height="475">
+    <img src="/Users/jorgeromero/Downloads/1000015110.jpg" alt="Placeholder image" class="profile-image" width="350">
+    <img src="/Users/jorgeromero/Downloads/1000010487.jpg" alt="Placeholder image" class="profile-image" width="350">
+
+    </div>
+<h2>Useful links:</h2>
+<p>Click these buttons to visit my socials</p>
+<a href="https://www.linkedin.com/in/jorge-romero-4a7088319/" class="my-button" target="blank" style="text-decoration: none;">
+linkedin
+</a>
+    <p>Thanks for visiting my page!</p>
+
+<h2>Try javascript</h2>
+<button class="my-button" onclick="alert('Hello!')">
+    Click me
+</button>
+
+<h2>Secret Message</h2>
+<button class="my-button" onclick="showMessage()">
+    Show secret
+</button>
+<p id="secret" style="display: none; color: red,">
+    found it
+</p>
+<script>
+    function showMessage() {
+        document.getElementById('secret').style.display = 'block';
+    }
+</script>
+
+
 </body>
-</html> 
+</html>
