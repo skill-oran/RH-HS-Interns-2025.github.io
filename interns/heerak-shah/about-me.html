@@ -24,7 +24,7 @@
 
     <section id="about" class="card">
         <h2>About Me</h2>
-        <p>Hi! I'm Heerak, a rising senior at Wake Early College of Information & Biotechnologies with a passion for exploring tech and solving problems.</p>
+        <p>Hi! I'm Heerak, a rising senior at Wake Early College of Information & Biotechnologies. I like technology and solving problems and that is what led me to apply for this internship. Outside of school, some of my hobbies include speedcubing and swimming. I also have an older sister who goes to NC State and there is where I want to go too.</p>
         <img src="Me.jpg" alt="My Picture">
     </section>
 
@@ -54,16 +54,36 @@
             <li>Swimming</li>
             <li>Listening to Music</li>
             <li>Reading</li>
-            <li>Watching Movies</li>
+            <li>Travelling</li>
         </ul>
     </section>
 
-    <section id="projects" class="card">
-        <h2>Quiz</h2>
-        <button class="center-button" onclick="alert('Thanks for checking out my site!')">Say Hello</button>
-        <button class="center-button" onclick="showMessage()">Reveal Secret</button>
-        <p id="secret" style="display: none; color: red;">This is the secret message.</p>
-    </section>
+  <section id="projects" class="card">
+    <h2>Quiz</h2>
+    <div id="quiz">
+        <p id="question">What is my favorite subject?</p>
+        <button onclick="checkAnswer('Programming')">Programming</button>
+        <button onclick="checkAnswer('History')">History</button>
+        <button onclick="checkAnswer('Art')">Art</button>
+        <p id="quiz-feedback"></p>
+    </div>
+    <button class="center-button" onclick="alert('Thanks for checking out my site!')">Say Hello</button>
+    <button class="center-button" onclick="showMessage()">Reveal Secret</button>
+    <p id="secret" style="display: none; color: red;">This is the secret message.</p>
+</section>
+
+<script>
+function checkAnswer(answer) {
+    const feedback = document.getElementById('quiz-feedback');
+    if (answer === 'Programming') {
+        feedback.textContent = "Correct! Programming is my favorite subject.";
+        feedback.style.color = "green";
+    } else {
+        feedback.textContent = "Oops! Try again.";
+        feedback.style.color = "red";
+    }
+}
+</script>
 
     <section id="gallery" class="card">
         <h2>Photo Gallery</h2>
@@ -85,6 +105,7 @@
         <p>Click the buttons below to connect and view my work:</p>
         <a href="https://www.linkedin.com/in/heerakrshah" class="my-button" target="_blank">LinkedIn</a>
         <a href="https://github.com/expert228" class="my-button" target="_blank">GitHub</a>
+        <a href="https://docs.google.com/document/d/1tZyOcGl3Rw0Akv6gzxw6hrkUgaAc-hQ9HkEkelg67js/edit?usp=sharing" class="my-button" target="_blank">Journal Entry</a>
     </section>
 
     <footer>
@@ -97,8 +118,12 @@
         }
     </script>
     <script>
+let lastBallTime = 0;
 document.addEventListener('mousemove', function(e) {
-    // Create a new ball
+    const now = Date.now();
+    if (now - lastBallTime < 120) return; 
+    lastBallTime = now;
+
     const ball = document.createElement('img');
     ball.src = 'ball.png';
     ball.alt = 'Ping Pong Ball';
@@ -113,7 +138,6 @@ document.addEventListener('mousemove', function(e) {
 
     document.body.appendChild(ball);
 
-    // Remove the ball after 1 second for cleanup
     setTimeout(() => {
         ball.remove();
     }, 1000);
