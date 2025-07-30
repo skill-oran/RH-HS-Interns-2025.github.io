@@ -1,0 +1,173 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-size:medium; 
+    background-color: purple;
+    line-height:2; 
+}
+
+/* the row of fonts shows the order or priority - if the browser does not */
+/* support the first one, it will automatically go to the second option.*/
+
+h1 { 
+    font-size: 2.8em;
+    color: lightblue; 
+}
+
+h1:hover { 
+    text-decoration: underline;
+    font-style: bold;
+    color: gold
+}
+/*note: can't transform text */ 
+
+.blurb { 
+    color: gold; 
+    margin: 50px 500px 30px 500px; 
+    animation: fadeIn 1.5s forwards; 
+    text-decoration: bold; 
+}
+
+.blurb:hover { 
+    color: navy; 
+    text-decoration: underline; 
+}
+
+.big-heading { 
+    font-size: 3em; 
+    font-family:Georgia; 
+    background-color: navy; 
+    padding: 30px 40px; 
+    margin: 25px 300px 25px 300px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+h2 { 
+    font-style:oblique; 
+    font-size: 2em; 
+    color: navy;
+}
+
+.container-rows { 
+    display:flex; 
+    flex-direction: row; 
+    align-items: center;
+    align-content: stretch;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+img { 
+    margin: 0px 20px 0px 10px;
+    transform:scale(0.5)
+}
+
+.diffHeading { 
+    text-align: center;
+    font-size: 1.5em; 
+    font-family:Georgia; 
+    background-color: lightblue; 
+    padding: 10px;  
+    border-radius: 10px; 
+    margin: 0px 0px 0px 0px
+}
+
+.diffHeading:hover{ 
+    font-size: 3em; 
+    color: magenta; 
+    transform: translate(-5px) 
+}
+
+/* a is usually a small piece of body text that serves as a link */ 
+
+a { 
+    color: purple; 
+    text-decoration: none; 
+}
+
+/*hover = stating what happens when the cursor hovers over element 'a'. If that -> this*/ 
+a:hover { 
+    color: blue;
+    text-decoration: underline 
+}
+
+/*img -> referring it to my stupid cat */ 
+/*transform - changes the size. Scaling it by a factor of 1.1, so not much */  
+/*
+img:hover { 
+    transform: scale(2) rotate(360deg) 
+} */
+
+/* '*' here is referring to every transition in the code, nothing specific.  */
+/*'0.3s ease' just means pausing 0.3 seconds before activating the effect */ 
+* { 
+    transition: all 0.3s ease;
+} 
+
+/*Can create a card style that lifts up on hover */ 
+/*This is the default card style for the cards that are not cut in half. */
+
+.card { 
+    background-color:rgb(243, 247, 249); 
+    padding: 20px; 
+    margin: 30px 400px 30px 400px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.3)
+} 
+
+.card:hover { 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.3);
+    transform: translate(-5px) 
+}
+
+.partial-card { 
+    background-color:rgb(243, 247, 249); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.3)
+} 
+
+.partial-card:hover { 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.3); 
+    transform: translate(-5px); 
+}
+
+.and { 
+    font-family:Georgia; 
+    color: gold; 
+    font-style:oblique;
+}
+
+.and:hover { 
+    text-decoration: underline; 
+}
+/*can create a button that changes on being hovered*/ 
+
+.my-button { 
+    background-color: navy; 
+    color: lightblue; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+.my-button:hover{ 
+    background-color: yellow;
+    transform: scale(1.5);
+}
+
+/*can also create a list, where list items light up on being hovered over*/ 
+li:hover{
+    background-color: navy;
+    padding-left: 10px; 
+    color: magenta
+}
+/*while the list is inside the card, it can still be edited individually. */
+/* padding left = padding solely on the left side i think*/ 
+
+
+
+
+
