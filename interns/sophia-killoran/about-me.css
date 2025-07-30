@@ -1,7 +1,7 @@
 body {
     font-family:'Courier New', Courier, monospace;
     font-size:medium; 
-    background-color: mediumpurple 
+    background-color: purple 
 }
 
 /* the row of fonts shows the order or priority - if the browser does not */
@@ -9,34 +9,35 @@ body {
 
 h1 { 
     font-size: 2.8em;
-    color: navy; 
+    color: cyan; 
 }
 
 h1:hover { 
     text-decoration: underline;
     font-style: bold;
-    color: violet 
+    color: gold
 }
 /*note: can't transform text */ 
 
 .blurb { 
     color: gold; 
-    margin: 20px 100px 15px 100px; 
+    margin: 50px 500px 30px 500px; 
     animation: fadeIn 1.5s forwards; 
     text-decoration: bold; 
 }
 
 .blurb:hover { 
-    color: darkred; 
+    color: navy; 
     text-decoration: underline; 
 }
 
 .big-heading { 
     font-size: 3em; 
-    background-color: cyan; 
-    padding: 10px; 
-    margin: 20px 100px 15px 100px;
+    background-color: navy; 
+    padding: 30px 40px; 
+    margin: 25px 400px 25px 400px;
     border-radius: 10px;
+    text-align: center;
 }
 
 h2 { 
@@ -59,29 +60,22 @@ flex: 70%;
 .flex-container-rows { 
     display: flex; 
     flex-direction: row;
-    align-items: center; 
-}
-
-.flex-container-cols { 
-    display: flex; 
-    flex-direction: column; 
-    flex-wrap: wrap;
-    justify-content: space-evenly; 
-    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 img { 
-    margin: 0px 20px 0px 10px
-    scale(2)
-
+    margin: 0px 20px 0px 10px;
+    transform:scale(0.5)
 }
 
 .diffHeading { 
+    text-align: center;
     font-size: 1.5em; 
-    background-color: lightcyan; 
-    padding: 10px; 
-    margin: 10px 700px 10px 20px; 
+    background-color: rgb(200, 253, 253); 
+    padding: 10px;  
     border-radius: 10px; 
+    margin: 0px 0px 0px 0px
 }
 
 .diffHeading:hover{ 
@@ -105,9 +99,10 @@ a:hover {
 
 /*img -> referring it to my stupid cat */ 
 /*transform - changes the size. Scaling it by a factor of 1.1, so not much */  
+/*
 img:hover { 
     transform: scale(2) rotate(360deg) 
-}
+} */
 
 /* '*' here is referring to every transition in the code, nothing specific.  */
 /*'0.3s ease' just means pausing 0.3 seconds before activating the effect */ 
@@ -120,7 +115,7 @@ img:hover {
 .card { 
     background-color: white; 
     padding: 20px; 
-    margin: 20px; 
+    margin: 20px 500px 20px 500px; 
     border-radius: 10px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.3)
 } 
@@ -128,6 +123,11 @@ img:hover {
 .card:hover { 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.3);
     transform: translate(-5px) 
+}
+
+.half-card { 
+    /*basically make a card split in half*/ 
+
 }
 
 /*can create a button that changes on being hovered*/ 
@@ -155,7 +155,6 @@ li:hover{
 }
 /*while the list is inside the card, it can still be edited individually. */
 /* padding left = padding solely on the left side i think*/ 
-
 
 
 
