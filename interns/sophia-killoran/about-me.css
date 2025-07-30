@@ -83,6 +83,8 @@ img {
 a { 
     color: purple; 
     text-decoration: none; 
+    display:inline-block; 
+    margin-left:10px;
 }
 
 /*hover = stating what happens when the cursor hovers over element 'a'. If that -> this*/ 
@@ -153,8 +155,15 @@ img:hover {
     font-size: 16px;
 }
 
+.button-align { 
+    display:flex; 
+    flex-direction: row; 
+    justify-content: center;
+
+}
+
 .my-button:hover{ 
-    background-color: yellow;
+    background-color: magenta;
     transform: scale(1.5);
 }
 
@@ -166,6 +175,12 @@ li:hover{
 }
 /*while the list is inside the card, it can still be edited individually. */
 /* padding left = padding solely on the left side i think*/ 
+
+
+
+
+
+
 
 
 
