@@ -1,16 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Website</title>
+    <link rel="stylesheet" href="about-me.css">
     
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+    <style>
+        body.dark-mode {
+            background-color: #1e396b;
+            color: #F5F5F5;
+        }
+        .dark-mode .card {
+            background-color: #187d29;
+            box-shadow: 0 2px 10px rgba(30, 9, 121, 0.4);
+        }
+        .dark-mode a {
+            color: #0fa80f;
+        }
+        .dark-mode a:hover {
+            color: #0e9d9d;
+        }
+        .dark-mode .my-button {
+            background-color: #198a73;
+            color: #fff;
+        }
+        .dark-mode .my-button:hover {
+            background-color: #168e36;
+        }
+        .dark-mode li:hover {
+            background-color: #333;
+            border-left: 3px solid #07045f;
+        }
+        #darkModeToggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            background-color: #1b1594;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        #darkModeToggle:hover {
+            background-color: #021f0f;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hi</h1>
+    <button id="darkModeToggle">Toggle Blue Mode</button>
+   <div class="intro">
+    <h1>Welcome to My Interactive Website!</h1>
+    <p>Ella Callahan</p>
+    <p>Melrose High School</p>
+    <p>Melrose, MA 02176</p>
+
+</div>
+
+    
+
+    
+    
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Card</title>
+    <style>
+        .card {
+            background: #94cda4;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            cursor: pointer;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .dropdown-text {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding-left: 15px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        .dropdown-text.show {
+            max-height: 100px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+        <h2>-Links-</h2>
+         </button>
+
+    <p>Here's my GitHub, Journal Entries, and LinkedIn!</p>
+    <a href="https://github.com/ecallahan4/RH-HS-Interns-2025.github.io/tree/main/interns/ella-callahan"
+       class="my-button"
+       target="_blank"
+       style="text-decoration: none; display: inline-block; margin-left: 10px;">
+        Visit GitHub
+        </a>
+
+    <p> </p>
+    <a href="https://rh-hs-interns-2025.github.io/interns/ella-callahan/journals/journals.html"
+       class="my-button"
+       target="_blank"
+       style="text-decoration: none; display: inline-block; margin-left: 10px;">
+        Visit Journal Entries
+        </a>
+
+    </button>
+    <a href="https://www.linkedin.com/in/ella-callahan-a1847533a/"
+       class="my-button"
+       target="_blank"
+       style="text-decoration: none; display: inline-block; margin-left: 10px;">
+        Visit LinkedIn
+    </a>
+    </div>
+
+    <div class="card">
+        <h2>-About Me-</h2>
+        <p>My name is Ella Callahan and I am a current high school intern at Red Hat. Outside of school, I love to play soccer and basketball while also keeping myself busy with two part-time jobs at ice cream shops. I enjoy volunteering at the local food pantry and farm co-op and I dedicate my time to various clubs including DECA and Debate club as well. I am enthusiastic when it comes to AI and furthering my knowledge in this department and finding new ways to interact with it. One of my greatest strengths is my ability to collaborate and listen to others and incorporate that information into my own work and in the workplace. </p>
+        <p></p>
+<img src="https://github.com/ecallahan4/RH-HS-Interns-2025.github.io/blob/main/interns/ella-callahan/IMG_2278.PNG?raw=true" style="width: 180px; height: 800;" alt="Reagan">
+
+    </div>
+
+    <div class="card">
+        <h2>-My Interests-</h2>
+        <ul>
+            <li onclick="toggleDropdown(this)">Web Development
+                <div class="dropdown-text"></div>
+            </li>
+
+            <li onclick="toggleDropdown(this)">Data Science
+                <div class="dropdown-text">During my time at the Red Hat internship, I've been able to meet with both a college mentor and a current Red Hat employee about Data Science and have gained a deeper understanding of this field and it has insprired me to pursue this interest further. </div>
+            </li>
+
+            <li onclick="toggleDropdown(this)">Learning New Coding Languages
+                <div class="dropdown-text">Before the Red Hat internship, I had learned to code with JavaScript and Python and I am always open to learning new coding languages! During my time here, I have learned how to code with html and css and I found it extremely interesting!</div>
+            </li>
+
+            <li onclick="toggleDropdown(this)">Architecture Legos
+                <div class="dropdown-text">Ever since I was young, I have loved legos. As I got older, I began to collect architecture lego sets and build them whenever I found the time. Sometimes I would get a kit and I would not get up until I finished it which could take up to 5 hours!</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleDropdown(element) {
+            const dropdown = element.querySelector('.dropdown-text');
+            dropdown.classList.toggle('show');
+        }
+    </script>
+
 </body>
-</html> 
+</html>
+<div class="card">
+        <h2>-Skills and Accomplishments-</h2>
+        <ul>Organization and innovation</p>
+</p>Hardworking and reliable</p>
+</p>Collaborating and helping others</p>
+</p>Two-time DECA state competitor</p>
+</p>Certification in Harvard AI Bootcamp</p>
+    </div>
+    </div>
+    
+ 
+    <script>
+        function showMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+        const darkToggle = document.getElementById('darkModeToggle');
+        darkToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
+
+
+      <div class="card" id="reel">
+        <h2>-Day in The Life Reel Project-</h2>
+    <p>This is a video I made to show what it's like to be a Red Hat HS Intern!</p>
+        <div style="margin-top: 20px; text-align: center;">
+          <video id="ditl-video" width="480" controls poster="./static/banner.png" style="border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.18);">
+            <source src="./static/0kxqzv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
