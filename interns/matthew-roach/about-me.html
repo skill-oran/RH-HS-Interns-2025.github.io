@@ -1,16 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me - Matthew Roach</title>
+  <link rel="stylesheet" href="about-me.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hi</h1>
+  <div class="background-pattern"></div>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="Webpage Profile Photo.jpeg" alt="Profile Photo" class="profile-img">
+      <h1 class="animate-pop">Matthew Roach</h1>
+      <h3 class="typewriter"><span id="typed-text"></span></h3>
+    </div>
+  </header>
+
+  <main>
+    <section class="bio-section card animate-slide">
+      <h2>About Me</h2>
+      <p>
+        I'm a high school senior currently enrolled at Apex High School. My favorite subjects are math, computer science, and chemistry.
+      </p>
+      <ul>
+        <li>Passionate about technology and innovation</li>
+        <li>Red Hat Intern, Summer 2025</li>
+        <li>Loves Biking</li>
+        <li>Interested in web development and UX design</li>
+      </ul>
+    </section>
+
+    <section class="images-section card animate-fade">
+      <h2>Gallery</h2>
+      <div class="images-grid">
+        <figure>
+          <img src="Gallery Image 1.jpeg" alt="Photo 1">
+          <figcaption>Inside the Tower</figcaption>
+        </figure>
+        <figure>
+          <img src="Gallery Image 2.jpeg" alt="Photo 2">
+          <figcaption>View of the Tower from outside <br><a href="https://en.wikipedia.org/wiki/Red_Hat_Tower" target="_blank">Source</a></figcaption>
+        </figure>
+        <figure>
+          <img src="Gallery Image 3.jpeg" alt="Photo 3">
+          <figcaption>The Cafeteria<br></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="reel-section card animate-pop">
+      <h2>Social Media Reel Project</h2>
+      <div class="reel-embed">
+        <iframe width="560" height="315" src="Matthew Roach Social Media Reel.mp4" title="Social Media Reel" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="journal-section card animate-slide">
+      <h2>Journal Entries</h2>
+      <div class="journal-highlight">
+        
+        <div>
+          <p>
+            Dive into my internship journey! My journal entries document my growth, challenges, and achievements throughout the Red Hat internship.
+          </p>
+          <a href="journal.html" class="journal-link">View My Journal Entries</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Matthew Roach. All rights reserved.</p>
+  </footer>
+  <script>
+    // Typewriter effect for subtitle
+    const text = "High School Student, Apex High School";
+    const typedText = document.getElementById("typed-text");
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        typedText.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 60);
+      }
+    }
+    typeWriter();
+  </script>
 </body>
-</html> 
+</html>
