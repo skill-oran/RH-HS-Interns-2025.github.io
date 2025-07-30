@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Hat Enterprise Linux (RHEL)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #1f1f1f;
+      background: #f6f9ff;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #c00;
+      letter-spacing: 1px;
+    }
+    .hero {
+      background: #f6f9ff;
+      padding: 5rem 2rem 2rem 2rem;
+      text-align: left;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #c00;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 0 1rem 0;
+    }
+    .section {
+      padding: 2rem 2rem 1rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #c00;
+    }
+    .section p, .section ul {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+    .features {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .feature {
+      flex: 1 1 250px;
+      padding: 1.5rem;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+      margin-bottom: 1.5rem;
+    }
+    .feature h3 {
+      margin-bottom: 0.5rem;
+      color: #1f2937;
+      font-size: 1.2rem;
+    }
+    .feature p {
+      color: #555;
+      font-size: 1rem;
+    }
+    .timeline-section {
+      padding: 2rem 2rem 1rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .timeline-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #c00;
+    }
+    .timeline-container {
+      overflow-x: auto;
+      padding: 1rem 0 2rem 0;
+      background: #f6f9ff;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      width: max-content;
+      position: relative;
+      padding-bottom: 20px;
+      border-bottom: 3px solid #1f2937;
+    }
+    .timeline-item {
+      position: relative;
+      min-width: 200px;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .timeline-item h3 {
+      margin: 0;
+      color: #1f2937;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-item ul {
+      list-style: disc inside;
+      padding-left: 0;
+      margin: 0;
+      color: #444;
+      font-size: 0.98rem;
+    }
+    .timeline-item li {
+      margin-bottom: 0.5em;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 12px;
+      width: 12px;
+      background-color: #c00;
+      border-radius: 50%;
+    }
+    .timeline-item:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 12px 32px rgba(204,0,0,0.15), 0 4px 16px rgba(0,0,0,0.10);
+      z-index: 2;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f1f1f1;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+    }
+    @media (max-width: 800px) {
+      .features {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .hero, .section, .timeline-section {
+        padding: 2rem 1rem 1rem 1rem;
+      }
+      .timeline {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Red Hat Enterprise Linux (RHEL)</div>
+  </header>
+
+  <section class="hero">
+    <h1>Imagine a bald head. No hair, no cap, no hat.</h1>
+    <p>
+      Out in the "Wild West" that we refer to as the open cloud INSERT Red Hat Enterprise Linux (RHEL) is a leading enterprise operating system trusted by organizations worldwide for its stability, security, and support. RHEL powers mission-critical workloads across data centers, clouds, and edge environments.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Why Enterprises Choose RHEL</h2>
+    <ul>
+      <li><strong>Stability:</strong> Long-term support and predictable release cycles.</li>
+      <li><strong>Security:</strong> Advanced security features and regular, rigorously tested updates.</li>
+      <li><strong>Support:</strong> 24/7 enterprise-grade support from Red Hat experts.</li>
+      <li><strong>Performance:</strong> Optimized for modern hardware and cloud environments.</li>
+      <li><strong>Ecosystem:</strong> Certified for thousands of applications and hardware platforms.</li>
+      <li><strong>Compliance:</strong> Meets standards like FIPS, HIPAA, PCI-DSS, and more.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>RHEL in the Modern Enterprise</h2>
+    <p>
+      RHEL is the backbone of IT infrastructure for many Fortune 500 companies. Its flexibility and scalability make it ideal for a wide range of workloads, including web servers, databases, virtualization, and cloud-native applications.
+    </p>
+    <p>
+      With tools like Red Hat Satellite and Red Hat Insights, organizations can manage large-scale deployments, automate tasks, and proactively address issues. RHEL’s certified ecosystem ensures compatibility and smooth integration with enterprise software and hardware.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Built for the Future</h2>
+    <p>
+      RHEL supports hybrid and multicloud environments—including AWS, Azure, and Google Cloud—offering a consistent platform across on-premises, cloud, and edge. Features like Application Streams and modularity let developers run multiple versions of key applications and languages without compromising system stability.
+    </p>
+  </section>
+
+  <section class="timeline-section">
+    <div class="timeline-title">RHEL Timeline</div>
+    <div class="timeline-container">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>1993</h3>
+          <ul>
+            <li>Red Hat, Inc. is founded.</li>
+            <li>Focuses on open-source software and Linux.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>1995-1999</h3>
+          <ul>
+            <li>Red Hat Linux gains traction among developers and businesses.</li>
+            <li>Becomes a popular choice for early enterprise Linux adoption.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>2002</h3>
+          <ul>
+            <li>RHEL 2.1 launches as a subscription-based enterprise OS.</li>
+            <li>Introduces official support and certified ecosystem.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>2005</h3>
+          <ul>
+            <li>RHEL 4 sets new security standards.</li>
+            <li>Introduces Security-Enhanced Linux (SELinux).</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>2011</h3>
+          <ul>
+            <li>RHEL 6 focuses on virtualization and cloud readiness.</li>
+            <li>Expands support for modern workloads.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>2019</h3>
+          <ul>
+            <li>RHEL 8 launches with Application Streams and improved modularity.</li>
+            <li>Enhances developer experience and cloud integration.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>2025+</h3>
+          <ul>
+            <li>RHEL continues to innovate for hybrid cloud, edge, and AI workloads.</li>
+            <li>Remains a trusted platform for enterprises worldwide.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 Bhavishnu Mood &mdash; Red Hat Enterprise Linux Narrative
+  </footer>
+
+  <script>
+      document.querySelectorAll('.timeline-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.backgroundColor = '#e0f2fe';
+    });
+    item.addEventListener('mouseleave', () => {
+      item.style.backgroundColor = 'white';
+    });
+  });
+  </script>
+</body>
+</html>
