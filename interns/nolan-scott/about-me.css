@@ -70,7 +70,7 @@ img:hover {
     height: auto;
     margin-left: 15vh;
     margin-right: 15vh;
-    margin-top: -45vh;
+    margin-top: -50vh;
 }
 
 
@@ -108,16 +108,7 @@ img:hover {
     transform: translateY(-5px);
 }
 
-/* Style a button that changes on hover */
-.my-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
+
 .profile-button {
     background-color: rgba(0,0,0,0.5);
     border: 2px solid #6df369;      /* green border */
@@ -126,14 +117,32 @@ img:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    display: block;
+    display: flex;
     justify-content: center;
     text-align: center;
     width: fit-content;
-    margin: 24px auto; /* Center horizontally */
+    margin: 0 auto; /* Center horizontally */
     margin-top: 20vh;
-
 }
+
+.link-button {
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid #6df369;      /* green border */
+    color: #6df369;;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 10vh;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 
 .my-button:hover {
     background-color: #2980b9;
@@ -180,6 +189,11 @@ li:hover {
     margin-bottom: 5vh; /* Add some space at the bottom */
     margin-left: 10vh;
     margin-right: 10vh;
+    flex-direction: row;
+}
+
+.link-button:hover {
+    transform: scale(1.05);
 }
 
 .interests {
@@ -189,6 +203,11 @@ li:hover {
     margin-bottom: 5vh; /* Add some space at the bottom */
     margin-left: 10vh;
     margin-right: 10vh;
+}
+.interests li {
+    text-align: justify;
+    width: 100%; /* Make list items take full width */
+    max-width: 180px;
 
 }
 
