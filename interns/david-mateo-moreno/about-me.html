@@ -57,9 +57,14 @@ target="_blank" style="text-decoration: none; color: white; background-color: #a
 <!-- Add this to your HTML-->
 </div>
 
-    <footer>
-        <p>&copy; 2025 Mateo Moreno. All rights reserved.</p>
-    </footer>
-    
+   <!-- Add this before the closing </body> tag in your HTML file -->
+<div id="cursor-trail"></div>
+<script>
+  const trail = document.getElementById('cursor-trail');
+  document.addEventListener('mousemove', function(e) {
+    trail.style.left = e.pageX + 'px';
+    trail.style.top = e.pageY + 'px';
+  });
+</script>
 </body>
 </html>
