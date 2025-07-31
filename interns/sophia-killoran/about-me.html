@@ -49,6 +49,7 @@ window.onload = typeWriter;
             <div class="text-block1">
                 <p>Hi, I'm Sophia. I'm a rising junior at Newton South High School.</p>
                 <p>I'm interested in computer science and data science, among other things.</p>
+                <p>In school, I've taken Honors CS1 and 2, and I can program in Swift, Python, and now HTML.</p>
                 <p>I have a dog named Zoe.</p>
             </div>
             <div class="image-wrapper">
@@ -102,8 +103,9 @@ window.onload = typeWriter;
     <div> 
         <!--I will put my video here--> 
     </div> 
-    
-    <div class="card">
+
+    <div class="container-rows">
+        <div class="partial-card">
         <h2 class="diffHeading"> Contact Me </h2>  
         <p>Contact me on different platforms!</p> 
         <div class="container-rows">
@@ -121,24 +123,27 @@ window.onload = typeWriter;
         <p>Email me:</p> 
         <p> sophia.killoran6@gmail.com </p> 
         </div>
-    <div class="card"> 
+    <div class="partial-card"> 
         <h2 class="diffHeading">Learn to Code!</h2> 
         <p>Access free courses in programming:</p> 
         <!-- This is a link that looks like a button, the button I designed in CSS --> 
         <!--- it is called a, but is a member of the class my-button -->
+        <div class="button-align">
         <a href="https://www.w3schools.com" class="my-button" target="_blank" style="text-decoration:none;"> 
             Learn More 
         </a> 
+        </div>
     </div> 
+    </div>
     <!--I will put my pictures here-->
-    <div class="card"> 
+    <div class="carousel-card"> 
         <p>Some pictures I like :]</p>
         <div class="carousel-container">
             <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
             <div class="carousel-slide">
-                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2808.jpeg" alt="Image 1" class="carousel-img active">
-                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_1438.jpeg" alt="Image 2" class="carousel-img">
-                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2339.jpeg" alt="Image 3" class="carousel-img">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2808.jpeg" alt="Image 1" id="caroimg1" class="carousel-img active">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_1438.jpeg" alt="Image 2" id="caroimg2" class="carousel-img">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2339.jpeg" alt="Image 3" id="caroimg3" class="carousel-img">
             </div>
         <p>Pictures taken by me </p>
         <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
