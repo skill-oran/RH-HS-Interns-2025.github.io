@@ -250,7 +250,7 @@
            <a href="#about">About</a>
            <a href="#reel">DITL</a>
            <a href="#journal">Journal</a>
-           <a href="https://www.linkedin.com/feed/" target="_blank" class="nav-btn" aria-label="LinkedIn">
+           <a href="https://www.linkedin.com/in/arvind-bassi-8504a2376/" target="_blank" class="nav-btn" aria-label="LinkedIn">
                <!-- LinkedIn SVG icon -->
                <svg width="20" height="20" fill="currentColor" style="vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.041 0 3.603 2.002 3.603 4.604v5.592z"/></svg>
                LinkedIn
@@ -295,17 +295,17 @@
        <section id="reel">
            <div class="section-title">Social Media Reel</div>
            <div class="reel-embed">
-               <!-- Replace the src below with your actual social media reel embed code -->
-               <iframe width="360" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+               <iframe width="800" height="315"
+                   src="4D84FE94-9EF5-45B3-A4F9-60D894CF76F2-2.mp4"
                    title="Social Media Reel" frameborder="0" allowfullscreen></iframe>
-           </div>
+           </div>   
        </section>
        <section id="journal">
            <div class="section-title">Journal Entries</div>
            <p>
                I document my learning, projects, and reflections in my journal. Check out my latest entries for insights and progress updates!
            </p>
-           <a href="https://your-journal-url.com" target="_blank" class="journal-link">
+           <a href="https://rh-hs-interns-2025.github.io/interns/arvind-bassi/journals/journals.html" target="_blank" class="journal-link">
                <!-- Journal SVG icon -->
                <span class="journal-icon" aria-hidden="true">
                    <svg width="38" height="38" fill="currentColor" viewBox="0 0 24 24"><path d="M19 2H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H8V4h11v16zM6 6H4v16c0 1.1.9 2 2 2h12v-2H6V6z"/></svg>
@@ -314,21 +314,28 @@
                    Visit My Journal
                </span>
            </a>
+           <div class="journal-buttons" style="display:flex; justify-content:center; margin-top:2rem;">
+               <a href="" target="_blank" class="journal-btn">Journal Entries</a>
+           </div>
        </section>
        <section id="redhat-photos">
            <div class="section-title">Red Hat Photo Gallery</div>
            <p style="text-align:center;max-width:600px;margin:0 auto;">
-               Here are some of my favorite photos I took at Red Hat. Click "Upload" to add more!
+               Here are some of my favorite photos I took at Red Hat.
            </p>
-           <div id="redhat-gallery" class="img-grid">
-               <!-- Uploaded images will appear here -->
-           </div>
-           <div style="text-align:center;margin-top:1.5rem;">
-               <input type="file" id="redhat-upload" accept="image/*" multiple style="display:none;">
-               <button id="upload-btn" class="nav-btn" style="font-size:1rem;">
-                   <svg width="20" height="20" fill="currentColor" style="vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M12 16v-8m0 0l-4 4m4-4l4 4M4 20h16"/></svg>
-                   Upload Photo
-               </button>
+           <div class="img-grid">
+               <div>
+                   <img src="https://i.postimg.cc/d1kfxw6Q/temp-Image-RR3k-Ya.avif" alt="Red Hat Photo 1">
+                   <div class="img-caption">Red Hat Teamwork</div>
+               </div>
+               <div>
+                   <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Red Hat Photo 2">
+                   <div class="img-caption">Office Moments</div>
+               </div>
+               <div>
+                   <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Red Hat Photo 3">
+                   <div class="img-caption">Innovation at Work</div>
+               </div>
            </div>
        </section>
    </main>
@@ -427,6 +434,29 @@
        body.dark-mode .nav-btn:hover {
            background: var(--accent2) !important;
            color: #fff !important;
+       }
+       .journal-btn {
+           display: inline-block;
+           padding: 0.7rem 2.2rem;
+           border-radius: 100px;
+           background: var(--eng-gradient, linear-gradient(90deg,#0071e3 0%,#00c3a5 100%));
+           color: #fff;
+           font-weight: 700;
+           font-size: 1.1rem;
+           text-decoration: none;
+           box-shadow: 0 2px 8px rgba(0,195,165,0.08);
+           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+           margin-bottom: 0.5rem;
+           border: none;
+           outline: none;
+           text-align: center;
+           letter-spacing: 0.03em;
+       }
+       .journal-btn:hover {
+           background: var(--accent, #0071e3);
+           color: #fff;
+           transform: translateY(-2px) scale(1.04);
+           box-shadow: 0 4px 16px rgba(0,113,227,0.12);
        }
    </style>
 </body>
