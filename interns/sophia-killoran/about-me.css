@@ -1,7 +1,8 @@
 body {
     font-family:'Courier New', Courier, monospace;
     font-size:medium; 
-    background-color: purple 
+    background-color: purple;
+    line-height:2em; 
 }
 
 /* the row of fonts shows the order or priority - if the browser does not */
@@ -37,7 +38,7 @@ h1:hover {
     background-color: navy; 
     padding: 30px 40px; 
     margin: 25px 300px 25px 300px;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
 }
 
@@ -47,28 +48,53 @@ h2 {
     color: navy;
 }
 
-/*.row { 
-    display: flex;
-}
-
-.col {
-flex: 70%; 
-
-}
-*/ 
-/*the above text is for the formatting of the columns for the card*/
-
-.flex-container-rows { 
-    display: flex; 
-    flex-direction: row;
+.container-rows { 
+    display:flex; 
+    flex-direction: row; 
     align-items: center;
-    justify-content: space-evenly;
+    align-content: stretch;
+    justify-content: center; 
+    gap: 20px; 
 }
 
-img { 
-    margin: 0px 20px 0px 10px;
-    transform:scale(0.5)
+.text-image-container { 
+    display: flex; 
+    flex-direction: row; 
+    gap: 50px;  
+    align-items: center; 
+    flex-wrap: wrap;  
+    justify-content: center; 
 }
+
+.text-block1 { 
+    flex: 1; 
+    padding:0; 
+}
+
+.image-wrapper {
+    flex: 1; 
+    flex-shrink: 0; /* Prevents the image from shrinking too much if space is tight */
+    justify-content: center;
+    align-content: center;
+
+}
+
+.image-wrapper img {
+    max-width: 50%; /* Ensures the image scales down to fit its container */ 
+    height: auto;/* Maintains aspect ratio */
+    display: block;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.divider { 
+    max-width: 100%; 
+    width: 100px; 
+    height: auto;
+    justify-content: center; 
+    align-content: center; 
+} 
+
 
 .diffHeading { 
     text-align: center;
@@ -77,7 +103,7 @@ img {
     background-color: lightblue; 
     padding: 10px;  
     border-radius: 10px; 
-    margin: 0px 0px 0px 0px
+    margin: 0px 30px 20px 30px;
 }
 
 .diffHeading:hover{ 
@@ -91,6 +117,8 @@ img {
 a { 
     color: purple; 
     text-decoration: none; 
+    display:inline-block; 
+    margin-left:10px;
 }
 
 /*hover = stating what happens when the cursor hovers over element 'a'. If that -> this*/ 
@@ -113,30 +141,49 @@ img:hover {
 } 
 
 /*Can create a card style that lifts up on hover */ 
+/*This is the default card style for the cards that are not cut in half. */
 
 .card { 
-    background-color: white; 
+    background-color:rgb(243, 247, 249); 
     padding: 20px; 
-    margin: 40px 400px 40px 400px; 
+    margin: 30px 400px 30px 400px; 
     border-radius: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.3)
+    box-shadow: 0 2px 5px rgba(0,0, 0, 0.3)
 } 
 
 .card:hover { 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transform: translate(-5px) 
 }
 
-.half-card { 
-    /*basically make a card split in half*/ 
+.partial-card { 
+    background-color:rgb(243, 247, 249); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px; 
+    margin: 10px;
+} 
 
+.partial-card:hover { 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    transform: translate(-5px); 
 }
 
+.and { 
+    font-family:Georgia; 
+    color: gold; 
+    font-style:oblique;
+}
+
+.and:hover { 
+    text-decoration: underline; 
+}
 /*can create a button that changes on being hovered*/ 
 
 .my-button { 
-    background-color: blue; 
-    color: red; 
+    background-color: navy; 
+    color: lightblue; 
     padding: 10px 20px; 
     border: none; 
     border-radius: 5px; 
@@ -144,8 +191,15 @@ img:hover {
     font-size: 16px;
 }
 
+.button-align { 
+    display:flex; 
+    flex-direction: row; 
+    justify-content: center;
+
+}
+
 .my-button:hover{ 
-    background-color: yellow;
+    background-color: magenta;
     transform: scale(1.5);
 }
 
@@ -157,6 +211,22 @@ li:hover{
 }
 /*while the list is inside the card, it can still be edited individually. */
 /* padding left = padding solely on the left side i think*/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
