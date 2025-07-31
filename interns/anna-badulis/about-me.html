@@ -47,7 +47,7 @@
     padding: 2rem;
     width: 90%;
     max-width: 800px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
     backdrop-filter: blur(4px);
   }
 
@@ -143,13 +143,64 @@
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     margin-top: 2rem;
+    transition: background-color 0.5s;
   }
 
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #b388eb;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* DARK MODE STYLES */
   .dark-mode {
-    background-color: #1e1e1e;
+    background: #1e1e1e !important;
+    background-size: initial !important;
+    animation: none !important;
     color: #fdfdfd;
   }
+
+  .dark-mode .card {
+    background-color: #2e2e2e;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .card h2 {
+    color: #dabfff;
+  }
+
+  .dark-mode header {
+    background-color: #333;
+  }
+
+  .dark-mode footer {
+    background-color: #333;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .caption {
+    color: #bbb;
+  }
+
+  .dark-mode button {
+    background-color: #444;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .dot {
+    background-color: #888;
+  }
+
+  .dark-mode .dot.active {
+    background-color: #fff;
+  }
 </style>
+
 
 </head>
 <body>
@@ -161,7 +212,7 @@
   <div class="container">
     <div class="card" style="animation-delay: 0.1s">
       <h2><i class="fas fa-user"></i> About Me</h2>
-      <p>I’m a rising junior at Wakefield High School. I’m captain of Wakefield Girls' Soccer and play on NCFC Gold North. I love being outdoors and hanging out with my friends. Some aspirations I have for my career in the future are to enjoy my job and stay creative.</p>
+      <p>I’m a rising junior at Wakefield High School, where I’ve had the opportunity to grow both academically and as a student leader. I currently serve as the captain of the Wakefield Girls' Soccer team, a role that has helped me develop strong leadership, communication, and teamwork skills. Outside of school, I play for NCFC Gold North, which keeps me active and competitive year-round. In my free time, I love being outdoors, whether it’s going for a hike, playing sports, or simply spending time with my friends. Looking ahead, I hope to pursue a career that allows me to stay creative, collaborate with others, and genuinely enjoy the work I do every day.</p>
     </div>
 
     <div class="card" style="animation-delay: 0.2s">
@@ -183,7 +234,7 @@
 
     <div class="card" style="animation-delay: 0.3s">
       <h2><i class="fas fa-user"></i> My Experience at Red Hat</h2>
-      <p>During these past two weeks, I have learned a lot from Red Hat. I had to learn how to code for this website which was difficult but I had a lot of help from my mentors and peers. Many of the speakers here have also given us great advice on how to view our career journey.</p>
+      <p>During these past two weeks, I have learned a lot from Red Hat. I had to learn how to code for this website which was difficult but I had a lot of help from my mentors and peers. Many of the speakers here have also given us great advice on how to view our career journey. They are also very open to us asking questions and making sure that we aren't confused on any of the content they go over. At the end of every session, each speaker has told us to connect with them on LinkedIn which I appreciated because I'm now able to connect with their expansive network.</p>
     </div>
 
     <div class="card" style="animation-delay: 0.4s">
@@ -232,6 +283,15 @@
       </div>
     </div>
 
+    <div class="card">
+  <h2><i class="fas fa-book"></i> My Journals</h2>
+  <p>Check out my reflections and experiences during my internship:</p>
+  <a href="https://rh-hs-interns-2025.github.io/interns/anna-badulis/journals/journals.html" target="_blank" style="color: #5a4e7c; font-weight: bold;">
+    View My Journal Entries
+  </a>
+</div>
+
+
     <div class="card" style="animation-delay: 0.5s">
       <h2><i class="fas fa-adjust"></i> Theme & Secret</h2>
       <button onclick="toggleTheme()">Toggle Light/Dark Mode</button>
@@ -241,8 +301,13 @@
   </div>
 
   <footer>
-    <p><i class="fas fa-smile"></i> Thanks for visiting my page!</p>
-  </footer>
+  <p>
+    <i class="fas fa-smile"></i> Thanks for visiting my page! |
+    <a href="https://www.linkedin.com/in/anna-badulis-4a9bb9370/" target="_blank" style="color: #0077b5; text-decoration: none;">
+      <i class="fab fa-linkedin"></i> Connect with me on LinkedIn by clicking here!
+    </a>
+  </p>
+</footer>
 
   <script>
     function toggleTheme() {
