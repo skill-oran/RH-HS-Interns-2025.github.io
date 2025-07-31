@@ -89,7 +89,7 @@ img:hover {
     height: auto;
     margin-left: 15vh;
     margin-right: 15vh;
-    margin-top: -50vh;
+    margin-top: -55vh;
 }
 
 
@@ -105,6 +105,20 @@ img:hover {
     align-items: center;
     gap: 24px;                      /* space between images */
     max-width: 700px;               /* optional: limit box width */
+    position: relative;
+}
+.image-qr {
+    background: rgba(0,0,0,0.5);    /* semi-transparent background */
+    border: 2px solid #6df369;      /* green border */
+    border-radius: 16px;            /* rounded corners */
+    padding: 24px;                  /* space inside the box */
+    margin: 32px auto;              /* space outside the box, centered */
+    display: flex;
+    flex-direction: row;            /* line up images horizontally */
+    justify-content: center;        /* center images horizontally */
+    align-items: center;
+    gap: 24px;                      /* space between images */
+    max-width: 350px;               /* optional: limit box width */
     position: relative;
 }
 
@@ -143,6 +157,28 @@ img:hover {
     margin: 0 auto; /* Center horizontally */
     margin-top: 20vh;
 }
+
+.video {
+    background: rgba(0,0,0,0.5);    /* semi-transparent background */
+    border: 2px solid #6df369;      /* green border */
+    border-radius: 16px;            /* rounded corners */
+    padding: 24px;                  /* space inside the box */
+    margin: 32px auto;              /* space outside the box, centered */
+    display: flex;
+    flex-direction: row;            /* line up images horizontally */
+    justify-content: center;        /* center images horizontally */
+    align-items: center;
+    gap: 24px;                      /* space between images */
+    max-width: 700px;               /* optional: limit box width */
+}
+.video-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh; /* Add some space at the bottom */
+    margin-left: 10vh;
+    margin-right: 10vh;
+}   
 
 .link-button {
     background-color: rgba(0,0,0,0.5);
@@ -219,7 +255,7 @@ li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5vh; /* Add some space at the bottom */
+    margin-bottom: 0vh; /* Add some space at the bottom */
     margin-left: 10vh;
     margin-right: 10vh;
 }
@@ -229,14 +265,28 @@ li:hover {
     max-width: 180px;
 
 }
-.dayinlife {
+.skills {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15vh; /* Add some space at the bottom */
+    margin-bottom: 0vh; /* Add some space at the bottom */
     margin-left: 10vh;
     margin-right: 10vh;
 }
+.skills li {
+    text-align: justify;
+    width: 100%; /* Make list items take full width */
+    max-width: 180px;
+
+}
+        .liststhings {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+
 
     @font-face {
         font-family: 'FixedSys'; /* Choose a name for your font */
