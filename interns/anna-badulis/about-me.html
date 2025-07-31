@@ -30,6 +30,7 @@
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.5s, color 0.5s;
   }
 
   .container {
@@ -47,7 +48,7 @@
     padding: 2rem;
     width: 90%;
     max-width: 800px;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    transition: transform 0.3s, background-color 0.5s, color 0.5s;
     backdrop-filter: blur(4px);
   }
 
@@ -87,6 +88,7 @@
     font-style: italic;
     color: #555;
     margin-top: 0.5rem;
+    transition: color 0.5s;
   }
 
   .prev, .next {
@@ -143,61 +145,44 @@
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     margin-top: 2rem;
-    transition: background-color 0.5s;
-  }
-
-  button {
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #b388eb;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.5s, color 0.5s;
   }
 
   /* DARK MODE STYLES */
-  .dark-mode {
-    background: #1e1e1e !important;
-    background-size: initial !important;
-    animation: none !important;
-    color: #fdfdfd;
+  body.dark-mode {
+    background: #121212;
+    color: #f4f4f4;
   }
 
-  .dark-mode .card {
-    background-color: #2e2e2e;
-    color: #fdfdfd;
-  }
-
-  .dark-mode .card h2 {
-    color: #dabfff;
-  }
-
-  .dark-mode header {
+  body.dark-mode header {
     background-color: #333;
+    color: #f4f4f4;
   }
 
-  .dark-mode footer {
-    background-color: #333;
-    color: #fdfdfd;
+  body.dark-mode .card {
+    background: rgba(40, 40, 40, 0.95);
+    color: #f4f4f4;
   }
 
-  .dark-mode .caption {
-    color: #bbb;
+  body.dark-mode .card h2 {
+    color: #e0d7ff;
   }
 
-  .dark-mode button {
-    background-color: #444;
-    color: #fdfdfd;
+  body.dark-mode .caption {
+    color: #ccc;
   }
 
-  .dark-mode .dot {
-    background-color: #888;
+  body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #ccc;
   }
 
-  .dark-mode .dot.active {
-    background-color: #fff;
+  body.dark-mode .dot {
+    background-color: #777;
+  }
+
+  body.dark-mode .dot.active {
+    background-color: #ddd;
   }
 </style>
 
@@ -206,24 +191,28 @@
 <body>
   <header>
     <h1><i class="fas fa-star"></i> Welcome to My Website!</h1>
-    <p>Hi! I'm Anna Badulis and this is my first webpage.</p>
+  <p style="margin-top: 0.5rem; font-size: 1rem;">
+    <a href="https://www.linkedin.com/in/anna-badulis" target="_blank" style="color: inherit; text-decoration: underline;">
+      www.linkedin.com/in/anna-badulis
+    </a> &mdash; Raleigh, NC
+  </p>
   </header>
 
   <div class="container">
     <div class="card" style="animation-delay: 0.1s">
-      <h2><i class="fas fa-user"></i> About Me</h2>
-      <p>I’m a rising junior at Wakefield High School, where I’ve had the opportunity to grow both academically and as a student leader. I currently serve as the captain of the Wakefield Girls' Soccer team, a role that has helped me develop strong leadership, communication, and teamwork skills. Outside of school, I play for NCFC Gold North, which keeps me active and competitive year-round. In my free time, I love being outdoors, whether it’s going for a hike, playing sports, or simply spending time with my friends. Looking ahead, I hope to pursue a career that allows me to stay creative, collaborate with others, and genuinely enjoy the work I do every day.</p>
+      <h2><i class="fas fa-user"></i>Hi! I'm Anna</h2>
+      <p>I’m a rising junior at Wakefield High School. I am the captain of the Wakefield Girls' Soccer team and play year-round with NCFC Gold North, which has taught me the value of teamwork, discipline, and perseverance. Outside of sports, I love being outdoors, spending time with my friends, and staying active. Looking ahead, I hope to pursue a career that allows me to stay creative, work with others, and truly enjoy what I do every day.</p>
     </div>
 
     <div class="card" style="animation-delay: 0.2s">
-      <h2><i class="fas fa-heart"></i> My Interests</h2>
+      <h2><i class="fas fa-heart"></i> How I spend my free time</h2>
       <ul>
         <li>Playing soccer</li>
         <li>Listening to music</li>
         <li>Going to the gym</li>
         <li>Watching TV/Movies</li>
       </ul>
-      <h3><i class="fas fa-heart"></i> My Career Interests</h3>
+      <h2><i class="fas fa-heart"></i> My career aspirations</h2>
       <ul>
         <li>Marketing</li>
         <li>Creativity</li>
@@ -275,19 +264,20 @@
         </div>
         <div class="media-column">
 <iframe src="https://drive.google.com/file/d/1AUZhHUjMve1krmFkicNx445iCaC-U9mi/preview" width="300" height="480" allow="autoplay"></iframe>
-          <p class="caption">A Day in My Life!</p>
+          <p class="caption">#LifeAtRedHat</p>
         </div>
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" style="animation-delay: 0.6s">
   <h2><i class="fas fa-book"></i> My Journals</h2>
-  <p>Check out my reflections and experiences during my internship:</p>
-  <a href="https://rh-hs-interns-2025.github.io/interns/anna-badulis/journals/journals.html" target="_blank" style="color: #5a4e7c; font-weight: bold;">
-    View My Journal Entries
-  </a>
+  <p>
+    Check out my reflections and weekly updates from the internship:
+    <a href="https://rh-hs-interns-2025.github.io/interns/anna-badulis/journals/journals.html" target="_blank">
+      My Journals
+    </a>
+  </p>
 </div>
-
 
     <div class="card" style="animation-delay: 0.5s">
       <h2><i class="fas fa-adjust"></i> Theme & Secret</h2>
@@ -298,13 +288,8 @@
   </div>
 
   <footer>
-  <p>
-    <i class="fas fa-smile"></i> Thanks for visiting my page! |
-    <a href="https://www.linkedin.com/in/anna-badulis-4a9bb9370/" target="_blank" style="color: #0077b5; text-decoration: none;">
-      <i class="fab fa-linkedin"></i> Connect with me on LinkedIn by clicking here!
-    </a>
-  </p>
-</footer>
+    <p><i class="fas fa-smile"></i> Thanks for visiting my page!</p>
+  </footer>
 
   <script>
     function toggleTheme() {
