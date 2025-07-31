@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+    <title>About Me - Bhavishnu Mood</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+    <div class="image-gallery">
+    <div class="profile-image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWyZ8mRseD1662FxMkFDYSNu5jDss3X6H85w&s">
+    </div>
+    <div class="profile-image-container">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHMVnrh-p0iUQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1721961153211?e=1756944000&v=beta&t=WGiI4Yvgkm4K603ff_rsyLsS8TbePdKu6BeoSRa3y4E" alt="Profile Picture" class="profile-image">
+    </div>
+    <div class="profile-image-container">
+        <img src="https://pngimg.com/uploads/tennis_ball/tennis_ball_PNG21.png" alt="Profile Picture" class="profile-image">
+    </div>
+</div>
+        <h1 class="name-heading">Bhavishnu Mood</h1>
+        <p class="title-text">Red Hat Intern, North Attleboro High School</p>
+        <div class="about-me-section">
+            <p class="about-me-paragraph">
+                What's up? I'm Bhavishnu, but you can call me Bhavi. I'm a high school senior passionate about making technology accessible for everyone.
+            </p>
+            <br>
+            <p>
+                My favorite song? Enchanted Waterfall by Tory Lanez.  
+            </p>
+            <p>
+                My favorite food? Mutton Biryani.
+            </p>
+            <p>
+                My favorite word? Tangible. 
+            </p>
+            <p>
+                Connect with me below to learn more about my interest in open source, economics, and applied math!
+
+            </p>
+        </div>
+        <div class="links-container">
+            <a id="linkedinButton" href="https://www.linkedin.com/in/bhavishnu-mood-325b882ba/" target="_blank" rel="noopener noreferrer" class="action-button blue-button">
+                LinkedIn
+            </a>
+            <a id="videoButton" href="https://youtube.com/shorts/dQKf4pNNubE" target="_blank" rel="noopener noreferrer" class="action-button red-button">
+                Day in the Life Video
+            </a>
+            <a id="videoButton" href="https://rh-hs-interns-2025.github.io/interns/bhavishnu-chowhan-mood/journals/journals.html" target="_blank" rel="noopener noreferrer" class="action-button red-button">
+                Journal Entries
+            </a>
+        </div>
+    </div>
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+        // Select all link buttons using their IDs which end with 'Button'
+        const buttons = document.querySelectorAll('a[id$="Button"]');
+
+        // Loop through each button and add a click event listener
+        buttons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                // The `event.target.textContent.trim()` gets the visible text of the button
+                // and `.trim()` removes any leading/trailing whitespace.
+                console.log(`${event.target.textContent.trim()} button clicked!`);
+            });
+        });
+
+        // A simple console log to confirm the script has loaded and is ready
+        console.log("About Me page JavaScript loaded and ready!");
+    });
+    </script>
 </body>
-</html> 
+</html>

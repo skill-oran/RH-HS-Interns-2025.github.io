@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<link rel="stylesheet" href="about-me.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ethan Lubomirski - Intern Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hi</h1>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">Ethan Lubomirski</span></h1>
+      <p>2025 High School Intern | Math + Data Science Enthusiast</p>
+      <a href="#about" class="btn">Explore My Site ↓</a>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="grid two-col">
+      <div>
+        <p>📍 Winchester, MA | 🎓 Class of 2026</p>
+        <p>I’m a rising senior who loves solving problems using math, statistics, and data. Outside of school, I play grass volleyball and lead in Boy Scouts. I’m looking to explore niche careers that combine data science with real-world impact.</p>
+        <a href="https://www.linkedin.com/in/ethan-lubomirski-999669376/" target="_blank" class="btn small">LinkedIn</a>
+      </div>
+      <div>
+        <img src="https://i.ibb.co/QFGKrpJX/IMG-3624-1.png" alt="Ethan Lubomirski" class="profile-pic"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="skills">
+    <h2>Skills & Goals</h2>
+    <div class="grid two-col">
+      <div>
+        <ul>
+          <li>🧭 Leadership in Boy Scouts</li>
+          <li>📊 Analytical mindset</li>
+          <li>🧠 Strong foundation in calculus, chemistry, statistics</li>
+        </ul>
+      </div>
+      <div>
+        <p>🎯 I aimed to find a more niche interest in finance, data science, or mathematical modeling. This internship helped me discover where I want to specialize. College is my next big step, and then, I hope to work in a field where I make data-driven decisions that matter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="media">
+    <h2>My Social Media Reel 🎥</h2>
+    <p>Here's a quick look at what I've been working on!</p>
+    <div class="video-wrapper">
+        <iframe
+            src="https://drive.google.com/file/d/1EyCqI0wFWlqyc53rEL6_Qguzr-86ZgZL/preview"
+            width="560"
+            height="315"
+            allow="autoplay"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+
+  </section>
+
+  <section class="section alt" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.ibb.co/JW1Yx0Q9/DSC01616.jpg" alt="Volleyball" />
+      <img src="https://i.ibb.co/5gZjtNYh/Screenshot-2025-07-30-220623.png" alt="Boy Scouts" />
+      <img src="https://i.ibb.co/d0TCdWMh/IMG-0503.jpg" alt="Math Passion" />
+    </div>
+  </section>
+
+  <section class="section" id="journal">
+    <h2>📘 My Internship Journal</h2>
+    <p>I kept a journal throughout this experience. Read it to learn more about what I learned, explored, and reflected on during the internship.</p>
+    <a href="https://rh-hs-interns-2025.github.io/interns/ethan-lubomirski/journals/journals.html" class="btn">Read My Journal</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Ethan Lubomirski | Built using HTML, CSS & JavaScript</p>
+  </footer>
+
+  <!-- Link JavaScript file -->
+<script src="about-me.js"></script>
+  
 </body>
-</html> 
+</html>

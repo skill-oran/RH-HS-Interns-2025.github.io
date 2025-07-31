@@ -1,16 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>Samantha's Website</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <h1>Samantha Sun</h1>
+
+        <div class="flex-container">
+        <img src="me-at-redhat.jpg" alt="Me at Red Hat">
+        <img src="https://i.pinimg.com/736x/b2/61/76/b261763eec3aa2735cde5342714980fa.jpg" alt="Me at Red Hat">
+        <img src="Red-hat-pic.jpg" alt="Me at Red Hat">
+    </div>
+
+    <div class="card">
+        <h2 class="about-me">About Me</h2>
+        <p class="bio">Welcome to my website! I am a rising senior attending Andover High School. I'm currently a high school intern at Red Hat!</p>
+        <ul>
+            <li>I love art and design</li>
+            <li>I have a lot of creativity</li>
+            <li>I am organized</li>
+            <li>I am a good listener and have a lot of empathy</li>
+            <li>I am eager to learn new things</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>My interests</h2>
+        <ul>
+            <li>Design; I love making aesthetic designs</li>
+            <li>Art; I love painting and drawing</li>
+            <li>Psychology; I love learning about human interactions</li>
+            <li>Writing; I want to write a book in the future</li>
+            <li>Biology; I love science</li>
+        </ul>    
+    </div>
+
+    <div class="card">
+        <h2>My Experiences</h2>
+        <ul>
+            <li>I have done website design for the League of Women Voters, Waltham</li>
+            <li>Through my Red Hat internship I learned how to use Github; css & html code</li>
+            <li>I was the Social Media Editor for my school newspaper, and am now a Copy Editor!</li>
+            <li>I have done portfolio & documentation for my school's robotics team</li>
+            <li>I was part of National Art Honor Soceity & my work was displayed at an art show</li>
+        </ul>    
+    </div>
+
+    <div class="center-box">
+    <button class="my-button2" onclick="showMessage()">
+        Photo sources
+    </button>
+        <a href="https://www.linkedin.com/in/samantha-sun-80b4a5376/" class="my-button">linkedin</a>
+        <a href="https://rh-hs-interns-2025.github.io/interns/samantha-sun/journals/journals.html" class="my-button">journals</a>
+        <a href="https://youtube.com/shorts/LOPpPW6VEDs?feature=share" class="my-button">video</a>
+    </div>
+
+
+    <p id="secret" style="display:none; color:white;">
+        pinterest
+    </p>
+        
+    <script>
+        function showMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+    </script>
+
 </body>
-</html> 
+</html>

@@ -1,16 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<head>
+   <meta charset="UTF-8">
+   <title>Arvind Bassi | Portfolio</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Minimal Apple-style CSS -->
+   <style>
+       :root {
+           --bg: #f5f5f7;
+           --fg: #1d1d1f;
+           --accent: #0071e3;
+           --card: #fff;
+           --border: #e0e0e5;
+           --shadow: 0 2px 8px rgba(0,0,0,0.04);
+           --radius: 16px;
+           --font: 'San Francisco', 'Segoe UI', Arial, sans-serif;
+           --eng-accent: #00c3a5;
+           --eng-gradient: linear-gradient(90deg, #0071e3 0%, #00c3a5 100%);
+           --eng-grid: repeating-linear-gradient(
+               0deg, #e0e0e5, #e0e0e5 1px, transparent 1px, transparent 40px
+           ), repeating-linear-gradient(
+               90deg, #e0e0e5, #e0e0e5 1px, transparent 1px, transparent 40px
+           );
+       }
+       html, body {
+           margin: 0;
+           padding: 0;
+           background: var(--bg);
+           color: var(--fg);
+           font-family: var(--font);
+           font-size: 18px;
+           line-height: 1.6;
+       }
+       body {
+           background-image: var(--eng-grid);
+           background-size: 40px 40px;
+       }
+       header {
+           background: var(--card);
+           box-shadow: var(--shadow);
+           padding: 1.5rem 0 1.5rem 0;
+           border-bottom: 1px solid var(--border);
+           position: relative;
+       }
+       header::after {
+           content: '';
+           display: block;
+           position: absolute;
+           left: 50%;
+           bottom: 0;
+           transform: translateX(-50%);
+           width: 80vw;
+           height: 3px;
+           background: var(--eng-gradient);
+           border-radius: 2px;
+           opacity: 0.15;
+       }
+       nav {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 2rem;
+       }
+       nav a, .nav-btn {
+           color: var(--fg);
+           text-decoration: none;
+           font-weight: 500;
+           padding: 0.5rem 1rem;
+           border-radius: 8px;
+           transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+           border-bottom: 2px solid transparent;
+       }
+       nav a:hover, .nav-btn:hover {
+           background: var(--accent);
+           color: #fff;
+           box-shadow: 0 4px 16px rgba(0,113,227,0.10);
+           transform: translateY(-2px) scale(1.04);
+           border-bottom: 2px solid var(--eng-accent);
+       }
+       .nav-btn {
+           background: var(--eng-gradient);
+           color: #fff;
+           font-weight: 600;
+           border: none;
+           box-shadow: 0 2px 8px rgba(0,195,165,0.08);
+       }
+       .nav-btn:hover {
+           background: var(--accent);
+           color: #fff;
+           border-bottom: 2px solid var(--eng-accent);
+       }
+       .nav-btn:active, nav a:active {
+           transform: scale(0.98);
+       }
+       main {
+           max-width: 900px;
+           margin: 2.5rem auto 0 auto;
+           padding: 0 1.5rem;
+       }
+       section {
+           margin-bottom: 3rem;
+       }
+       .about-header {
+           text-align: center;
+           margin-bottom: 2rem;
+       }
+       .about-header h1 {
+           font-size: 2.7rem;
+           font-weight: 800;
+           margin: 0.5rem 0 0.2rem 0;
+           letter-spacing: 0.02em;
+           background: var(--eng-gradient);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+           background-clip: text;
+       }
+       .about-header h2 {
+           font-size: 1.3rem;
+           font-weight: 400;
+           color: var(--eng-accent);
+           margin: 0 0 1rem 0;
+           letter-spacing: 0.04em;
+       }
+       .about-header p {
+           font-size: 1.1rem;
+           color: #444;
+           max-width: 600px;
+           margin: 0 auto 1.5rem auto;
+       }
+       .img-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+           gap: 1.5rem;
+           margin: 2rem 0;
+       }
+       .img-grid img {
+           width: 100%;
+           border-radius: var(--radius);
+           box-shadow: 0 4px 24px rgba(0,195,165,0.10), var(--shadow);
+           border: 2px solid var(--eng-accent);
+           background: #eee;
+           aspect-ratio: 4/3;
+           object-fit: cover;
+           transition: transform 0.2s, box-shadow 0.2s;
+       }
+       .img-grid img:hover {
+           transform: scale(1.03) rotate(-1deg);
+           box-shadow: 0 8px 32px rgba(0,195,165,0.18), 0 2px 8px rgba(0,0,0,0.04);
+       }
+       .img-caption {
+           font-size: 0.95rem;
+           color: #888;
+           text-align: center;
+           margin-top: 0.5rem;
+           font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+           letter-spacing: 0.01em;
+       }
+       .section-title {
+           font-size: 1.5rem;
+           font-weight: 700;
+           margin-bottom: 1rem;
+           letter-spacing: 0.01em;
+           color: var(--accent);
+           border-left: 5px solid var(--eng-accent);
+           padding-left: 0.7rem;
+       }
+       .reel-embed {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background: var(--card);
+           border-radius: var(--radius);
+           box-shadow: var(--shadow);
+           padding: 1.5rem;
+           min-height: 320px;
+           border: 2px dashed var(--eng-accent);
+       }
+       .journal-link {
+           display: flex;
+           align-items: center;
+           gap: 1rem;
+           background: var(--card);
+           border-radius: var(--radius);
+           box-shadow: var(--shadow);
+           padding: 1.2rem 1.5rem;
+           text-decoration: none;
+           color: var(--fg);
+           font-weight: 500;
+           transition: box-shadow 0.2s, background 0.2s, color 0.2s, transform 0.15s;
+           margin-top: 1rem;
+           border: 2px solid var(--eng-accent);
+       }
+       .journal-link:hover {
+           background: var(--eng-gradient);
+           color: #fff;
+           box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+           transform: translateY(-2px) scale(1.04);
+           border-color: var(--accent);
+       }
+       .journal-link:active {
+           transform: scale(0.98);
+       }
+       .journal-icon {
+           width: 38px;
+           height: 38px;
+           display: inline-block;
+           background: var(--eng-gradient);
+           border-radius: 8px;
+           padding: 3px;
+       }
+       .journal-icon svg {
+           filter: drop-shadow(0 2px 4px rgba(0,195,165,0.10));
+       }
+       footer {
+           text-align: center;
+           color: #aaa;
+           font-size: 1rem;
+           padding: 2rem 0 1rem 0;
+           margin-top: 3rem;
+           border-top: 1px solid var(--border);
+       }
+       @media (max-width: 600px) {
+           .img-grid {
+               grid-template-columns: 1fr;
+           }
+           nav {
+               flex-direction: column;
+               gap: 1rem;
+           }
+       }
+   </style>
 </head>
 <body>
-  <h1>Hi</h1>
+   <!-- Loading Screen -->
+   <div id="loading-screen">
+       <div class="loader-content">
+           <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+               <circle cx="32" cy="32" r="28" stroke="#00c3a5" stroke-width="6" opacity="0.2"/>
+               <circle cx="32" cy="32" r="28" stroke="#0071e3" stroke-width="6" stroke-dasharray="44 88" stroke-linecap="round">
+                   <animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="1.2s" repeatCount="indefinite"/>
+               </circle>
+           </svg>
+           <div class="loader-text">Loading Arvind Bassi's Portfolio...</div>
+       </div>
+   </div>
+   <div id="main-content" style="opacity:0; pointer-events:none;">
+   <header>
+       <nav>
+           <a href="#about">About</a>
+           <a href="#reel">DITL</a>
+           <a href="#journal">Journal</a>
+           <a href="https://www.linkedin.com/in/arvind-bassi-8504a2376/" target="_blank" class="nav-btn" aria-label="LinkedIn">
+               <!-- LinkedIn SVG icon -->
+               <svg width="20" height="20" fill="currentColor" style="vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.041 0 3.603 2.002 3.603 4.604v5.592z"/></svg>
+               LinkedIn
+           </a>
+           <a href="https://drive.google.com/file/d/1488VG-raKU1JIMH3YNZ41KQ0xmPMiopD/view?usp=share_link" target="_blank" class="nav-btn" aria-label="Resume" style="background:linear-gradient(90deg,#00c3a5 0%,#0071e3 100%);margin-left:8px;">
+               <!-- Resume SVG icon -->
+               <svg width="20" height="20" fill="currentColor" style="vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828A2 2 0 0 0 19.414 7.414l-4.828-4.828A2 2 0 0 0 12.172 2H6zm6 1.414L18.586 10H14a2 2 0 0 1-2-2V3.414zM6 4h6v4a4 4 0 0 0 4 4h4v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4zm2 10h8v2H8v-2z"/></svg>
+               Resume
+           </a>
+           <button id="dark-mode-toggle" class="nav-btn" style="margin-left:8px;" aria-label="Toggle dark mode">
+               <svg width="20" height="20" fill="currentColor" style="vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/></svg>
+               Dark Mode
+           </button>
+       </nav>
+   </header>
+   <main>
+       <section id="about">
+           <div class="about-header">
+               <h1>Arvind Bassi</h1>
+               <h2>Cardinal Gibbons High School</h2>
+               <p>
+                   Hi! I'm Arvind Bassi, a high school student at Cardinal Gibbons High School in North Carolina. I am passionate about engineering and finance. I love building things, learning new tech, and sharing my journey online.
+               </p>
+           </div>
+           <div class="section-title">Interests</div>
+           <div class="img-grid">
+               <!-- Replace src with your own images if available -->
+               <div>
+                   <img src="https://www.discoverengineering.org/wp-content/uploads/2023/12/mj_11351_4.jpg" alt="Engineering Project">
+                   <div class="img-caption">Engineering</div>
+               </div>
+               <div>
+                   <img src="https://media.istockphoto.com/id/1795167728/photo/growth-in-business-and-finance-growing-graphs-and-charts.jpg?s=612x612&w=0&k=20&c=626gZ0gRzvxnmVODOIGYmIlMWnFc5Uv5fV7OrddBp-w=" alt="Finance">
+                   <div class="img-caption">Finance</div>
+               </div>
+               <div>
+                   <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Coding">
+                   <div class="img-caption">Coding</div>
+               </div>
+           </div>
+       </section>
+       <section id="reel">
+           <div class="section-title">Social Media Reel</div>
+           <div class="reel-embed">
+               <iframe width="800" height="315"
+                   src="4D84FE94-9EF5-45B3-A4F9-60D894CF76F2-2.mp4"
+                   title="Social Media Reel" frameborder="0" allowfullscreen></iframe>
+           </div>   
+       </section>
+       <section id="journal">
+           <div class="section-title">Journal Entries</div>
+           <p>
+               I document my learning, projects, and reflections in my journal. Check out my latest entries for insights and progress updates!
+           </p>
+           <a href="https://rh-hs-interns-2025.github.io/interns/arvind-bassi/journals/journals.html" target="_blank" class="journal-link">
+               <!-- Journal SVG icon -->
+               <span class="journal-icon" aria-hidden="true">
+                   <svg width="38" height="38" fill="currentColor" viewBox="0 0 24 24"><path d="M19 2H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H8V4h11v16zM6 6H4v16c0 1.1.9 2 2 2h12v-2H6V6z"/></svg>
+               </span>
+               <span>
+                   Visit My Journal
+               </span>
+           </a>
+           <div class="journal-buttons" style="display:flex; justify-content:center; margin-top:2rem;">
+               <a href="" target="_blank" class="journal-btn">Journal Entries</a>
+           </div>
+       </section>
+       <section id="redhat-photos">
+           <div class="section-title">Red Hat Photo Gallery</div>
+           <p style="text-align:center;max-width:600px;margin:0 auto;">
+               Here are some of my favorite photos I took at Red Hat.
+           </p>
+           <div class="img-grid">
+               <div>
+                   <img src="https://i.postimg.cc/d1kfxw6Q/temp-Image-RR3k-Ya.avif" alt="Red Hat Photo 1">
+                   <div class="img-caption">Red Hat Teamwork</div>
+               </div>
+               <div>
+                   <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Red Hat Photo 2">
+                   <div class="img-caption">Office Moments</div>
+               </div>
+               <div>
+                   <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Red Hat Photo 3">
+                   <div class="img-caption">Innovation at Work</div>
+               </div>
+           </div>
+       </section>
+   </main>
+   <footer>
+       &copy; 2025 Arvind Bassi. All rights reserved.
+   </footer>
+   </div>
+   <script>
+       // Show loading screen for 2.5 seconds, then fade in main content
+       window.addEventListener('DOMContentLoaded', function() {
+           setTimeout(function() {
+               const loading = document.getElementById('loading-screen');
+               const main = document.getElementById('main-content');
+               loading.style.transition = 'opacity 0.8s';
+               loading.style.opacity = '0';
+               setTimeout(function() {
+                   loading.style.display = 'none';
+                   main.style.transition = 'opacity 1s';
+                   main.style.opacity = '1';
+                   main.style.pointerEvents = 'auto';
+               }, 800);
+           }, 2500);
+
+           // Dark mode toggle
+           const toggleBtn = document.getElementById('dark-mode-toggle');
+           toggleBtn.addEventListener('click', function() {
+               document.body.classList.toggle('dark-mode');
+               if(document.body.classList.contains('dark-mode')) {
+                   toggleBtn.innerHTML = `<svg width="20" height="20" fill="currentColor" style="vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18c4.97 0 9-4.03 9-9 0-4.97-4.03-9-9-9zm0 16a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>Light Mode`;
+               } else {
+                   toggleBtn.innerHTML = `<svg width="20" height="20" fill="currentColor" style="vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/></svg>Dark Mode`;
+               }
+           });
+       });
+   </script>
+   <style>
+       #loading-screen {
+           position: fixed;
+           z-index: 9999;
+           inset: 0;
+           background: linear-gradient(120deg, #f5f5f7 60%, #e0e0e5 100%);
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           transition: opacity 0.8s;
+       }
+       .loader-content {
+           text-align: center;
+           animation: fadeIn 1.2s;
+       }
+       .loader-text {
+           margin-top: 1.2rem;
+           font-size: 1.2rem;
+           color: #0071e3;
+           font-family: 'San Francisco', 'Segoe UI', Arial, sans-serif;
+           letter-spacing: 0.04em;
+           font-weight: 600;
+       }
+       @keyframes fadeIn {
+           from { opacity: 0; transform: scale(0.95);}
+           to { opacity: 1; transform: scale(1);}
+       }
+       body.dark-mode {
+           --bg: #181a1b;
+           --fg: #f5f5f7;
+           --card: #232526;
+           --border: #333;
+           --accent: #00c3a5;
+           --accent2: #0071e3;
+       }
+       body.dark-mode {
+           background-image: none;
+           background: var(--bg);
+           color: var(--fg);
+       }
+       body.dark-mode header,
+       body.dark-mode .journal-link,
+       body.dark-mode .reel-embed,
+       body.dark-mode .img-grid img,
+       body.dark-mode .about-header,
+       body.dark-mode .section-title,
+       body.dark-mode footer {
+           background: var(--card) !important;
+           color: var(--fg) !important;
+           border-color: var(--border) !important;
+       }
+       body.dark-mode .img-caption {
+           color: var(--accent2) !important;
+       }
+       body.dark-mode nav a,
+       body.dark-mode .nav-btn {
+           color: var(--fg) !important;
+           background: none !important;
+       }
+       body.dark-mode nav a:hover,
+       body.dark-mode .nav-btn:hover {
+           background: var(--accent2) !important;
+           color: #fff !important;
+       }
+       .journal-btn {
+           display: inline-block;
+           padding: 0.7rem 2.2rem;
+           border-radius: 100px;
+           background: var(--eng-gradient, linear-gradient(90deg,#0071e3 0%,#00c3a5 100%));
+           color: #fff;
+           font-weight: 700;
+           font-size: 1.1rem;
+           text-decoration: none;
+           box-shadow: 0 2px 8px rgba(0,195,165,0.08);
+           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+           margin-bottom: 0.5rem;
+           border: none;
+           outline: none;
+           text-align: center;
+           letter-spacing: 0.03em;
+       }
+       .journal-btn:hover {
+           background: var(--accent, #0071e3);
+           color: #fff;
+           transform: translateY(-2px) scale(1.04);
+           box-shadow: 0 4px 16px rgba(0,113,227,0.12);
+       }
+   </style>
 </body>
-</html> 
+</html>
+

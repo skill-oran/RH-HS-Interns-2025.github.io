@@ -1,0 +1,5 @@
+Name: Tyler Parker
+School: Apex Friendship High School
+Favorite Subject: Math
+Fun Fact: I am allergic to cats
+What I hope to learn: I hope to gain practical experience with programming tools utilized by actual Red Hat devs
