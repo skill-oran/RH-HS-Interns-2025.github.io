@@ -47,7 +47,7 @@
     padding: 2rem;
     width: 90%;
     max-width: 800px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
     backdrop-filter: blur(4px);
   }
 
@@ -143,13 +143,64 @@
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     margin-top: 2rem;
+    transition: background-color 0.5s;
   }
 
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #b388eb;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* DARK MODE STYLES */
   .dark-mode {
-    background-color: #1e1e1e;
+    background: #1e1e1e !important;
+    background-size: initial !important;
+    animation: none !important;
     color: #fdfdfd;
   }
+
+  .dark-mode .card {
+    background-color: #2e2e2e;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .card h2 {
+    color: #dabfff;
+  }
+
+  .dark-mode header {
+    background-color: #333;
+  }
+
+  .dark-mode footer {
+    background-color: #333;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .caption {
+    color: #bbb;
+  }
+
+  .dark-mode button {
+    background-color: #444;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .dot {
+    background-color: #888;
+  }
+
+  .dark-mode .dot.active {
+    background-color: #fff;
+  }
 </style>
+
 
 </head>
 <body>
