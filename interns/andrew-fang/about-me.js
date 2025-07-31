@@ -1,58 +1,47 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("mode-toggle");
+    const body = document.body;
+    const preview = document.getElementById("interest-preview");
+    const previewImage = document.getElementById("preview-image");
+    const previewDescription = document.getElementById("preview-description");
 
-    // dark/light mode toggle w icons
-    const toggleButton = document.getElementById('mode-toggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // check saved preference / system preference
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-        document.body.classList.add('dark-mode');
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleButton.querySelector('.fa-moon').style.display = 'none';
+        toggleButton.querySelector('.fa-sun').style.display = 'inline';
     }
-    
-    toggleButton.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
+
+    toggleButton.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+        
+        const moonIcon = toggleButton.querySelector('.fa-moon');
+        const sunIcon = toggleButton.querySelector('.fa-sun');
+        if (isDarkMode) {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'inline';
+        } else {
+            moonIcon.style.display = 'inline';
+            sunIcon.style.display = 'none';
+        }
     });
 
-    // scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+    document.querySelectorAll(".interests-list li").forEach(item => {
+        item.addEventListener("mouseover", () => {
+            const imagePath = item.getAttribute("data-image");
+            const description = item.getAttribute("data-description");
+            previewImage.src = imagePath;
+            previewImage.style.display = "block";
+            previewDescription.textContent = description;
+            previewDescription.style.display = "block";
         });
-    });
 
-    // hover fxs for the footer
-    const footer = document.querySelector('footer p');
-    footer.style.transition = 'color 0.3s ease';
-    
-    footer.addEventListener('mouseover', () => {
-        footer.style.color = 'var(--primary-color)';
-    });
-    
-    footer.addEventListener('mouseout', () => {
-        footer.style.color = '';
-    });
-
-    // animate  cards when into view
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('slide-up');
-                observer.unobserve(entry.target);
-            }
+        item.addEventListener("mouseout", () => {
+            previewImage.style.display = "none";
+            previewDescription.style.display = "none";
         });
-    }, observerOptions);
-
-    document.querySelectorAll('.card').forEach(card => {
-        observer.observe(card);
     });
 });
