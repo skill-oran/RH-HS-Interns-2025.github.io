@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+  font-family: 'Indie Flower', cursive, 'Poppins', sans-serif;
+  background-color: #f2e9e4;
+  color: #4e3d36;
+  margin: 0;
+  padding: 20px;
+
+  /* More apparent abstract swirl SVG across the background */
+  background-image: url("data:image/svg+xml;utf8,<svg width='1440' height='700' viewBox='0 0 1440 700' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M-100,500 Q720,0 1540,500 T3140,500' stroke='%23e9dcc9' stroke-width='120' fill='none' opacity='0.45'/><path d='M-100,600 Q720,200 1540,600 T3140,600' stroke='%23a58d7b' stroke-width='60' fill='none' opacity='0.28'/></svg>");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+/* HEADER/BANNER */
+.banner {
+  background-image: url('static/jpg\(4\).jpeg'); /* Adjust path */
+  background-size: 120;
+  background-position: center;
+  height: 300px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding: 20px;
+  flex-direction: column;
+  color: white; /* Optional: make text readable */
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.banner-text .cursive {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  color: #c2c1be;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.banner-text h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  z-index: 2;
+}
+
+.banner-text p {
+  margin-top: 10px;
+  font-size: 2rem;
+  color: #6d5c53;
+  z-index: 2;
+}
+
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;  /* ensures all child cards in this row are equal height */
+}
+
+.row-container .card {
+  display: flex;
+  flex-direction: column; /* allows internal content to expand vertically */
+  height: 200%;           /* card will fill the full height of its flex sibling */
+}
+/* LAYOUT: ROWS + COLUMNS */
+.row-container,
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.row-container .card,
+.flex-row .card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+/* Add or update these rules for the about/gallery row */
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.row-container .card,
+.row-container .photo-slider {
+  flex: 1 1 45%;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .row-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .row-container .card,
+  .row-container .photo-slider {
+    flex: 1 1 100%;
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
+/* CARDS */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 15px rgba(120, 70, 20, 0.15);
+  transform: translateY(-4px);
+}
+
+/* TEXT HEADINGS */
+h1, h2 {
+  color: #5a4d44;
+  margin-bottom: 12px;
+}
+.about-container {
+  position: relative; /* defines positioning context */
+  margin-bottom: 100px; /* extra space so following cards don’t overlap */
+}
+
+.under-about {
+  position: absolute;
+  width: 100%;
+  max-width: 400px; /* match card width, if needed */
+  bottom: -80px; /* pulls it beneath the About Me card */
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* centers it */
+  z-index: 0;
+}
+
+.about-container .card {
+  position: relative;
+  z-index: 1;
+}
+/* BUTTONS */
+.my-button {
+  background-color: #a58d7b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 8px 8px 0 0;
+}
+
+.my-button:hover {
+  background-color: #927765;
+}
+
+/* LINKS */
+a {
+  color: #a87055;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7a503c;
+  text-decoration: underline;
+}
+
+/* PHOTO SLIDER */
+.photo-slider .slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#gallery-image {
+  width: 100%;
+  max-height: 400px; /* Increase as needed */
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.slider-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #7c5c48;
+  padding: 0 10px;
+  transition: transform 0.2s ease;
+}
+
+.slider-btn:hover {
+  transform: scale(1.2);
+}
+
+/* SMOOTH TRANSITION */
+* {
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .banner-text .cursive {
+    font-size: 3rem;
+  }
+
+  .banner-text h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Make "My Skills" and "My Interests" cards appear on the left in .flex-row */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* Align items to the left */
+  margin-top: -10px; /* Adjust as needed */
+}
+
+/* Make "My Skills" and "My Interests" cards smaller so they don't cross the middle */
+.flex-row .card {
+  flex: 0 1 -808%;
+  min-width: 160px;
+  max-width: 220px;
+
+}
+
+/* Make all cards in the flex-row fill the row equally */
+.flex-row .card {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+}
+
+/* Enlongate the Photo Gallery card (increase height, keep width) */
+.card.photo-slider {
+  min-height: 500px; /* Increase as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;        /* optional cap */
+  padding-top: 56.25%;       /* preserves 16:9 ratio (9 ÷ 16 = 0.5625) */
+  overflow: hidden;
+  margin: 0 auto;            /* centers the video if container is narrower */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Make About Me card shorter in height */
+.row-container .card:first-child {
+  max-height: 220px;    /* Adjust as needed */
+  overflow: auto;       /* Adds scroll if content overflows */
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Make Social Media Reel card longer and wider in 16x9 scale */
+.row-container .card iframe {
+  width: 100%;
+
+  min-width: 600px;
+  min-height: 850px;
+  max-width: 600px;
+  max-height: 850px;
+  display: block;
+  margin: 0 auto;
+}
+
+.row-container .card {
+  /* Optionally, make the card itself wider */
+  max-width: 1000px;
+}
+
+.connect-photo {
+  max-width: 100px;
+  max-height: 140px;
+  width: auto;
+  height: 170px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* Make the cards and the row in .flex-row shorter */
+.flex-row {
+  margin-bottom: 10px;    /* Reduce space below the row */
+  gap: 12px;              /* Reduce space between cards */
+  align-items: flex-start;
+}
+
+.flex-row .card {
+  min-height: 180px;
+  max-height: 260px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+h1, h2, h3 {
+  font-family: 'Indie Flower', cursive;
+}

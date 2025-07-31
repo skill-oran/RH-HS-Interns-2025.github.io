@@ -1,16 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>SophiaIsReal??</title>
+    <link rel="stylesheet" href="about-me.css"> 
+    <!---rel - referencing a local file, href is instructing to find it-->
 </head>
 <body>
-  <h1>Hi</h1>
+    <h1 title="Hovering, huh?"; class="big-heading">Hello? This is Sophia speaking...</h1>
+    
+    </div>
+    <p id="typedText" class="blurb">
+    <span id="text"></span><span id="cursor">|</span>
+    </p> 
+
+    <script>
+        const text = "...Is anyone there?";
+        const textElement = document.getElementById("text");
+        const cursor = document.getElementById("cursor");
+        let i = 0;
+        const speed = 45; // typing speed
+        const delayBetweenLoops = 2000;
+
+    // Blink cursor by toggling opacity
+    setInterval(() => {
+        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+    }, 500);
+
+    function typeWriter() {
+        if (i < text.length) {
+            textElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+            setTimeout(() => {
+                textElement.textContent = "";
+                i = 0;
+                typeWriter();
+            }, delayBetweenLoops);
+        }
+    }   
+window.onload = typeWriter;
+</script>
+
+    <div class="card"> 
+        <h2 style="font-style:oblique"; class="diffHeading">About Me</h2>
+        <!--- creating the card layout w/ the about me -> the name of the class is .card -->
+        <div class="text-image-container">
+            <div class="text-block1">
+                <p>Hi, I'm Sophia. I'm a rising junior at Newton South High School.</p>
+                <p>I'm interested in computer science and data science, among other things.</p>
+                <p>In school, I've taken Honors CS1 and 2, and I can program in Swift, Python, and now HTML.</p>
+                <p>I have a dog named Zoe.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/Zoe!.jpg" id="img1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-rows"> 
+        <div>
+        <div class="partial-card">
+            <h2 class="diffHeading">My Interests</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Computer science</li>
+                <li>Biochemistry</li>
+                <li>Data science</li>
+                <li>Reading</li>
+            </ul>
+        </div>
+    </div>
+    <div> <h2 class="and">and</h2> </div>
+        <div>
+        <div class="partial-card">
+            <h2 class="diffHeading">My Activities</h2>
+            <ul> 
+                <li>Science Team</li>
+                <li>Kempo karate</li>
+                <li>Violin</li>
+                <li>Guitar</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+        
+    <!-- 'card' is kind of like a class, only a class of format that can be applied to multiple sections-->
+    <div class="card"> 
+        <h2 class="diffHeading">Journal</h2> 
+        <p>
+            While at RedHat, I and the other interns wrote journal entries 
+            discussing our thoughts and experiences during the internship. 
+            Click on the button to see them! 
+        </p>
+        <div class="button-align">
+        <a href="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/journals/journals.html" class="my-button" target="_blank" > 
+                Journals
+        </a> 
+        </div>
+     </div>
+
+    <div> 
+        <!--I will put my video here--> 
+    </div> 
+
+    <div class="container-rows">
+        <div class="partial-card">
+        <h2 class="diffHeading"> Contact Me </h2>  
+        <p>Contact me on different platforms!</p> 
+        <div class="container-rows">
+        <div class="button-align">
+            <a href="https://github.com/skill-oran" class="my-button" target="_blank"> 
+                Github
+            </a>
+        </div> 
+        <div class="button-align">
+            <a href="https://www.linkedin.com/" class="my-button" target="_blank"> 
+                Linkedin
+            </a>
+        </div>
+        </div>
+        <p>Email me:</p> 
+        <p> sophia.killoran6@gmail.com </p> 
+        </div>
+    <div class="partial-card"> 
+        <h2 class="diffHeading">Learn to Code!</h2> 
+        <p>Access free courses in programming:</p> 
+        <!-- This is a link that looks like a button, the button I designed in CSS --> 
+        <!--- it is called a, but is a member of the class my-button -->
+        <div class="button-align">
+        <a href="https://www.w3schools.com" class="my-button" target="_blank" style="text-decoration:none;"> 
+            Learn More 
+        </a> 
+        </div>
+    </div> 
+    </div>
+    <!--I will put my pictures here-->
+    <div class="carousel-card"> 
+        <p>Some pictures I like :]</p>
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-slide">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2808.jpeg" alt="Image 1" id="caroimg1" class="carousel-img active">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_1438.jpeg" alt="Image 2" id="caroimg2" class="carousel-img">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2339.jpeg" alt="Image 3" id="caroimg3" class="carousel-img">
+            </div>
+        <p>Pictures taken by me </p>
+        <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".carousel-img");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+// Show the first slide on load
+        showSlide(currentSlide);
+    </script>
+
+
+    <!--href is basically referencing an outside source, ig-->
+
+   <!-- <h2>Try Javascript!</h2> 
+
+    <button class="my-button" onclick="alert('Hello!')"> 
+        Click Me! 
+    </button> 
+
+    <h2>Secret Message</h2>
+    <button class="my-button" onclick="showMessage()"> 
+        Show Secret 
+    </button> 
+
+    <p id="secret" style="display: none; color: red;">
+        You found it ! 
+    </p> 
+
+    <p> See how all the features function: </p> 
+
+     Hoverable List syntax (commands in CSS) 
+     <ul>
+        <li>Hover over me !</li>
+        <li>Me too!</li>
+     </ul>
+
+    Javascript button
+    <button class="my-button" onclick="alert('Hello!')"> 
+        Say Hello 
+    </button> 
+
+    Link that looks like a button
+    <a href="https://github.com" class="my-button" target="_blank">
+        Visit GitHub 
+    </a> 
+    </div> -->
+    <p>Thanks for visiting my page!</p>
+    <img src="https://media.tenor.com/92MplgQwb80AAAAM/cat-meme-wave-emoji.gif" alt="goofy aah cat">
+
+    <script> 
+    function showMessage() { 
+        document.getElementById('secret').style.display = 'block';
+    }
+    </script>
+
 </body>
-</html> 
+</html>

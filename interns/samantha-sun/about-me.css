@@ -1,0 +1,128 @@
+body {
+    font-family: "Playfair Display", serif;
+    background-color: rgba(245, 39, 145, 0.24);
+    font-size: 16;
+
+}
+h1 {
+    font-size:3em;
+    color: white;
+    text-align: center;
+    margin-top:2em;
+    font-family: "Playfair Display", serif;
+}
+
+h2 {
+    font-family: "Concert One", sans-serif;
+    color:white;
+    text-align: center;
+}
+
+li {
+    font-family: "EB Garamond", serif;
+    color:white
+}
+
+p {
+    font-family: "EB Garamond", serif;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+a:hover {
+    color:white;
+    text-decoration:underline;
+}
+img { 
+    object-fit: contain;
+    max-width: 300px;
+}
+
+img:hover {
+    transform: scale(1.2);
+
+}
+
+.flex-container {
+    display: flex;
+    max-height: 200px;
+    justify-content: center;
+    padding: 20px;
+    margin: 30px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    gap: 32px;
+}
+
+* {
+    transition:all 0.3s ease;
+}
+.card {
+    background-color:rgba(245,39,145,0.22);
+    padding:20px;
+    margin:30px 0;
+    margin-left:100px;
+    margin-right:100px;
+    border-radius:20px;
+    box-shadow: 0 2px 5px rbga(0,0,0,0.1);
+}
+.card:hover {
+    box-shadow: 0 5px 15px rbga(0,0,0,0.3);
+    transform:translateY(-5px);
+}
+.my-button {
+    background-color:rgba(245,39,145,0.62);
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius:none;
+    cursor:pointer;
+    font-size:16px;
+    margin-left:100px;
+    margin-right:100px;
+    font-family:"Playfair Display", serif;
+}
+.my-button:hover {
+    background-color: rgba(245,39,145,0.22);
+    transform:scale(1);
+}
+
+.about-me {
+    font-family: "Concert One", sans-serif;
+    color:white;
+    text-align: center;
+}
+
+.my-button2 {
+    background-color:rgba(245,39,145,0.62);
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius:none;
+    cursor:pointer;
+    font-size:16px;
+    font-family:"Playfair Display", serif;
+}
+
+.my-button2:hover {
+    background-color: rgba(245,39,145,0.22);
+    transform:scale(1.05);
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 30px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+}
+
+.bio {
+    text-align: center;
+    color:white;
+}
