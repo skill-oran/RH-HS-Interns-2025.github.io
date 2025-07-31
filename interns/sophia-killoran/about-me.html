@@ -45,14 +45,16 @@ window.onload = typeWriter;
     <div class="card"> 
         <h2 style="font-style:oblique"; class="diffHeading">About Me</h2>
         <!--- creating the card layout w/ the about me -> the name of the class is .card -->
-        <div class="flex-container-rows">
-        <div>
-        <p>Hi, I'm Sophia. I'm a rising junior at Newton South High School.</p>
-        <p>I'm interested in computer science and data science, among other things.</p> 
-        <p>I have a dog named Zoe.</p> 
+        <div class="text-image-container">
+            <div class="text-block1">
+                <p>Hi, I'm Sophia. I'm a rising junior at Newton South High School.</p>
+                <p>I'm interested in computer science and data science, among other things.</p>
+                <p>I have a dog named Zoe.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/Zoe!.jpg">
+            </div>
         </div>
-    </div>
-        <div><img src="./Zoe!.jpg"></div>
     </div>
 
     <div class="container-rows"> 
@@ -83,13 +85,32 @@ window.onload = typeWriter;
     </div>
         
     <!-- 'card' is kind of like a class, only a class of format that can be applied to multiple sections-->
-
-    <div class="card"> 
-        <h2 class="diffHeading">Journal</h2> 
-        <p>While at RedHat, I and the other interns wrote journal entries 
-            discussing our thoughts and experiences during the internship. 
-            Click on the button to see them! 
-        </p>
+    <div class="container-rows">
+        <div class="partial-card"> 
+            <h2 class="diffHeading">Journal</h2> 
+            <p>
+                While at RedHat, I and the other interns wrote journal entries 
+                discussing our thoughts and experiences during the internship. 
+                Click on the button to see them! 
+            </p>
+            <div class="button-align">
+            <a href="https://github.com/skill-oran/RH-HS-Interns-2025.github.io/tree/main/interns/sophia-killoran/journals" class="my-button" target="_blank" > 
+                Journals
+            </a> 
+            </div>
+        </div>
+       <!-- <div class="divider"> 
+            <img src="https://community.smartsheet.com/api/v2/media/download-by-url?url=https%3A%2F%2Fus.v-cdn.net%2F6031209%2Fuploads%2F5KH6ZMHTR4IP%2Fdivider-vertical-with-star.png">
+        </div> If I want to try and put a divider between the two blocks. annoying, though--> 
+        <div class="partial-card">
+            <h2 class="diffHeading"> Contact Me </h2>  
+                <p>Contact me on different platforms!</p> 
+            <div class="button-align">
+                <a href="https://github.com/skill-oran" class="my-button" target="_blank"> 
+                    Github
+                </a>
+            </div>
+        </div>
     </div>
     <div class="card">
     <h2 class="diffHeading">Useful Links</h2> 
@@ -133,8 +154,7 @@ window.onload = typeWriter;
     </button> 
 
     <!--Link that looks like a button--> 
-    <a href="https://github.com" class="my-button" target="_blank"
-    style="text-decorations:none; display:inline-block; margin-left:10px;">
+    <a href="https://github.com" class="my-button" target="_blank">
         Visit GitHub 
     </a> 
     </div>
