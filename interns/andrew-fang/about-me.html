@@ -30,16 +30,32 @@
         <main>
             <section class="card slide-up">
                 <h2><i class="fas fa-user"></i> About Me</h2>
-                <p>I'm a high school student with a deep interest in web development, computer architecture, and innovative design. My internship experiences have allowed me to explore these passions in professional settings.</p>
+                <div class="about-me-flex">
+                    <img src="your-photo.jpg" alt="Andrew Fang" class="profile-photo">
+                    <p>I'm a high school student with a deep interest in web development, computer architecture, and innovative design. My internship experiences have allowed me to explore these passions in professional settings.</p>
+                </div>
             </section>
 
             <section class="card slide-up">
                 <h2><i class="fas fa-star"></i> My Interests</h2>
-                <ul class="interests-list">
-                    <li><i class="fa-solid fa-microchip"></i> RISC Architecture</li>
-                    <li><i class="fa-solid fa-computer"></i> Computer Hardware / Newest Tech Trends</li>
-                    <li><i class="fa-sold fa-seedling"></i> Environmentalist</li>
-                </ul>
+                <p class="hover-instruction">Hover over each interest to reveal more</p>
+                <div class="interests-container">
+                    <ul class="interests-list">
+                        <li data-image="risc.jpg" data-description="I'm intersted in RISC for it's energy efficiency potential">
+                            <i class="fa-solid fa-microchip"></i> RISC Architecture
+                        </li>
+                        <li data-image="hardware.jpg" data-description="I'm especially interested in Samsung's Foldables">
+                            <i class="fa-solid fa-computer"></i> Computer Hardware / Newest Tech Trends
+                        </li>
+                        <li data-image="environment.jpg" data-description="As an environmentalist, I'm passionate about sustainable technology solutions.">
+                            <i class="fa-solid fa-seedling"></i> Environmentalist
+                        </li>
+                    </ul>
+                    <div id="interest-preview">
+                        <img id="preview-image" src="" alt="Preview">
+                        <p id="preview-description"></p>
+                    </div>
+                </div>
             </section>
 
             <section class="card slide-up">
@@ -49,7 +65,7 @@
                         <img src="https://via.placeholder.com/400x250" alt="Project placeholder" class="project-image">
                         <div class="project-overlay">
                             <h3>wip title</h3>
-                            <p>wip descript/p>
+                            <p>wip descript</p>
                         </div>
                     </div>
                 </div>
