@@ -1,16 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Interactive Website</title>
+    <link rel="stylesheet" href="about-me.css" />
 </head>
 <body>
-  <h1>Hi</h1>
+    <!-- Hero Panel -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Alina D.</h1>
+    <p>High School Student  • Red Hat Intern</p>
+  </div>
+</header>
+
+    
+    <!-- About Me and Interests side by side -->
+    <section class="card-container">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>Hi! I’m Alina Dhaliwal, a rising senior at Green Level High School. I’m 17 years old and the oldest of three siblings.  I am most interested in the field of data science, and I have really enjoyed gaining hands-on experience in the tech industry, and learning from my mentors.</p>
+        </div>
+
+        <div class="card">
+            <h2>My Interests</h2>
+            <ul>
+                <li>Spending time with friends and family</li>
+                <li>Running</li>
+                <li>Traveling</li>
+                <li>Watching TV/Movies</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Photo Gallery and My Favorite Things side by side with sliders -->
+    <section id="media" class="card-container">
+        <div class="card gallery-card">
+            <h2>Photo Gallery</h2>
+            <div class="slider">
+                <button class="prev">&#10094;</button>
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/alinabahamas.jpg" alt="Photo 1" class="slider-image" />
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/sunset.jpg" alt="Photo 2" class="slider-image" style="display:none;" />
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/polkadot.jpg" alt="Photo 3" class="slider-image" style="display:none;" />
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/lisbon.jpg" alt="Photo 4" class="slider-image" style="display:none;" />
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/madrid.jpg" alt="Photo 5" class="slider-image" style="display:none;" />
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/prom.jpeg" alt="Photo 6" class="slider-image" style="display:none;" />
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="card favorites-card">
+            <h2>My Favorite Things</h2>
+            <div class="slider">
+                <button class="prev">&#10094;</button>
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/acai.jpg" alt="Favorite Thing 1" class="slider-image" />
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/hiking.jpg" alt="Favorite Thing 2" class="slider-image" style="display:none;" />
+                <img src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/concert.jpg" alt="Favorite Thing 3" class="slider-image" style="display:none;" />
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+<!-- Call-to-Action Cards -->
+<section class="card-container">
+  <!-- Connect with Me -->
+  <div class="card">
+    <h2>Connect with Me</h2>
+    <p>Want to reach out or learn more?</p>
+    <a href="https://www.linkedin.com/in/alina-dhaliwal-09ab0a361/" target="_blank">
+      <button class="action-button">Visit My LinkedIn</button>
+    </a>
+  </div>
+
+  <!-- My Journal Entries -->
+  <div class="card">
+    <h2>My Journal Entries</h2>
+    <p>Read about my experiences and reflections.</p>
+    <a href="https://rh-hs-interns-2025.github.io/interns/alina-dhaliwal/journals/journals.html" target="_blank">
+      <button class="action-button">Read Entries</button>
+    </a>
+  </div>
+</section>
+
+<!-- Social Media Reel Project -->
+<section class="card-container">
+  <div class="card" style="width: 100%; max-width: 500px; margin: 0 auto;">
+    <h2>My Social Media Reel Project</h2>
+    <p>Here is a day in my life as a Red Hat high school intern!</p>
+    <video controls width="100%" style="max-width: 100%; height: auto; border-radius: 12px;">
+
+      <source src="/Users/adhaliwa/RH-HS-Interns-2025.github.io/interns/alina-dhaliwal/static/6972fcd1815546b3a403c946d0149b5c.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+    <script>
+        // Image slider script for all sliders on the page
+        document.querySelectorAll('.slider').forEach(slider => {
+            const images = slider.querySelectorAll('.slider-image');
+            let currentIndex = 0;
+
+            const prevBtn = slider.querySelector('.prev');
+            const nextBtn = slider.querySelector('.next');
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.style.display = i === index ? 'block' : 'none';
+                });
+            }
+
+            showImage(currentIndex);
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>
