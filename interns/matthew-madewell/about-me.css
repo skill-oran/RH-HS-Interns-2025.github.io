@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 45px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+h3 {
+    text-align: center;
+    color: #ffffff;
+}
+
+li {
+    color: #ffffff;
+    text-align: left;
+}
+
+.highlight {
+    background-color: rgb(78, 160, 254);
+    padding: 5px;
+}
+
+button {
+    margin-bottom: 15px;
+}
+
+/* Make links change color when you hover */
+a {
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Make images slightly bigger on hover */
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Add smooth transitions to everything */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Create a card style that lifts up on hover */
+.card {
+    background-color: rgb(41, 35, 35);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.225);
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.778);
+    transform: translateY(-5px);
+}
+
+/* Style a button that changes on hover */
+.my-button {
+    background-color: #98c3ff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.my-button:hover {
+    background-color: #0b356f;
+    transform: scale(1.05);
+}
+
+/* Make list items highlight on hover */
+li:hover {
+    background-color: #0b356f;
+    padding-left: 10px;
+}
+
+/* Container to place cards side by side */
+.card-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between the two cards */
+    margin: 20px 0;
+}
+
+.half-card {
+    width: calc(50% - 10px); /* Subtract half the gap to account for spacing */
+}
+
+/* Responsive stacking for smaller screens */
+@media (max-width: 768px) {
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .half-card {
+        width: 100%;
+    }
+}
+
+.image-text-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.side-image {
+    width: 400px;
+    height: auto;
+}
+
+.center-text {
+    flex: 1;
+    color: white;
+    font-size: 34px;
+    padding: 0 20px;
+}
+
+.video-card {
+    width: 50%;          /* Make this card take up only half the page width */   /* Center it horizontally with vertical spacing */
+    padding: 20px;
+}
+
+.video-card video {
+    width: 70%;         /* Makes the video fill the width of the card */
+    height: auto;        /* Maintains 16:9 aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
