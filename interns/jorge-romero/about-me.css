@@ -9,10 +9,15 @@ h1 {
 }
 h4 {
     color:white;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
 }
-
-
+p1 {
+    color:white;
+}
+p {
+    font-size: 22px;
+}
 h2 {
     color:rgb(255, 88, 227);
 }
@@ -55,7 +60,15 @@ img:hover {
 .my-button:hover {
     transform: scale(1.05);
 }
+
 li:hover {
     padding-left: 10px;
     background-color: rgb(212, 206, 206);
+}
+ul2 {
+    color:white;
+    text-indent: 10px;
+}
+ul {
+    font-size: 20px;
 }
