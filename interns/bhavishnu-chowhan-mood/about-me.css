@@ -10,6 +10,7 @@ body {
             justify-content: center;
             min-height: 100vh;
             color: #333;
+            text-align: center;
         }
 
         /* Responsive padding for body */
@@ -77,6 +78,47 @@ body {
         .profile-image:hover {
             transform: scale(1.05); /* hover:scale-105 */
         }
+
+        .image-gallery {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    align-items: flex-start; /* Aligns images to the top if they have different heights */
+    gap: 10px; /* Adds space between images */
+}
+
+.profile-image-container {
+    /* You can add specific styling for individual containers if needed */
+    flex-shrink: 0; /* Prevents images from shrinking if space is limited */
+}
+
+.profile-image {
+    max-width: 100%; /* Ensures images fit within their containers */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.profile-image-container {
+   
+}
+
+
+.profile-image-container img { /* Target all images inside these containers */
+    width: 150px;  
+    height: 150px; /* Set your desired fixed height */
+    object-fit: cover; /* This is key! It crops the image to fit without distortion.
+    border-radius: 50%; /* Example: if you want circular profile pictures */
+}
+
+
+.profile-image { /* Keep this if you have other specific styling for profile images */
+    /* If .profile-image-container img targets all, this might be redundant or for specific overrides */
+}
 
         /* Responsive image sizing */
         @media (min-width: 640px) { /* sm:w-40 sm:h-40 */
@@ -191,4 +233,11 @@ body {
         }
         .red-button:hover {
             background-color: #b91c1c; /* hover:bg-red-700 */
+        }
+        .red-button {
+            background-color: #1d4ed8; /* bg-red-600 */
+            --focus-ring-color: #1d4ed8; /* red-500 */
+        }
+        .red-button:hover {
+            background-color: #1d4ed8; /* hover:bg-red-700 */
         }

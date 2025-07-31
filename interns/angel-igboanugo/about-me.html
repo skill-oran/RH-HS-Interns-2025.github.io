@@ -1,16 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+    <title>About Me Portfolio</title>
+    <link rel="stylesheet" href="about-me.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hi</h1>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <div class="banner-text">
+      <h1>Hi, I'm Angel Igboanugo</h1>
+      <p>Welcome to My Website</p>
+    </div>
+  </div>
+
+  <!-- ABOUT + GALLERY -->
+  <div class="row-container">
+    <!-- About Me -->
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I’m a student who loves bringing ideas to life and working with others to create meaningful change. As co-founder of The Patience Foundation, I help provide resources to support and empower underserved communities all over the globe through donations. Through my nonprofit work and involvement in student organizations, I’ve grown to become a person who’s passionate about problem solving and creativity.</p>
+      <ul>
+        <li>Red Hat High School Intern</li>
+        <li>Rising Junior @ Wakefield High School</li>
+      </ul>
+  
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="card photo-slider">
+      <h2>Photo Gallery</h2>
+      <div class="slider">
+        <button class="slider-btn" onclick="changeSlide(-1)">❮</button>
+        <img id="gallery-image" src="static/IMG_4527_Original.jpg" alt="Gallery image">
+        <button class="slider-btn" onclick="changeSlide(1)">❯</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS + INTERESTS + CONNECT (now separated from gallery row) -->
+  <div class="flex-row">
+    <div class="card">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Collaborative</li>
+        <li>Communicative</li>
+        <li>Detail-Oriented</li>
+        <li>Planner</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Reading</li>
+        <li>Weightlifting</li>
+        <li>Traveling</li>
+        <li>Community Service</li>
+        <li>Spending Time with Family & Friends</li>
+      </ul>
+    </div>
+
+    <!-- New card for your photo -->
+    <div class="card">
+      <h2>Connect With Me!</h2>
+      <img
+        src="static/IMG_1917.png"
+        alt="Angel Igboanugo"
+        class="connect-photo"
+        style="max-width:80px; max-height:120px; width:auto; height:auto; display:block; margin:0 auto; border-radius:8px;"
+      >
+    </div>
+  </div>
+
+  <!-- REEL + JOURNAL -->
+  <div class="row-container">
+    <!-- Social Media Reel -->
+    <div class="card">
+  <h2>My Social Media Reel 🎬</h2>
+  <p>…</p>
+  <div class="video-container">
+    <iframe
+      src="https://drive.google.com/file/d/11bjDDzEmbRND1eyn4K2NtMs55KVUMP2_/preview"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+    <!-- Journal Entries -->
+    <div class="card">
+      <h2>📓 My Journal Entries</h2>
+      <p>Throughout the internship, I documented my weekly experiences, goals, and reflections.</p>
+      <a href="https://rh-hs-interns-2025.github.io/interns/angel-igboanugo/journals/journals.html" target="_blank">
+        <button class="my-button">Read My Internship Journal</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Slider Script -->
+  <script>
+    const images = ["static/IMG_4527_Original.jpg", "static/IMG_0171.jpg", "static/Tezza-4770.jpg", "static/IMG_0173.jpg", "static/IMG_1234.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex >= images.length) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      document.getElementById('gallery-image').src = images[currentIndex];
+    }
+  </script>
+
 </body>
-</html> 
+
+
+</html>

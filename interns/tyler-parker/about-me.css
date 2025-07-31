@@ -137,8 +137,8 @@ body.dark-mode .nav-links a:focus::after {
   font-weight: 500;
 }
 .hero-img {
-  width: 140px;
-  height: 140px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 24px #00bcd422;
