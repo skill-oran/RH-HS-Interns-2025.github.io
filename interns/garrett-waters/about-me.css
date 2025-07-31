@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #76a0e8;
+    margin: 20px;
+}
+
+h1 {
+    color: #333366;
+}
+
+.highlight {
+    background-color: rgb(0, 255, 238);
+    padding: 5px;
+}
+
+.my-style {
+    color: #ff002b;
+    font-size: 18px;
+}
+
+img {
+    width: auto;
+    height: 200px;
+}
+

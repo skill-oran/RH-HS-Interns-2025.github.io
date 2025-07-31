@@ -1,16 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna Badulis | My First Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  header {
+    background: rgba(179, 136, 235, 0.95);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    backdrop-filter: blur(4px);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card h2 {
+    color: #5a4e7c;
+    margin-bottom: 1rem;
+  }
+
+  .slider {
+    position: relative;
+    text-align: center;
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  .slide img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .caption {
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  .dots-container {
+    margin-top: 1rem;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #666;
+  }
+
+  .media-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .media-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    transition: background-color 0.5s;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #b388eb;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* DARK MODE STYLES */
+  .dark-mode {
+    background: #1e1e1e !important;
+    background-size: initial !important;
+    animation: none !important;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .card {
+    background-color: #2e2e2e;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .card h2 {
+    color: #dabfff;
+  }
+
+  .dark-mode header {
+    background-color: #333;
+  }
+
+  .dark-mode footer {
+    background-color: #333;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .caption {
+    color: #bbb;
+  }
+
+  .dark-mode button {
+    background-color: #444;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .dot {
+    background-color: #888;
+  }
+
+  .dark-mode .dot.active {
+    background-color: #fff;
+  }
+</style>
+
+
 </head>
 <body>
-  <h1>Hi</h1>
+  <header>
+    <h1><i class="fas fa-star"></i> Welcome to My Website!</h1>
+    <p>Hi! I'm Anna Badulis and this is my first webpage.</p>
+  </header>
+
+  <div class="container">
+    <div class="card" style="animation-delay: 0.1s">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <p>I’m a rising junior at Wakefield High School, where I’ve had the opportunity to grow both academically and as a student leader. I currently serve as the captain of the Wakefield Girls' Soccer team, a role that has helped me develop strong leadership, communication, and teamwork skills. Outside of school, I play for NCFC Gold North, which keeps me active and competitive year-round. In my free time, I love being outdoors, whether it’s going for a hike, playing sports, or simply spending time with my friends. Looking ahead, I hope to pursue a career that allows me to stay creative, collaborate with others, and genuinely enjoy the work I do every day.</p>
+    </div>
+
+    <div class="card" style="animation-delay: 0.2s">
+      <h2><i class="fas fa-heart"></i> My Interests</h2>
+      <ul>
+        <li>Playing soccer</li>
+        <li>Listening to music</li>
+        <li>Going to the gym</li>
+        <li>Watching TV/Movies</li>
+      </ul>
+      <h3><i class="fas fa-heart"></i> My Career Interests</h3>
+      <ul>
+        <li>Marketing</li>
+        <li>Creativity</li>
+        <li>Branding</li>
+        <li>Collaboration & Team Work</li>
+      </ul>
+    </div>
+
+    <div class="card" style="animation-delay: 0.3s">
+      <h2><i class="fas fa-user"></i> My Experience at Red Hat</h2>
+      <p>During these past two weeks, I have learned a lot from Red Hat. I had to learn how to code for this website which was difficult but I had a lot of help from my mentors and peers. Many of the speakers here have also given us great advice on how to view our career journey. They are also very open to us asking questions and making sure that we aren't confused on any of the content they go over. At the end of every session, each speaker has told us to connect with them on LinkedIn which I appreciated because I'm now able to connect with their expansive network.</p>
+    </div>
+
+    <div class="card" style="animation-delay: 0.4s">
+      <h2><i class="fas fa-images"></i> Gallery & Video</h2>
+      <div class="media-row">
+        <div class="media-column">
+          <div class="slider">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="slide active">
+              <img src="static/379FA054-808A-4A3F-86E3-3E5475BAED9A-Messages.jpg" alt="First day at Red Hat" />
+              <p class="caption">First day at Red Hat</p>
+            </div>
+            <div class="slide">
+              <img src="static/Pets.jpg" alt="My pets" />
+              <p class="caption">My pets</p>
+            </div>
+            <div class="slide">
+              <img src="static/DSC02945.jpeg" alt="Me with friends at the park" />
+              <p class="caption">My favorite picture I have ever taken</p>
+            </div>
+            <div class="slide">
+              <img src="static/DSC02849.jpeg" alt="Hiking with friends" />
+              <p class="caption">4th of July celebration</p>
+            </div>
+            <div class="slide">
+              <img src="static/JessieBarksdalePhotography_full-collection_348.JPG" alt="Wedding celebration" />
+              <p class="caption">My sister's wedding</p>
+            </div>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dots-container">
+              <span class="dot active" onclick="currentSlide(0)"></span>
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+          </div>
+        </div>
+        <div class="media-column">
+          <video controls width="100%">
+            <source src="static/my-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="caption">A Day in My Life!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+  <h2><i class="fas fa-book"></i> My Journals</h2>
+  <p>Check out my reflections and experiences during my internship:</p>
+  <a href="https://rh-hs-interns-2025.github.io/interns/anna-badulis/journals/journals.html" target="_blank" style="color: #5a4e7c; font-weight: bold;">
+    View My Journal Entries
+  </a>
+</div>
+
+
+    <div class="card" style="animation-delay: 0.5s">
+      <h2><i class="fas fa-adjust"></i> Theme & Secret</h2>
+      <button onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+      <button onclick="showMessage()">Reveal a Secret</button>
+      <p id="secret" style="display: none; color: red; margin-top: 10px;">You found it!</p>
+    </div>
+  </div>
+
+  <footer>
+  <p>
+    <i class="fas fa-smile"></i> Thanks for visiting my page! |
+    <a href="https://www.linkedin.com/in/anna-badulis-4a9bb9370/" target="_blank" style="color: #0077b5; text-decoration: none;">
+      <i class="fab fa-linkedin"></i> Connect with me on LinkedIn by clicking here!
+    </a>
+  </p>
+</footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function showMessage() {
+      document.getElementById('secret').style.display = 'block';
+    }
+
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    function showSlide(index) {
+      if (index >= slides.length) slideIndex = 0;
+      if (index < 0) slideIndex = slides.length - 1;
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+        dots[i].classList.remove("active");
+      }
+
+      slides[slideIndex].classList.add("active");
+      dots[slideIndex].classList.add("active");
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      showSlide(slideIndex);
+    }
+
+    function currentSlide(n) {
+      slideIndex = n;
+      showSlide(slideIndex);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSlide(slideIndex);
+    });
+  </script>
 </body>
-</html> 
+</html>

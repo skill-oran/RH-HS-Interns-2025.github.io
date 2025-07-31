@@ -1,16 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+    <title>My First Website</title>
+    <link rel="stylesheet" type="text/css" href="about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+
+    <h1>Welcome to My Website!</h1>
+    <p class="center-text">This is my first website, and I'm excited to share a bit about myself.</p>
+
+
 </body>
-</html> 
+
+    <div id="boat" class="card">“In the same boat, our waters just different” -Lucki  
+
+</div>
+    
+<div class="card">
+    <h2>Intrests</h2>
+    <ul>
+        <li>Fashion</li>
+        <li>Culinary</li>
+        <li>Soccer, Skateboarding, and Boxing</li>
+        <li>I enjoy making music along with avidly listening to music as well.</li>
+    
+    </ul>
+</div>
+
+    <img src="./IMG_7239.jpeg" alt="Placeholder image" width="350">
+    <img src="./IMG_1862.jpeg" alt="Placeholder image" width="350">
+    <img src="./IMG_7263.jpeg" alt="Placeholder image" width="350">
+    <img src="./IMG_7944.jpeg" alt="Placeholder image" width="350">
+
+    <div class="card">
+        <h2>Bio</h2>
+        <p>My name is Mateo Moreno, and I am a high school student learning web development.</p>
+        <p>I am a highschool student attending Cristo Rey Boston in Dorchester,Boston Massachussetts
+         and I am passionate about culinary arts and have traveled to Paris and Frankfurt to work in kitchens, aiming to work in a Michelin-star restaurant.
+        I have worked in various places asweel varrying from a non profit church to Resturants
+
+        </p>
+
+    <div class="card">
+        <h2>Contact Me</h2>
+        <p>If you want to get in touch, feel free to reach out!</p>
+        <p>Email: <a href="mailto:mateomorenom09@gmail.com">mateomorenom09@gmail.com</a></p>
+    </div>
+    <!--Add this to your HTML file -->
+<h2>My Links!</h2>
+<div class="button-container">
+    <p>Click the button below to visit my LinkedIn profile:</p>
+
+<!-- This is a link that looks like a button -->
+<a href="https://www.linkedin.com/in/mateo-moreno-506b23376/" class="my-button"
+target="_blank" style="text-decoration: none; color: white; background-color: #af0890; padding: 10px 20px; border-radius: 5px;">link for my LinkedIn</a>
+<!-- Add this to your HTML-->
+</div>
+
+<div class="button-container">
+    <p>Click the button below to visit my Journal:</p>
+    <!-- This is a link that looks like a button -->
+    <a href=https://rh-hs-interns-2025.github.io/interns/david-mateo-moreno/journals/journals.html class="my-button"
+    target="_blank" style="text-decoration: none; color: white; background-color: #af0890; padding: 10px 20px; border-radius: 5px;">link for my Journal</a>
+</div>
+   <!-- Add this before the closing </body> tag in your HTML file -->
+<div id="cursor-trail"></div>
+<script>
+  const trail = document.getElementById('cursor-trail');
+  document.addEventListener('mousemove', function(e) {
+    trail.style.left = e.pageX + 'px';
+    trail.style.top = e.pageY + 'px';
+  });
+</script>
+
+
+</body>
+</html>
