@@ -1,16 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
+    <title>My First Website</title>
     <link rel="stylesheet" href="./about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+    <header>
+        <h1>Heerak Shah</h1>
+        <p class="tagline">Hi, my name is Heerak Shah and this is my first website.</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="card">
+        <h2>About Me</h2>
+        <p>Hi! I'm Heerak, a rising senior at Wake Early College of Information & Biotechnologies. I like technology and solving problems and that is what led me to apply for this internship. Outside of school, some of my hobbies include speedcubing and swimming. I also have an older sister who goes to NC State and there is where I want to go too.</p>
+        <img src="Me.jpg" alt="My Picture">
+    </section>
+
+    <section id="education" class="card">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>School:</strong> Wake Early College of Information & Biotechnologies</li>
+            <li><strong>Graduation Year:</strong> 2026</li>
+            <li><strong>Favorite Subjects:</strong> Programming, Math, Chemistry</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming</li>
+            <li>Good listener</li>
+            <li>Teamwork & Communication</li>
+            <li>Creative Writing</li>
+        </ul>
+    </section>
+
+    <section id="interests" class="card">
+        <h2>My Interests</h2>
+        <ul>
+            <li>Programming</li>
+            <li>Swimming</li>
+            <li>Listening to Music</li>
+            <li>Reading</li>
+            <li>Travelling</li>
+        </ul>
+    </section>
+
+  <section id="projects" class="card">
+    <h2>Quiz</h2>
+    <div id="quiz">
+        <p id="question">What is my favorite subject?</p>
+        <button onclick="checkAnswer('Programming')">Programming</button>
+        <button onclick="checkAnswer('History')">History</button>
+        <button onclick="checkAnswer('Art')">Art</button>
+        <p id="quiz-feedback"></p>
+    </div>
+    <button class="center-button" onclick="alert('Thanks for checking out my site!')">Say Hello</button>
+    <button class="center-button" onclick="showMessage()">Reveal Secret</button>
+    <p id="secret" style="display: none; color: red;">This is the secret message.</p>
+</section>
+
+<script>
+function checkAnswer(answer) {
+    const feedback = document.getElementById('quiz-feedback');
+    if (answer === 'Programming') {
+        feedback.textContent = "Correct! Programming is my favorite subject.";
+        feedback.style.color = "green";
+    } else {
+        feedback.textContent = "Oops! Try again.";
+        feedback.style.color = "red";
+    }
+}
+</script>
+
+    <section id="gallery" class="card">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="M&Ms.jpg" alt="Gallery image 1">
+            <img src="Table Tennis.jpg" alt="Gallery image 2">
+            <img src="Food.jpg" alt="Gallery image 3">
+        </div>
+        <p style="text-align: center;">Pictures from my time at Red Hat</p>
+    </section>
+
+    <section id="goals" class="card">
+        <h2>Goals & Dreams</h2>
+        <p>I'd love to pursue computer science in college and work on apps that make a positive impact on the community.</p>
+    </section>
+
+    <section id="contact" class="card">
+        <h2>Connect With Me</h2>
+        <p>Click the buttons below to connect and view my work:</p>
+        <a href="https://www.linkedin.com/in/heerakrshah" class="my-button" target="_blank">LinkedIn</a>
+        <a href="https://github.com/expert228" class="my-button" target="_blank">GitHub</a>
+        <a href="https://docs.google.com/document/d/1tZyOcGl3Rw0Akv6gzxw6hrkUgaAc-hQ9HkEkelg67js/edit?usp=sharing" class="my-button" target="_blank">Journal Entry</a>
+    </section>
+
+    <footer>
+        <p>Thanks for visiting my page.</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+    </script>
+    <script>
+let lastBallTime = 0;
+document.addEventListener('mousemove', function(e) {
+    const now = Date.now();
+    if (now - lastBallTime < 120) return; 
+    lastBallTime = now;
+
+    const ball = document.createElement('img');
+    ball.src = 'ball.png';
+    ball.alt = 'Ping Pong Ball';
+    ball.style.position = 'fixed';
+    ball.style.left = (e.clientX - 20) + 'px';
+    ball.style.top = (e.clientY - 20) + 'px';
+    ball.style.width = '40px';
+    ball.style.pointerEvents = 'none';
+    ball.style.zIndex = '999';
+    ball.style.opacity = '0.8';
+    ball.className = 'pingpong-ball';
+
+    document.body.appendChild(ball);
+
+    setTimeout(() => {
+        ball.remove();
+    }, 1000);
+});
+</script>
 </body>
-</html> 
+</html>
