@@ -11,9 +11,26 @@ body {
 }
 
 .dark-mode {
-  background-color: #1c1c1c;
-  color: #f4f4f4;
+  background: #1e1e1e !important;
+  background-size: initial;
+  animation: none;
+  color: #fdfdfd;
 }
+.dark-mode .card {
+  background-color: #2e2e2e;
+  color: #fdfdfd;
+}
+.dark-mode header {
+  background-color: #333;
+}
+.dark-mode footer {
+  background-color: #333;
+  color: #fdfdfd;
+}
+.dark-mode .caption {
+  color: #bbb;
+}
+
 
 /* Header */
 header {
@@ -31,21 +48,33 @@ header h1 {
 /* Container for Cards */
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
+  gap: 2rem;
 }
 
-/* Card Styles */
 .card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  width: 300px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
+.media-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.media-column {
+  flex: 1;
+  min-width: 300px;
+}
+
 
 .card:hover {
   transform: scale(1.03);
@@ -98,30 +127,30 @@ button:hover {
   background-color: #db7af9;
 }
 
-.dark-mode button {
-  background-color: #000000;
-  color: #1c1c1c;
+body.dark-mode {
+  background: #121212;
+  color: #f4f4f4;
 }
 
-/* Lists */
-ul {
-  list-style-type: circle;
-  padding-left: 1.5rem;
+body.dark-mode header {
+  background: #333;
+  color: #f4f4f4;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 1rem;
-  color: #666;
-  background-color: #f9f9f9;
+body.dark-mode .card {
+  background: #2a2a2a;
+  color: #f4f4f4;
 }
 
-.dark-mode footer {
-  background-color: #292929;
+body.dark-mode .caption {
   color: #ccc;
 }
+
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
 
 /* Slideshow Styles */
 .slider {
