@@ -2,7 +2,7 @@ body {
     font-family:'Courier New', Courier, monospace;
     font-size:medium; 
     background-color: purple;
-    line-height:2; 
+    line-height:2em; 
 }
 
 /* the row of fonts shows the order or priority - if the browser does not */
@@ -57,10 +57,44 @@ h2 {
     gap: 20px; 
 }
 
-img { 
-    margin: 0px 20px 0px 10px;
-    transform:scale(0.5)
+.text-image-container { 
+    display: flex; 
+    flex-direction: row; 
+    gap: 50px;  
+    align-items: center; 
+    flex-wrap: wrap;  
+    justify-content: center; 
 }
+
+.text-block1 { 
+    flex: 1; 
+    padding:0; 
+}
+
+.image-wrapper {
+    flex: 1; 
+    flex-shrink: 0; /* Prevents the image from shrinking too much if space is tight */
+    justify-content: center;
+    align-content: center;
+
+}
+
+.image-wrapper img {
+    max-width: 50%; /* Ensures the image scales down to fit its container */ 
+    height: auto;/* Maintains aspect ratio */
+    display: block;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.divider { 
+    max-width: 100%; 
+    width: 100px; 
+    height: auto;
+    justify-content: center; 
+    align-content: center; 
+} 
+
 
 .diffHeading { 
     text-align: center;
@@ -69,7 +103,7 @@ img {
     background-color: lightblue; 
     padding: 10px;  
     border-radius: 10px; 
-    margin: 0px 0px 0px 0px
+    margin: 0px 30px 20px 30px;
 }
 
 .diffHeading:hover{ 
@@ -114,11 +148,11 @@ img:hover {
     padding: 20px; 
     margin: 30px 400px 30px 400px; 
     border-radius: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.3)
+    box-shadow: 0 2px 5px rgba(0,0, 0, 0.3)
 } 
 
 .card:hover { 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transform: translate(-5px) 
 }
 
@@ -126,11 +160,13 @@ img:hover {
     background-color:rgb(243, 247, 249); 
     padding: 20px; 
     border-radius: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.3)
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px; 
+    margin: 10px;
 } 
 
 .partial-card:hover { 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.3); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
     transform: translate(-5px); 
 }
 
@@ -175,6 +211,16 @@ li:hover{
 }
 /*while the list is inside the card, it can still be edited individually. */
 /* padding left = padding solely on the left side i think*/ 
+
+
+
+
+
+
+
+
+
+
 
 
 
