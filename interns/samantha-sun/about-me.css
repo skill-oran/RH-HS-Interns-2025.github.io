@@ -1,6 +1,7 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: pink;
+    font-family: "Playfair Display", serif;
+    background-color: rgba(245, 39, 145, 0.24);
+    font-size: 16;
 
 }
 h1 {
@@ -12,11 +13,14 @@ h1 {
 }
 
 h2 {
-    font-family: "Playfair Display", serif;
+    font-family: "Concert One", sans-serif;
+    color:white;
+    text-align: center;
 }
 
 li {
     font-family: "EB Garamond", serif;
+    color:white
 }
 
 p {
@@ -31,14 +35,33 @@ a:hover {
     color:white;
     text-decoration:underline;
 }
-img:hover {
-    transform: scale(1.1);
+img { 
+    object-fit: contain;
+    max-width: 300px;
 }
+
+img:hover {
+    transform: scale(1.2);
+
+}
+
+.flex-container {
+    display: flex;
+    max-height: 200px;
+    justify-content: center;
+    padding: 20px;
+    margin: 30px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    gap: 32px;
+}
+
 * {
     transition:all 0.3s ease;
 }
 .card {
-    background-color:white;
+    background-color:rgba(245,39,145,0.22);
     padding:20px;
     margin:30px 0;
     margin-left:100px;
@@ -51,21 +74,55 @@ img:hover {
     transform:translateY(-5px);
 }
 .my-button {
-    background-color: deeppink;
+    background-color:rgba(245,39,145,0.62);
     color:white;
-    padding:10px 20px;
-    border:none;
+    padding: 10px 20px;
+    border: none;
     border-radius:none;
     cursor:pointer;
     font-size:16px;
     margin-left:100px;
     margin-right:100px;
+    font-family:"Playfair Display", serif;
 }
 .my-button:hover {
-    background-color: powderblue;
-    transform:scale(1.05);
+    background-color: rgba(245,39,145,0.22);
+    transform:scale(1);
 }
 
 .about-me {
-    font-family: "EB Garamond", serif;
+    font-family: "Concert One", sans-serif;
+    color:white;
+    text-align: center;
+}
+
+.my-button2 {
+    background-color:rgba(245,39,145,0.62);
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius:none;
+    cursor:pointer;
+    font-size:16px;
+    font-family:"Playfair Display", serif;
+}
+
+.my-button2:hover {
+    background-color: rgba(245,39,145,0.22);
+    transform:scale(1.05);
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 30px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+}
+
+.bio {
+    text-align: center;
+    color:white;
 }
