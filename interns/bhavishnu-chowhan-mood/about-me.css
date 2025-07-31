@@ -1,0 +1,194 @@
+body {
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 1rem; /* p-4 equivalent */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Responsive padding for body */
+        @media (min-width: 640px) { /* sm:p-6 */
+            body {
+                padding: 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) { /* lg:p-8 */
+            body {
+                padding: 2rem;
+            }
+        }
+
+        /* Background Gradient */
+        .bg-gradient {
+            background: linear-gradient(to bottom right, #e0f2fe, #f3e8ff); /* from-indigo-50 to-purple-50 */
+        }
+
+        /* Main content area */
+        .main-content-area {
+            width: 100%;
+            max-width: 64rem; /* max-w-4xl is 64rem = 1024px */
+            padding: 2rem 1rem; /* py-8 px-4 */
+            text-align: center;
+        }
+
+        /* Responsive padding for main content area */
+        @media (min-width: 640px) { /* sm:px-6 sm:py-10 */
+            .main-content-area {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+        @media (min-width: 768px) { /* md:py-12 */
+            .main-content-area {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        @media (min-width: 1024px) { /* lg:px-8 */
+            .main-content-area {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        /* Profile Image Container */
+        .profile-image-container {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+
+        /* Profile Image */
+        .profile-image {
+            width: 9rem;   /* w-36 */
+            height: 9rem;  /* h-36 */
+            border-radius: 50%; /* rounded-full */
+            margin-left: auto;
+            margin-right: auto; /* mx-auto */
+            object-fit: cover;
+            border: 4px solid #c7d2fe; /* border-indigo-200 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            transition: transform 0.3s ease; /* transition-transform duration-300 */
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05); /* hover:scale-105 */
+        }
+
+        /* Responsive image sizing */
+        @media (min-width: 640px) { /* sm:w-40 sm:h-40 */
+            .profile-image {
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+
+        /* Name Heading */
+        .name-heading {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            color: #1a202c; /* text-gray-900 */
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+
+        /* Responsive name heading size */
+        @media (min-width: 640px) { /* sm:text-5xl */
+            .name-heading {
+                font-size: 3rem;
+            }
+        }
+
+        /* Title Text */
+        .title-text {
+            font-size: 1.125rem; /* text-lg */
+            color: #4338ca; /* text-indigo-700 */
+            font-weight: 600; /* font-semibold */
+            margin-bottom: 2rem; /* mb-8 */
+        }
+
+        /* Responsive title text size */
+        @media (min-width: 640px) { /* sm:text-xl */
+            .title-text {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* About Me Section */
+        .about-me-section {
+            color: #2d3748; /* text-gray-800 */
+            font-size: 1rem; /* text-base */
+            line-height: 1.625; /* leading-relaxed */
+            max-width: 48rem; /* max-w-2xl */
+            margin-left: auto;
+            margin-right: auto; /* mx-auto */
+            margin-bottom: 3rem; /* mb-12 */
+        }
+
+        /* Responsive about me section text size */
+        @media (min-width: 640px) { /* sm:text-lg */
+            .about-me-section {
+                font-size: 1.125rem;
+            }
+        }
+
+        .about-me-paragraph {
+            margin-bottom: 1rem; /* mb-4 */
+        }
+
+        /* Links Container */
+        .links-container {
+            display: flex; /* flex */
+            flex-wrap: wrap; /* flex-wrap */
+            justify-content: center; /* justify-center */
+            gap: 1rem; /* gap-4 */
+        }
+
+        /* Responsive gap for links container */
+        @media (min-width: 640px) { /* sm:gap-6 */
+            .links-container {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Action Buttons */
+        .action-button {
+            display: inline-flex; /* inline-flex */
+            align-items: center; /* items-center */
+            padding: 0.75rem 1.5rem; /* px-6 py-3 */
+            font-size: 1rem; /* text-base */
+            font-weight: 600; /* font-semibold */
+            color: white; /* text-white */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            outline: none; /* focus:outline-none */
+            transition: all 0.3s ease; /* transition-all duration-300 */
+            transform: translateY(0); /* Initial state for hover effect */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .action-button:hover {
+            transform: translateY(-0.25rem); /* hover:-translate-y-1 */
+        }
+
+        .action-button:focus {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px var(--focus-ring-color); /* focus:ring-2 focus:ring-offset-2 */
+        }
+
+        /* Specific button colors */
+        .blue-button {
+            background-color: #2563eb; /* bg-blue-600 */
+            --focus-ring-color: #3b82f6; /* blue-500 */
+        }
+        .blue-button:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+        }
+        .red-button {
+            background-color: #dc2626; /* bg-red-600 */
+            --focus-ring-color: #ef4444; /* red-500 */
+        }
+        .red-button:hover {
+            background-color: #b91c1c; /* hover:bg-red-700 */
+        }

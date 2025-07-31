@@ -1,0 +1,152 @@
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #fce3e3 0%, #fbc5c5 100%);
+    margin: 0;
+    padding: 0;
+    color: #2d2d2d;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #ee0000;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.card {
+    background: #fff;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(255, 0, 0, 0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+    transition: transform 0.25s cubic-bezier(.21,1.02,.73,1.01), box-shadow 0.25s;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-16px) scale(1.025);
+    box-shadow: 0 12px 32px rgba(255, 0, 0, 0.18), 0 4px 16px rgba(0,0,0,0.10);
+    z-index: 2;
+}
+
+section {
+    padding: 32px 36px 24px 36px;
+}
+
+h2 {
+    color: #ee0000;
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+}
+
+ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.08em;
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    color: #000000;
+    font-size: 1em;
+}
+
+a {
+    color: #ee0000;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #ee0000;
+    text-decoration: underline;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.card {
+    /* ...existing code... */
+    animation: cardFadeIn 0.8s cubic-bezier(.21,1.02,.73,1.01);
+}
+
+.timeline-container {
+  overflow-x: auto;
+  padding: 40px;
+  background: #f9fafb;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: max-content;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #1f2937;
+}
+
+.timeline-item {
+  position: relative;
+  min-width: 200px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.timeline-item p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 12px;
+  width: 12px;
+  background-color: #1f2937;
+  border-radius: 50%;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-container {
+  scroll-snap-type: x mandatory;
+}
+
+.timeline-item {
+  scroll-snap-align: start;
+}
