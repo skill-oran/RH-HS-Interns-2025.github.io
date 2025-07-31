@@ -73,7 +73,7 @@ body {
 .row-container .card {
   display: flex;
   flex-direction: column; /* allows internal content to expand vertically */
-  height: 100%;           /* card will fill the full height of its flex sibling */
+  height: 200%;           /* card will fill the full height of its flex sibling */
 }
 /* LAYOUT: ROWS + COLUMNS */
 .row-container,
