@@ -1,0 +1,278 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* header stiff */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.header-content {
+    position: relative;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #e74c3c;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.about-me-card {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* card styling */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/*  abt me sec */
+.about-me-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #c0392b;
+}
+
+.about-me-flex p {
+    flex: 1;
+    margin-top: 0;
+}
+
+/* intersts sect */
+.interests-container {
+    display: flex;
+    gap: 30px;
+}
+
+.interests-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.interests-list li {
+    padding: 10px;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.interests-list li:hover {
+    background-color: #f9e1e0;
+}
+
+.hover-instruction {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+#interest-preview {
+    flex: 1;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    display: none;
+}
+
+#preview-description {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    display: none;
+}
+
+/* vidoe gal */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    position: relative;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(192, 57, 43, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+/*  Links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-button {
+    padding: 10px;
+    background-color: #c0392b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.social-button:hover {
+    background-color: #a93226;
+}
+
+/* footes */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+/* style 4 dark mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .about-me-card {
+    color: #b0b0b0;
+}
+
+.dark-mode .interests-list li:hover {
+    background-color: #2a2a2a;
+}
+
+.dark-mode .social-button {
+    background-color: #8b2518;
+}
+
+.dark-mode .social-button:hover {
+    background-color: #6a1c12;
+}
+
+.dark-mode .project-overlay {
+    background: rgba(139, 37, 24, 0.9);
+}
+
+.dark-mode #interest-preview {
+    background-color: #333;
+}
+
+/* button dark/light */
+#mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+#mode-toggle .fa-sun {
+    display: none;
+}
+
+.dark-mode #mode-toggle .fa-moon {
+    display: none;
+}
+
+.dark-mode #mode-toggle .fa-sun {
+    display: inline;
+    color: #ffd700;
+}
+
+.dark-mode #mode-toggle {
+    color: #e0e0e0;
+}
+
+/*  response design */
+@media (max-width: 768px) {
+    .about-me-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .interests-container {
+        flex-direction: column;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 180px;
+    }
+}

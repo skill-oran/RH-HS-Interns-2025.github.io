@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(47, 47, 47);
+}
+h1 {
+    font-size: 2em;
+    text-align: center;
+    color:rgb(255, 88, 227);
+}
+h4 {
+    color:white;
+    font-size: 16px;
+    text-align: center;
+}
+p1 {
+    color:white;
+}
+p {
+    font-size: 22px;
+}
+h2 {
+    color:rgb(255, 88, 227);
+}
+
+h2:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/*adds smooth transitions*/
+
+* {
+    transition: all 0.3s ease;
+}
+/*creates a card style that lifs up on hover*/
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+.my-button {
+    background-color: rgb(121, 150, 176);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.my-button:hover {
+    transform: scale(1.05);
+}
+
+li:hover {
+    padding-left: 10px;
+    background-color: rgb(212, 206, 206);
+}
+ul2 {
+    color:white;
+    text-indent: 10px;
+}
+ul {
+    font-size: 20px;
+}

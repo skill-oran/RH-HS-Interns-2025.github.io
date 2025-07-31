@@ -1,16 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sail&family=Sofia&display=swap" rel="stylesheet">
+    <title>Adeena-c</title>
+    <link rel="stylesheet" href="about-me.css">
 </head>
 <body>
-  <h1>Hi</h1>
+    <h1>Adeena Chowdhury</h1>
+    <p id="typedText" class="my-style">
+<span id="text"></span><span id="cursor">|</span>
+</p>
+<script>
+const text = "Welcome to my website!";
+const textElement = document.getElementById("text");
+const cursor = document.getElementById("cursor");
+let i = 0;
+const speed = 50; // typing speed
+const delayBetweenLoops = 2000;
+
+// Blink cursor by toggling opacity
+setInterval(() => {
+cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+}, 500);
+
+function typeWriter() {
+if (i < text.length) {
+textElement.textContent += text.charAt(i);
+i++;
+setTimeout(typeWriter, speed);
+} else {
+setTimeout(() => {
+textElement.textContent = "";
+i = 0;
+typeWriter();
+}, delayBetweenLoops);
+}
+}
+
+window.onload = typeWriter;
+</script>
+    <div class="card"> 
+        <h2>About Me</h2>
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQGajWB0jB8AUQ/profile-displayphoto-scale_400_400/B4EZg_Hf0TGwAo-/0/1753405587718?e=1756944000&v=beta&t=zL2rRXPweyYApwsu1kX1t5Q7N-pCwV_wgsIFagXg3FM" alt="Placeholder image" width="200px" height=auto>
+        <p>Hi! I'm Adeena, a rising junior at Sharon High School looking to go into finance and tech in the future</p>
+       <a href="https://www.linkedin.com/in/adeena-chowdhury-6aab79298/" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left:10px;"> Find me on Linkedin! 
+    </a>
+    </div>
+    <div class="list">
+        <h2>My Interests</h2>
+        <ul>
+            <li>Playing with my cat Rani!</li>
+            <li>All types of media: reading, watching movies/tv shows, listening to music</li>
+            <li>Mock Trial - my team made it to state semi-finals & became the #1 public high school team in the state</li>
+            <li>Traveling! I've been to 8 countries so far</li>
+            </ul>
+    </div>
+    <div class="card">
+    <img src="https://shstalon.com/wp-content/uploads/2025/05/image-1.png" alt="Placeholder image" width="300px" height=auto>
+    <img src="IMG_9018.jpg" alt="Placeholder image" width="300px" height=auto> 
+    <img src="e8a8daa0-caae-417e-a10f-45eae4ecb8d7.JPG" alt="Placeholder image" width="300px" height=auto>
+</div>
+   <div class="card">
+    <h2>Day in my Life</h2>
+    <iframe width="315" height="560"
+src="https://www.youtube.com/embed/I6akwpbUVl4"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+</div>
+    <div class="card">
+        <h2>Helpful Links</h2>
+        <a href="https://github.com" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left:10px;"> Visit Github 
+    </a>
+
+    <a href="https://rh-hs-interns-2025.github.io/interns/adeena-chowdhury/journals/journals.html" class="my-button" target="_blank" style="text-decoration: none; display: inline-block; margin-left:10px;"> My Journals! 
+    </a>
+    </div>
+    <h2>Secret Message</h2>
+    <button class="my-button" onclick="showMessage()"> Show Secret 
+    </button>
+    <p id="secret" style="display: none; color: red;"> You found it! 
+    </p>
+    <script>
+        function showMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+    </script>
+    <h2>Thanks for Visiting My Page!</h2>
 </body>
-</html> 
+</html>

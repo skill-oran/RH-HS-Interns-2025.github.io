@@ -1,0 +1,90 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: pink;
+}
+
+h1 {
+    font-family: "Sail", system-ui;
+    font-size: 4em;
+    text-align: center;
+}
+
+.my-style {
+    text-align: center;
+    font-size: 1.5em;
+}
+h2 {
+    font-family: "Sofia", cursive;
+    color: rgb(1, 93, 93);
+    text-align: center;
+}
+a {
+    color: #3498db ;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+img:hover {
+    transform:scale(1.1);
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
+.list {
+    background-color: rgb(250, 212, 218);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.card {
+    background-color: rgb(250, 212, 218);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
+.my-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20 px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.my-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+li:hover {
+    background-color: #ecf0f1;
+    padding-left: 10px;
+}
+.pics {
+    float: left;
+
+}
+
