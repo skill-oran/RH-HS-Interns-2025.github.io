@@ -46,7 +46,7 @@ h1:hover {
 h2 { 
     font-style:oblique; 
     font-size: 2em; 
-    color: navy;
+    color: lightblue;
 }
 
 .container-rows { 
@@ -106,10 +106,10 @@ h2 {
     text-align: center;
     font-size: 1.5em; 
     font-family:Georgia; 
-    background-color: lightblue; 
+    background-color: navy; 
     padding: 10px;  
     border-radius: 10px; 
-    margin: 0px 30px 20px 30px;
+    margin: 0px 100px 20px 100px;
 }
 
 .diffHeading:hover{ 
@@ -150,11 +150,11 @@ img:hover {
 /*This is the default card style for the cards that are not cut in half. */
 
 .card { 
-    background-color:rgb(243, 247, 249); 
+    background-color:rgb(210, 196, 248); 
     padding: 20px; 
-    margin: 30px 400px 30px 400px; 
+    margin: 30px 200px 30px 200px; 
     border-radius: 10px; 
-    box-shadow: 0 2px 5px rgba(0,0, 0, 0.3)
+    box-shadow: 0 3px 5px rgba(2, 2, 2, 0.3);
 } 
 
 .card:hover { 
@@ -163,12 +163,13 @@ img:hover {
 }
 
 .partial-card { 
-    background-color:rgb(243, 247, 249); 
+    background-color:rgb(210, 196, 248); 
     padding: 20px; 
     border-radius: 10px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 400px; 
     margin: 10px;
+    height:300px; 
 } 
 
 .partial-card:hover { 
@@ -218,23 +219,25 @@ li:hover{
 /*while the list is inside the card, it can still be edited individually. */
 /* padding left = padding solely on the left side i think*/ 
 
-.carousel-container {
+.carousel-container { 
     position: relative;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 500px; 
 }
 
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
+    width: 100%;  
 }
 
 .carousel-img {
-    min-width: 100%;
+    min-width: 30%;
     height: auto;
+    width: auto; 
     display: none;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 .carousel-img.active {
@@ -278,6 +281,42 @@ to {
 opacity: 1;
 }
 }
+
+.carousel-card { 
+    background-color:rgb(210, 196, 248); 
+    padding: 20px; 
+    margin: 30px 200px 30px 200px; 
+    border-radius: 10px; 
+    box-shadow: 0 3px 5px rgba(2, 2, 2, 0.3);
+    display:flex; 
+    flex-direction: column; 
+    align-items: center; 
+} 
+
+.carousel-card:hover { 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translate(-5px) 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
