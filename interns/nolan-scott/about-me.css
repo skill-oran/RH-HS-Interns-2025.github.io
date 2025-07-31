@@ -59,6 +59,25 @@ img:hover {
     transform: scale(1.1);
 }
 
+.profile-button:hover {
+    transform: scale(1.1);
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Limit the width of the video */
+    margin: 0 auto; /* Center the video */
+    display: block; /* Make it a block element */
+    background: rgba(0,0,0,0.5);    /* semi-transparent background */
+    border: 2px solid #6df369;      /* green border */
+    border-radius: 16px;            /* rounded corners */
+    padding: 24px;                  /* space inside the box */
+    margin: 32px auto;              /* space outside the box, centered */
+    margin-bottom: 5vh;
+    display: flex;
+}
+
 
 .image-row {
     display: flex;
@@ -183,13 +202,13 @@ li:hover {
 
 .links {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 5vh; /* Add some space at the bottom */
     margin-left: 10vh;
     margin-right: 10vh;
     flex-direction: row;
+    margin-top: 0vh;
 }
 
 .link-button:hover {
@@ -209,6 +228,14 @@ li:hover {
     width: 100%; /* Make list items take full width */
     max-width: 180px;
 
+}
+.dayinlife {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15vh; /* Add some space at the bottom */
+    margin-left: 10vh;
+    margin-right: 10vh;
 }
 
     @font-face {
