@@ -1,0 +1,5 @@
+Name: Matthew Madewell
+School: Ravenscroft
+Favorite Subject: Computer Science
+Fun Fact: I love to play baseball and my favorite team is the SF Giants
+What I hope to learn: the different types of projects that a large company like Red Hat works on
