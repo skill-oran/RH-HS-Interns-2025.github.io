@@ -4,8 +4,6 @@
     <title>Sophia'sWebsite</title>
     <link rel="stylesheet" href="about-me.css"> 
 
-    
-
     <!---rel - referencing a local file, href is instructing to find it-->
 </head>
 <body>
@@ -137,6 +135,20 @@ window.onload = typeWriter;
 
     </div>
 
+    <!--<div class="card"> 
+        <h2 class="diffHeading">Journal</h2> 
+        <p>
+            While at RedHat, I and the other interns wrote journal entries 
+            discussing our thoughts and experiences during the internship. 
+            Click on the button to see them! 
+        </p>
+        <div class="button-align">
+        <a href="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/journals/journals.html" class="my-button" target="_blank" > 
+                Journals
+        </a> 
+        </div>
+     </div> --> 
+
     <div class="video-card"> 
         <h2 class="diffHeading">Day In the Life Video</h2> 
         <iframe
@@ -159,6 +171,8 @@ window.onload = typeWriter;
                 <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2808.jpeg" alt="Image 1" id="caroimg1" class="carousel-img active">
                 <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_1438.jpeg" alt="Image 2" id="caroimg2" class="carousel-img">
                 <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2339.jpeg" alt="Image 3" id="caroimg3" class="carousel-img">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2814.jpeg" alt="Image 4" id="caroimg4" class="carousel-img">
+                <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_0580.jpeg" alt="Image 5" id="caroimg5" class="carousel-img">
             </div>
         <p>Pictures taken by me :]</p>
         <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
@@ -198,15 +212,6 @@ window.onload = typeWriter;
         Click Me! 
     </button> 
 
-    <h2>Secret Message</h2>
-    <button class="my-button" onclick="showMessage()"> 
-        Show Secret 
-    </button> 
-
-    <p id="secret" style="display: none; color: red;">
-        You found it ! 
-    </p> 
-
     <p> See how all the features function: </p> 
 
      Hoverable List syntax (commands in CSS) 
@@ -215,18 +220,18 @@ window.onload = typeWriter;
         <li>Me too!</li>
      </ul>
 
-    Javascript button
-    <button class="my-button" onclick="alert('Hello!')"> 
-        Say Hello 
-    </button> 
 
-    Link that looks like a button
-    <a href="https://github.com" class="my-button" target="_blank">
-        Visit GitHub 
-    </a> 
-    </div> -->
-    <p>Thanks for visiting my page!</p>
-    <img src="https://media.tenor.com/92MplgQwb80AAAAM/cat-meme-wave-emoji.gif" alt="goofy aah cat">
+    
+    </div> --> 
+    <div class="carousel-card">
+        <h2 class="diffHeading">Secret Message</h2>
+        <div class="button-align">
+        <button class="my-button" onclick="showMessage()"> 
+            Show Secret 
+        </button>  
+        </div>
+        <img id="secret" src="https://media.tenor.com/jYfP3Nj30agAAAAM/kaboom-explosion.gif" alt="Secret Image" style="display: none;">
+    </div>
 
     <script> 
     function showMessage() { 
@@ -234,5 +239,12 @@ window.onload = typeWriter;
     }
     </script>
 
+    <div class="button-align">
+        <img src="https://media.tenor.com/92MplgQwb80AAAAM/cat-meme-wave-emoji.gif" alt="goofy aah cat">
+    </div>
+    
+    <footer>
+        <p>Thanks for visiting my page!</p>
+    </footer> 
 </body>
-</html>
+</html> 
