@@ -1,16 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+    <title>My Interactive Website</title>
+    <link rel="stylesheet" href="about-me.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN is crucial for the chatbot's styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the interactive card (from your original nested HTML) */
+        .card {
+            background: #94cda4;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .dropdown-text {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding-left: 15px;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        .dropdown-text.show {
+            max-height: 100px; /* Adjust as needed based on content */
+        }
+
+        /* Chatbot specific styles (from previous responses) */
+
+
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            height: 80vh;
+            max-height: 700px;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 20px; /* Add margin to separate from other content */
+        }
+
+        #chat-header {
+            background-color: #4f46e5;
+            color: white;
+            padding: 1rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        #chat-messages {
+            flex-grow: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            background-color: #f9fafb;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #6366f1;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0.25rem;
+        }
+
+        .bot-message {
+            background-color: #e0e7ff;
+            color: #1f2937;
+            align-self: flex-start;
+            border-bottom-left-radius: 0.25rem;
+        }
+
+        .typing-indicator {
+            background-color: #e0e7ff;
+            color: #4b5563;
+            align-self: flex-start;
+            font-style: italic;
+            border-bottom-left-radius: 0.25rem;
+        }
+
+        #chat-input-area {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #e5e7eb;
+            background-color: #ffffff;
+        }
+
+        #user-input {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        #user-input:focus {
+            border-color: #6366f1;
+        }
+
+        #send-button {
+            background-color: #4f46e5;
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            border-radius: 0.75rem;
+            margin-left: 0.75rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #send-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        #send-button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hi</h1>
+    <button id="darkModeToggle">Toggle Blue Mode</button>
+    <div class="intro">
+        <h1>Welcome to My Interactive Website!</h1>
+        <p>Ella Callahan</p>
+        <p>Melrose High School</p>
+        <p>Melrose, MA 02176</p>
+    </div>
+
+    <div class="card">
+        <h2>-Links-</h2>
+        <p>Here's my GitHub, Journal Entries, Social Media Reel, and LinkedIn!</p>
+        <a href="https://github.com/ecallahan4/RH-HS-Interns-2025.github.io/tree/main/interns/ella-callahan"
+           class="my-button"
+           target="_blank"
+           style="text-decoration: none; display: inline-block; margin-left: 10px;">
+            Visit GitHub
+        </a>
+        <a href="https://youtube.com/shorts/n0qPPfu7Qac?feature=share"
+           class="my-button"
+           target="_blank"
+           style="text-decoration: none; display: inline-block; margin-left: 10px;">
+           Social Media Video
+        </a>
+        <p> </p>
+        <a href="https://rh-hs-interns-2025.github.io/interns/ella-callahan/journals/journals.html"
+           class="my-button"
+           target="_blank"
+           style="text-decoration: none; display: inline-block; margin-left: 10px;">
+            Visit Journal Entries
+        </a>
+        <a href="https://www.linkedin.com/in/ella-callahan-a1847533a/"
+           class="my-button"
+           target="_blank"
+           style="text-decoration: none; display: inline-block; margin-left: 10px;">
+            Visit LinkedIn
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>-About Me-</h2>
+        <p>My name is Ella Callahan and I am a current high school intern at Red Hat. Outside of school, I love to play soccer and basketball while also keeping myself busy with two part-time jobs at ice cream shops. I enjoy volunteering at the local food pantry and farm co-op and I dedicate my time to various clubs including DECA and Debate club as well. I am enthusiastic when it comes to AI and furthering my knowledge in this department and finding new ways to interact with it. One of my greatest strengths is my ability to collaborate and listen to others and incorporate that information into my own work and in the workplace. </p>
+        <p></p>
+    <div class="row">
+        <div class="column">
+        <img src="https://github.com/ecallahan4/RH-HS-Interns-2025.github.io/blob/main/interns/ella-callahan/IMG_2278.PNG?raw=true" style="width: 85%; height: 600;" alt="Ella">
+         </div>
+        <div class="column">
+        <img src="https://github.com/ecallahan4/RH-HS-Interns-2025.github.io/blob/main/interns/ella-callahan/D3AF9972-7917-4871-81B6-26BF0D4213BD.JPG?raw=true" style="width: 100%; height: 800;" alt="Ella">
+        </div>
+        <div class="column">
+        <img src="https://www.officelovin.com/wp-content/uploads/2017/08/redhat-boston-office-1.jpg" style="width: 100%; height: 800;" alt="Ella">
+        </div>
+    </div>
+    </div>
+
+    <div class="card">
+        <h2>-My Interests-</h2>
+        <ul>
+            <li onclick="toggleDropdown(this)">Web Development
+                <div class="dropdown-text"></div>
+            </li>
+            <li onclick="toggleDropdown(this)">Data Science
+                <div class="dropdown-text">During my time at the Red Hat internship, I've been able to meet with both a college mentor and a current Red Hat employee about Data Science and have gained a deeper understanding of this field and it has insprired me to pursue this interest further. </div>
+            </li>
+            <li onclick="toggleDropdown(this)">Learning New Coding Languages
+                <div class="dropdown-text">Before the Red Hat internship, I had learned to code with JavaScript and Python and I am always open to learning new coding languages! During my time here, I have learned how to code with html and css and I found it extremely interesting!</div>
+            </li>
+            <li onclick="toggleDropdown(this)">Architecture Legos
+                <div class="dropdown-text">Ever since I was young, I have loved legos. As I got older, I began to collect architecture lego sets and build them whenever I found the time. Sometimes I would get a kit and I would not get up until I finished it which could take up to 5 hours!</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>-Skills and Accomplishments-</h2>
+        <ul>Organization and innovation</p>
+        </p>Hardworking and reliable</p>
+        </p>Collaborating and helping others</p>
+        </p>Two-time DECA state competitor</p>
+        </p>Certification in Harvard AI Bootcamp</p>
+    </div>
+
+    <!-- Chatbot HTML Structure -->
+    <div id="chat-container">
+        <div id="chat-header">
+            My AI Personal Chatbot
+        </div>
+        <div id="chat-messages">
+            <!-- Initial bot message -->
+            <div class="message bot-message">Hello! I'm your personal AI chatbot. I can tell you a few things about Ella. Try asking "What is Ella's favorite color?" or "What are Ella's hobbies?". I can also answer general questions.</div>
+        </div>
+        <div id="chat-input-area">
+            <input type="text" id="user-input" placeholder="Ask me something...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <!-- Your existing scripts -->
+    <script>
+        function toggleDropdown(element) {
+            const dropdown = element.querySelector('.dropdown-text');
+            dropdown.classList.toggle('show');
+        }
+
+        function showMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+        const darkToggle = document.getElementById('darkModeToggle');
+        darkToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
+    <!-- Link to your chatbot JavaScript file -->
+    <!-- This MUST be placed AFTER the chatbot's HTML structure -->
+    <script src="chatbot.js"></script>
+    <!-- If you have other scripts that depend on the chatbot, link them after -->
+    <!-- <script src="path/to/your/other-scripts.js"></script> -->
 </body>
-</html> 
+</html>

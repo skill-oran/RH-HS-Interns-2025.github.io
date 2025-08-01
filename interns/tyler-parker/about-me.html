@@ -1,16 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Meta tags for proper character encoding and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- The title appears in the browser tab -->
-    <title>About Me</title>
-    
-    <!-- Link to our external CSS file -->
-    <link rel="stylesheet" href="./about-me.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler Parker | Portfolio</title>
+  <link rel="stylesheet" href="./about-me.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hi</h1>
+  <!-- Header / Top Navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="nav-brand">Tyler Parker</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 id="typed-hero-title"></h1>
+        <p class="tagline">Digital Developer & High School Intern</p>
+      </div>
+      <img src="Headshot.png" alt="Tyler Parker headshot" class="hero-img">
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div>
+        <h3>Tyler Parker</h3>
+        <p class="school">Red Hat High School Intern</p>
+        <p>
+          I am a rising senior at Apex Friendship High School in the Academy of Engineering cohort course program. I am interested in computer and data science, and I chose to pursue an internship at Red Hat to gain practical experience in the corporate tech world as I plan my future career goals. In my free time I run Track/XC and enjoy watching movies with friends. Thanks for checking out my website!
+        </p>
+        <p class="school">Skills/Experience</p>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>Web Development</li>
+          <li>Unity Game Engine</li>
+          <li>Java</li>
+        </ul>
+        <p> 
+          <a href="https://www.linkedin.com/in/tyler-parker-73b909349/" target="_blank" class="linkedin-link">Connect on LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Showcase Section -->
+  <section id="project" class="project-section container">
+    <h2>Featured Project: Social Media Reel</h2>
+    <div class="project-content">
+      <div class="project-video">
+        <iframe width="640" height="480"
+          src="https://drive.google.com/file/d/1o8YHkdXXXg7rPZWQQP_ZzxxLO-E6_HpE/preview"
+          title="Social Media Reel"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="project-desc">
+        <p>
+          This is a day in my life as a high school intern at Red Hat. Join me as I work on my projects, attend project showcases, and tour the media studio!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery-section container">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <figure>
+        <img src="IMG_4758.jpg" alt="Tyler in the common area">
+        <figcaption>The Common Area</figcaption>
+      </figure>
+      <figure>
+        <img src="IMG_4773.PNG" alt="Tyler working on a project">
+        <figcaption>Working on Website</figcaption>
+      </figure>
+      <figure>
+        <img src="IMG_9996.JPG" alt="Group photo at Red Hat">
+        <figcaption>The Red Hat Interns</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Journal Entry Access Section -->
+  <section id="journal" class="journal-section container">
+    <h2>Journal Entries</h2>
+    <div class="journal-access">
+      <img src="https://cdn-icons-png.flaticon.com/512/167/167755.png" alt="Journal Icon" class="journal-icon">
+      <div>
+        <p>
+          Check out my journal entries to explore my thoughts and experiences as I journeyed through my internship at Red Hat!
+        </p>
+        <a href="https://rh-hs-interns-2025.github.io/interns/tyler-parker/journals/journals.html" class="journal-link" target="_blank">Read My Journal Entries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer Section -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:tylerparker3112@gmail.com">tylerparker3112@gmail.com</a></p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/tyler-parker-73b909349/" target="_blank" aria-label="LinkedIn">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/TylerParker3112" target="_blank" aria-label="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+      <!-- Optional: Contact Form -->
+      <!--
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      -->
+    </div>
+  </footer>
+  <script src="./about-me.js"></script>
 </body>
-</html> 
+</html>
