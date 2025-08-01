@@ -1,7 +1,11 @@
 body {
     font-family:'Courier New', Courier, monospace;
     font-size:medium; 
-    background-color: purple;
+    /*background-color: purple;*/ 
+    background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     line-height:2em; 
 }
 
@@ -309,3 +313,23 @@ opacity: 1;
     align-items: center; 
 
 }
+
+#secret { 
+    margin-top: 10px; 
+    size: 3em 
+} 
+
+#secret:hover { 
+    transform:scale(2); 
+} 
+
+footer { 
+    text-align: center; 
+    background-color: navy; 
+    padding: 10px; 
+    color: lightblue; 
+    font-size: 2.8em; 
+    margin-top: 15px; 
+    font-family: Georgia 
+}
+
