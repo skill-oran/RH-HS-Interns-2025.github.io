@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SophiaIsReal??</title>
+    <title>Sophia'sWebsite</title>
     <link rel="stylesheet" href="About-me.css"> 
     <!---rel - referencing a local file, href is instructing to find it-->
 </head>
@@ -86,58 +86,70 @@ window.onload = typeWriter;
     </div>
         
     <!-- 'card' is kind of like a class, only a class of format that can be applied to multiple sections-->
-    <div class="card"> 
-        <h2 class="diffHeading">Journal</h2> 
-        <p>
-            While at RedHat, I and the other interns wrote journal entries 
-            discussing our thoughts and experiences during the internship. 
-            Click on the button to see them! 
-        </p>
-        <div class="button-align">
-        <a href="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/journals/journals.html" class="my-button" target="_blank" > 
-                Journals
-        </a> 
-        </div>
-     </div>
-
-    <div> 
-        <!--I will put my video here--> 
-    </div> 
-
     <div class="container-rows">
+        <div class="partial-card"> 
+            <h2 class="diffHeading">Journal</h2> 
+            <p>
+                While at RedHat, I and the other interns wrote journal entries 
+                discussing our thoughts and experiences during the internship. 
+                Click on the button to see them! 
+            </p>
+            <div class="button-align">
+                <a href="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/journals/journals.html" class="my-button" target="_blank" > 
+                Journals
+                </a> 
+            </div>
+        </div>
+
         <div class="partial-card">
-        <h2 class="diffHeading"> Contact Me </h2>  
-        <p>Contact me on different platforms!</p> 
-        <div class="container-rows">
-        <div class="button-align">
-            <a href="https://github.com/skill-oran" class="my-button" target="_blank"> 
-                Github
-            </a>
+            <h2 class="diffHeading"> Contact Me </h2>  
+            <p>Contact me on different platforms!</p> 
+            <div class="container-rows">
+                <div class="button-align">
+                    <a href="https://github.com/skill-oran" class="my-button" target="_blank"> 
+                        Github
+                    </a>
+                </div> 
+                <div class="button-align">
+                    <a href="https://www.linkedin.com/" class="my-button" target="_blank"> 
+                        Linkedin
+                    </a>
+                </div>
+            </div>
+            <p>Email me:</p> 
+            <p> sophia.killoran6@gmail.com </p> 
+        </div>
+
+        <div class="partial-card"> 
+            <h2 class="diffHeading">Learn to Code!</h2> 
+            <p>Access free courses in programming:</p> 
+            <!-- This is a link that looks like a button, the button I designed in CSS --> 
+            <!--- it is called a, but is a member of the class my-button -->
+            <div class="button-align">
+                <a href="https://www.w3schools.com" class="my-button" target="_blank" style="text-decoration:none;"> 
+                    Learn More 
+                </a> 
+            </div>
         </div> 
-        <div class="button-align">
-            <a href="https://www.linkedin.com/" class="my-button" target="_blank"> 
-                Linkedin
-            </a>
-        </div>
-        </div>
-        <p>Email me:</p> 
-        <p> sophia.killoran6@gmail.com </p> 
-        </div>
-    <div class="partial-card"> 
-        <h2 class="diffHeading">Learn to Code!</h2> 
-        <p>Access free courses in programming:</p> 
-        <!-- This is a link that looks like a button, the button I designed in CSS --> 
-        <!--- it is called a, but is a member of the class my-button -->
-        <div class="button-align">
-        <a href="https://www.w3schools.com" class="my-button" target="_blank" style="text-decoration:none;"> 
-            Learn More 
-        </a> 
-        </div>
-    </div> 
+
     </div>
+
+    <div class="video-card"> 
+        <h2 class="diffHeading">Day In the Life Video</h2> 
+        <iframe
+            width="300"
+            height="500"
+            src="https://www.youtube.com/embed/2E565GuFMUA"
+            title="Day in the life video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+    </div> 
+
     <!--I will put my pictures here-->
     <div class="carousel-card"> 
-        <p>Some pictures I like :]</p>
+        <h2 class="diffHeading"> Photography </h2>
         <div class="carousel-container">
             <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
             <div class="carousel-slide">
@@ -145,7 +157,7 @@ window.onload = typeWriter;
                 <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_1438.jpeg" alt="Image 2" id="caroimg2" class="carousel-img">
                 <img src="https://rh-hs-interns-2025.github.io/interns/sophia-killoran/IMG_2339.jpeg" alt="Image 3" id="caroimg3" class="carousel-img">
             </div>
-        <p>Pictures taken by me </p>
+        <p>Pictures taken by me :]</p>
         <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
         </div>
     </div>
