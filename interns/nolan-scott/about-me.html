@@ -1,82 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Interactive Website</title>
+    <title>Nolan Website</title>
     <link rel="stylesheet" href="about-me.css">
-    
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <body>
-    <h1>Welcome to My Interactive Website!</h1>
-    <p>Hi! My name is Adit. Hover over elements to see them change!</p>
-    
-    <div class="card">
-        <h2>About Me</h2>
-        <p>I'm a high school student learning web development!</p>
-        <p>Hover over this card to see it lift up!</p>
+    <div class="layout1">
+        <h1>Hi! Welcome to My Website!</h1>
+        <p>My name is Nolan.</p>
     </div>
+
+
+        <p class="layout2">I'm a high school student learning web development!</p>
+
+
+        <h2 class="bio">About Me</h2>
+        <p class="bio">I am a rising senior at Leesville Road High School. I am also a member of the National Honor Society and the Leesville Road Game Design Academy leadership team.
+        I enjoy reading, practicing Brazilian Jiu Jitsu and Muay Thai, music, video games, and learning new things. I plan to pursue a career in computer science, specificially in software engineering and game design.  
+        </p>
     
-    <div class="card">
-        <h2>My Interests</h2>
-        <p>Hover over the items below:</p>
-        <ul>
+        <div class="liststhings">
+
+        <h2 class="interests">My Interests:</h2>
+        <ul class="interests">
             <li>Web Development</li>
-            <li>Creating Cool Websites</li>
-            <li>Playing Chess</li>
-            <li>Watching TV</li>
+            <li>Learning to Program</li>
+            <li>Game Development</li>
+            <li>Martial Arts</li>
+            <li>My Dogs</li>
+            <li>DnD With My Friends</li>
+            
         </ul>
-    </div>
+            <h2 class="skills">My Skills:</h2>
+        <ul class="skills">
+            <li>Learner's Midnset</li>
+            <li>Quick Study</li>
+            <li>Good Listener</li>
+            <li>Problem Solver</li>
+            <li>Strong Communicator</li>
+            
+        </ul>
+        </div>
+        <a href="https://www.linkedin.com/in/nolan-scott-521714339/" class="profile-button" target="_blank" style="text-decoration: none;">
+        My LinkedIn Profile
+        </a>
+        <img src="./IMG_3336 2.JPG" alt="Nolan's Dog" class="image-qr">
+
     
-    <div class="card">
-        <h2>My Favorite Image</h2>
-        <p>Hover over the image to make it bigger!</p>
-        <img src="https://www.shutterstock.com/image-photo/hands-typing-on-laptop-programming-code-2480023489" 
-             alt="Placeholder image">
+    <div class="image-row">
+    <img src="./IMG_1360.jpg" alt="Nolan's Dog" class="image-box">
+    <img src="./IMG_1344.jpg" alt="Nolan's Other Dog" class="image-box">
     </div>
+    <img src="./IMG_2356.jpg" alt="nolan with dog" class="image-box">
+     <h2 class="video-title">A Day in My Life As a Red Hat Intern</h2>
+    <video class="video" width="300px" height="auto" controls>
+  <source src="./nolandayinlife 2(1)(1)(1).mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
 
-    <div class="my-button"><h 2> Useful Links
-         </h2> </div>
 
-    <h2>Try JavaScript!</h2>
+    <!--     <h2>Try JavaScript!</h2>
     <button class="my-button" onclick="alert('Hello!')">
-        Click Me
-    </button>
-
-    <h2> Secret Message </h2>
-    <button class="my-button" onclick="document.getElementById('secret').style.display='block'">
-        Reveal Secret
-    </button>
-    <p id="secret" style="display:none;">You found the secret message!</p>
-</body>
-</html>
-
-<h2> Everything Together </h2>
-
-<ul> <li> Hover over me </li> <li> Me too! </li></ul>
+        Click Me Please test
+    </button> -->
 
 <!-- Add this to your HTML -->
-<h2>Useful Links</h2>
-<p>Click these buttons to visit other websites:</p>
+<h2 class="links">Useful Links</h2>
+<p class="links">Click these buttons to visit other websites:</p>
 
 <!-- This is a link that looks like a button -->
-<a href="https://www.w3schools.com" class="my-button" target="_blank" style="text-decoration: none;">
-    Learn More
+ <a href="https://rh-hs-interns-2025.github.io/interns/nolan-scott/journals/journals.html" class="link-button" target="_blank" style="text-decoration: none;">
+    My Journal Entries
+</a>
+<div class="links">
+
+<a href="https://www.w3schools.com" class="link-button" target="_blank" style="text-decoration: none;">
+    Learn More About Web Development
+</a>
+<a href="https://html.com/" class="link-button" target="_blank" style="text-decoration: none;">
+    More HTML Resources
 </a>
 
-<button class="my-button" onclick="showMessage()">
-    Show Secret
-</button>
+</div>
+</body>
 
 
+</html>
 
-<p id="secret" style="display: none; color: red;">
-    You found it!
-</p>
 
-<script>
-function showMessage() {
-    document.getElementById('secret').style.display = 'block';
-}
-</script>
 
 
 
